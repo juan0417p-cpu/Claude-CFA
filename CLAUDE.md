@@ -43,7 +43,11 @@ cada fase debe dejar algo usable ese mismo día para no robarle tiempo al estudi
 - Archivo de BD: `data/cfa.db` (en `.gitignore`). El esquema vive en `lib/schema.sql`
   y se aplica automáticamente al arrancar (`CREATE TABLE IF NOT EXISTS`).
 - Los 10 temas/subtemas se cargan con un *seed* idempotente (`lib/seed.ts`).
-- Porcentajes se **calculan** con SQL (`SUM(aciertos)/SUM(preguntas)`), nunca se guardan.
+- Porcentajes se **calculan** al vuelo (nunca se guardan): SQL para leer sesiones y
+  `lib/stats.ts` (funciones puras) para el "nivel actual" y la evolución.
+- **Nivel actual** = % ponderado por recencia: peso = 0,5^(días de antigüedad / 14)
+  (`RECENCY_HALF_LIFE_DAYS` en `lib/config.ts`). Es el número que usa el semáforo.
+  El "histórico" (promedio simple) se muestra como dato secundario.
 - La API key va en `.env.local` como `ANTHROPIC_API_KEY` (nunca en git). El modelo se
   configura con `ANTHROPIC_MODEL`.
 - La IA solo se llama desde código de servidor (Server Actions / Route Handlers).
@@ -159,11 +163,14 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 - [ ] Página `/falladas`: listado filtrable por tema/subtema, con buscador de texto.
 - [ ] Página de detalle de cada tema: subtemas con su % y sus preguntas falladas.
 
-### Fase 3 — Análisis ⬜
-- [ ] % por subtema con comparación contra 70 % (barra + línea de meta).
-- [ ] Tendencia en el tiempo por tema (línea semanal, Recharts).
-- [ ] Clasificación: **Dominado** (≥ 70 % con ≥ 20 preguntas), **En riesgo** (60–69 %),
-      **Débil** (< 60 %), **Sin datos suficientes** (< 20 preguntas).
+### Fase 3 — Análisis 🟨
+- [x] Semáforo por tema con el nivel actual (verde ≥ 70 %, amarillo 60–69 %, rojo < 60 %),
+      siempre con ícono + texto (`components/StatusBadge.tsx`).
+- [x] Página `/temas/[id]`: nivel actual, evolución y subtemas ordenados de peor a mejor
+      (sin datos al final), con barra + marca de meta; aviso "pocos datos" si < 20 preguntas.
+- [x] Evolución en el tiempo (Recharts, `components/EvolutionChart.tsx`): línea del nivel
+      actual por día + puntos del resultado diario + línea de meta; eje X en tiempo real;
+      tooltip y tabla alternativa. En el dashboard (general) y en cada tema.
 - [ ] "Prioridad de estudio" = brecha a 70 % × peso del tema en el examen.
 - [ ] Ritmo: preguntas por semana vs. días restantes.
 

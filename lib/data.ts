@@ -3,45 +3,58 @@
 import { connection } from "next/server";
 import { allRows } from "./db";
 import { EXAM_DATE } from "./config";
-import { pctOf } from "./status";
+import { score, type Score, type SessionLite } from "./stats";
 
-export type Subtopic = { id: number; name: string };
+export type SubtopicWithScore = { id: number; name: string; score: Score };
 
 export type TopicWithStats = {
   id: number;
   name: string;
   weightMin: number;
   weightMax: number;
-  questions: number; // total de preguntas practicadas
-  correct: number; // total de aciertos
-  pct: number | null; // % de aciertos (null si aún no hay datos)
-  subtopics: Subtopic[];
+  score: Score; // nivel actual (ponderado) e histórico del tema
+  subtopics: SubtopicWithScore[]; // en el orden del currículo
 };
 
-// Devuelve los 10 temas, con sus subtemas y sus aciertos acumulados.
+// Todas las sesiones en versión liviana (para cálculos). Opcional: solo un tema.
+export async function getSessionsLite(topicId?: number): Promise<SessionLite[]> {
+  await connection();
+  return allRows<SessionLite>(
+    `SELECT date, topic_id AS topicId, subtopic_id AS subtopicId,
+            num_questions AS numQuestions, num_correct AS numCorrect
+     FROM sessions
+     ${topicId ? "WHERE topic_id = ?" : ""}
+     ORDER BY date`,
+    ...(topicId ? [topicId] : [])
+  );
+}
+
+// Devuelve los 10 temas con sus subtemas, cada uno con su nivel actual.
 export async function getTopicsWithStats(): Promise<TopicWithStats[]> {
   // node:sqlite es síncrono: sin esto, Next.js ejecutaría la consulta
   // una sola vez al compilar y la página mostraría datos viejos.
   await connection();
+  const today = await getTodayISO();
+  const sessions = await getSessionsLite();
 
-  const topics = allRows<Omit<TopicWithStats, "pct" | "subtopics">>(
-    `SELECT t.id, t.name,
-              t.weight_min AS weightMin, t.weight_max AS weightMax,
-              COALESCE(SUM(s.num_questions), 0) AS questions,
-              COALESCE(SUM(s.num_correct), 0)   AS correct
-       FROM topics t
-       LEFT JOIN sessions s ON s.topic_id = t.id
-       GROUP BY t.id
-       ORDER BY t.sort_order`
+  const topics = allRows<Omit<TopicWithStats, "score" | "subtopics">>(
+    `SELECT id, name, weight_min AS weightMin, weight_max AS weightMax
+     FROM topics ORDER BY sort_order`
+  );
+  const subtopics = allRows<{ id: number; topicId: number; name: string }>(
+    `SELECT id, topic_id AS topicId, name FROM subtopics ORDER BY sort_order`
   );
 
   return topics.map((t) => ({
     ...t,
-    pct: pctOf(t.correct, t.questions),
-    subtopics: allRows<Subtopic>(
-      `SELECT id, name FROM subtopics WHERE topic_id = ? ORDER BY sort_order`,
-      t.id
-    ),
+    score: score(sessions.filter((s) => s.topicId === t.id), today),
+    subtopics: subtopics
+      .filter((st) => st.topicId === t.id)
+      .map((st) => ({
+        id: st.id,
+        name: st.name,
+        score: score(sessions.filter((s) => s.subtopicId === st.id), today),
+      })),
   }));
 }
 
