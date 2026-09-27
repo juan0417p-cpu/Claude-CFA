@@ -33,9 +33,10 @@ export class MissingKeyError extends Error {
 }
 
 // Si el modelo se niega a responder (filtro de seguridad), la API reintenta
-// sola con otro modelo recomendado. Solo aplica a Claude Opus 5.
+// sola con otro modelo recomendado. Aplica a Claude Opus 5 y Opus 5.5
+// (claude-opus-5 y claude-opus-5-5).
 export function fallbackParams() {
-  return MODEL.startsWith("claude-opus-5") && !MODEL.startsWith("claude-opus-5-5")
+  return MODEL.startsWith("claude-opus-5")
     ? { fallbacks: "default" as const, betas: ["server-side-fallback-2026-07-01"] }
     : {};
 }

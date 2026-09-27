@@ -191,7 +191,9 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 - [ ] **Plan de estudio** semanal priorizado (con métricas y días restantes).
 
 Notas de la API: `client.beta.messages` con `fallbacks: "default"` + beta
-`server-side-fallback-2026-07-01` (solo Opus 5); revisar `stop_reason` (`refusal`,
+`server-side-fallback-2026-07-01` (Opus 5 y Opus 5.5; el usuario usa `claude-opus-5-5`:
+thinking siempre activo, effort por defecto `medium`, sin `tool_choice` forzado — la app
+no usa ninguno de esos parámetros); revisar `stop_reason` (`refusal`,
 `max_tokens`); `cache_control` automático; streaming vía `ReadableStream` con la marca
 `ERROR_MARK` (`lib/tutor-shared.ts`) para errores. Pruebas sin clave real: servidor falso
 + `ANTHROPIC_BASE_URL`.
