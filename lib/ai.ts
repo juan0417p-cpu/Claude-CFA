@@ -16,8 +16,13 @@ export function hasApiKey() {
 let client: Anthropic | null = null;
 export function getClient() {
   if (!hasApiKey()) throw new MissingKeyError();
-  // El SDK lee ANTHROPIC_API_KEY del entorno por su cuenta
-  client ??= new Anthropic();
+  // El SDK lee ANTHROPIC_API_KEY del entorno por su cuenta.
+  // Si la clave no está asociada a un espacio de trabajo (workspace), hay que
+  // decir en cada solicitud cuál usar: ANTHROPIC_WORKSPACE_ID en .env.local.
+  const workspaceId = process.env.ANTHROPIC_WORKSPACE_ID?.trim();
+  client ??= new Anthropic({
+    defaultHeaders: workspaceId ? { "anthropic-workspace-id": workspaceId } : undefined,
+  });
   return client;
 }
 
@@ -44,6 +49,8 @@ export function friendlyError(error: unknown): string {
     return "Tu clave no tiene permiso para esto (¿créditos o modelo disponible?).";
   if (error instanceof Anthropic.RateLimitError)
     return "Demasiadas solicitudes seguidas. Espera un momento y vuelve a intentar.";
+  if (error instanceof Anthropic.BadRequestError && /workspace/i.test(error.message))
+    return "Tu clave no está asociada a un espacio de trabajo (workspace). Crea una clave nueva eligiendo un espacio de trabajo en “Alcance”, o agrega ANTHROPIC_WORKSPACE_ID=wrkspc_… en .env.local (ver README).";
   if (error instanceof Anthropic.BadRequestError)
     return `La API rechazó la solicitud: ${error.message}. Si usaste un PDF muy grande (más de ~600 páginas), divídelo en partes.`;
   if (error instanceof Anthropic.APIConnectionError)

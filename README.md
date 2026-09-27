@@ -22,6 +22,10 @@ Luego abre **http://localhost:3000** en el navegador. Para detenerla: `Ctrl + C`
 3. Abre `.env.local` y reemplaza `sk-ant-...` por tu clave.
 4. Reinicia la app (`Ctrl + C` y `npm run dev`).
 
+Al crear la clave, en **Alcance** elige un **espacio de trabajo** (por ejemplo "Default").
+Si ya creaste una sin espacio de trabajo y ves el error "not scoped to a workspace",
+crea otra eligiendo uno, o agrega `ANTHROPIC_WORKSPACE_ID=wrkspc_...` en `.env.local`.
+
 `.env.local` no se sube a git y la clave solo se usa en el servidor: nunca llega al navegador.
 Para gastar menos, agrega `ANTHROPIC_MODEL=claude-sonnet-5` en `.env.local`.
 
