@@ -15,6 +15,16 @@ npm run dev     # arranca la app
 ```
 Luego abre **http://localhost:3000** en el navegador. Para detenerla: `Ctrl + C` en la terminal.
 
+## Cómo actualizar cuando hay cambios nuevos
+Con la app apagada (`Ctrl + C`), en la carpeta del proyecto:
+```bash
+git checkout -- package-lock.json   # descarta cambios automáticos de npm
+git pull                            # descarga lo nuevo
+npm install                         # instala piezas nuevas, si las hay
+npm run dev
+```
+El orden importa: `git pull` va **antes** de `npm install`.
+
 Tus datos quedan en `data/cfa.db` (se crea solo la primera vez). Haz copia de
 ese archivo si quieres un respaldo.
 
