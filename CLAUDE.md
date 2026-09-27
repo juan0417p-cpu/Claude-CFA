@@ -62,8 +62,8 @@ sessions    (id, date, topic_id → topics, subtopic_id → subtopics NULL,
              num_questions, num_correct, notes, created_at)
              -- CHECK (num_correct BETWEEN 0 AND num_questions)
 missed_questions (id, session_id → sessions ON DELETE CASCADE,
-             question_text, my_answer, correct_answer, explanation NULL,
-             created_at)                                   -- fase 2
+             question_text, my_answer, correct_answer, note NULL,
+             created_at)                                   -- fase 2 (note = mi nota)
 ai_messages (id, missed_question_id NULL, kind, prompt, response, created_at)
                                                             -- fase 4 (cache de respuestas IA)
 ```
@@ -127,7 +127,7 @@ ai_messages (id, missed_question_id NULL, kind, prompt, response, created_at)
 
 Estado: ⬜ pendiente · 🟨 en curso · ✅ hecho
 
-### Fase 1 — Lo mínimo útil (1 tarde) 🟨
+### Fase 1 — Lo mínimo útil (1 tarde) ✅
 Objetivo: empezar a registrar sesiones **hoy mismo**.
 - [x] `create-next-app` con TypeScript + Tailwind; SQLite con `node:sqlite` (sin dependencias nativas).
 - [x] `lib/db.ts`: abre `data/cfa.db`, aplica `schema.sql` (topics, subtopics, sessions), corre el seed.
@@ -135,15 +135,17 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
   - Cuenta regresiva: "Faltan N días" hasta 2026-11-17 (`components/Countdown.tsx`).
   - 10 tarjetas de temas (`components/TopicCard.tsx`): peso, aciertos, % y semáforo
     (verde ≥ 70 %, amarillo 60–69 %, rojo < 60 %, gris sin datos) + subtemas desplegables.
-- [ ] Página `/sesiones/nueva`: formulario (fecha, tema, subtema dependiente del tema,
-      nº preguntas, aciertos) → Server Action que valida e inserta.
-- [ ] Página `/sesiones`: lista de sesiones con opción de borrar.
+- [x] Página `/sesiones/nueva`: formulario (fecha, tema, subtema dependiente del tema,
+      nº preguntas, aciertos) → Server Action que valida e inserta (`app/sesiones/actions.ts`).
+- [x] Página `/sesiones`: lista de sesiones con opción de borrar.
 
 **Fuera de la fase 1 a propósito:** preguntas falladas, gráficas, IA, autenticación.
 
-### Fase 2 — Preguntas falladas ⬜
-- [ ] Tabla `missed_questions`.
-- [ ] En el formulario de sesión, agregar N preguntas falladas (texto, mi respuesta, correcta).
+### Fase 2 — Preguntas falladas 🟨
+- [x] Tabla `missed_questions`.
+- [x] En el formulario de sesión, agregar N preguntas falladas (enunciado, mi respuesta,
+      correcta, mi nota). Validación: no más falladas que (preguntas − aciertos).
+- [x] Historial por tema: `/sesiones?tema=ID` con resumen, % por sesión y falladas desplegables.
 - [ ] Página `/falladas`: listado filtrable por tema/subtema, con buscador de texto.
 - [ ] Página de detalle de cada tema: subtemas con su % y sus preguntas falladas.
 
@@ -173,6 +175,10 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 - Next.js 16: leer `AGENTS.md` y la guía en `node_modules/next/dist/docs/` antes de usar APIs de Next.
 - Consultas con `node:sqlite` deben llamar `await connection()` (de `next/server`) para
   no quedar congeladas en tiempo de compilación (ver `lib/data.ts`).
+- Leer filas con `allRows()` de `lib/db.ts`: convierte las filas de `node:sqlite` (sin
+  prototipo) en objetos normales; si no, Next.js no puede pasarlas a Client Components.
+- Formularios con `useActionState`: enviar con `onSubmit` + `startTransition` (no
+  `<form action>`), para que React no resetee los campos/selects cuando hay error.
 - Una fase a la vez; no adelantar funciones de fases futuras.
 - Al terminar una tarea, marcar su checkbox aquí y actualizar el estado de la fase.
 - Antes de dar algo por terminado: `npm run build` y `npm run lint` sin errores.

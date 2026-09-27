@@ -34,3 +34,16 @@ export function getDb() {
   }
   return globalForDb.cfaDb;
 }
+
+// node:sqlite devuelve cada fila como un objeto "sin prototipo". Next.js no
+// deja pasar esos objetos a los Client Components (como el formulario), así
+// que los copiamos a objetos normales con { ...fila }.
+export function allRows<T>(
+  sql: string,
+  ...params: (string | number | null)[]
+): T[] {
+  return getDb()
+    .prepare(sql)
+    .all(...params)
+    .map((row) => ({ ...row }) as T);
+}

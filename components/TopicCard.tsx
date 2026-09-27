@@ -2,18 +2,9 @@
 // semáforo respecto a la meta, y la lista de subtemas (desplegable).
 
 import type { TopicWithStats } from "@/lib/data";
+import Link from "next/link";
 import { TARGET_PCT } from "@/lib/config";
-
-// Colores del semáforo según el % de aciertos.
-function statusFor(pct: number | null) {
-  if (pct === null)
-    return { label: "Sin datos", badge: "bg-slate-100 text-slate-600", bar: "bg-slate-300" };
-  if (pct >= TARGET_PCT)
-    return { label: "En meta", badge: "bg-emerald-100 text-emerald-800", bar: "bg-emerald-500" };
-  if (pct >= 60)
-    return { label: "En riesgo", badge: "bg-amber-100 text-amber-800", bar: "bg-amber-500" };
-  return { label: "Débil", badge: "bg-red-100 text-red-800", bar: "bg-red-500" };
-}
+import { statusFor } from "@/lib/status";
 
 export default function TopicCard({
   topic,
@@ -73,6 +64,15 @@ export default function TopicCard({
           ))}
         </ol>
       </details>
+
+      <div className="mt-4 flex gap-4 border-t border-slate-100 pt-3 text-sm font-medium">
+        <Link href={`/sesiones?tema=${topic.id}`} className="text-slate-700 hover:underline">
+          Ver historial
+        </Link>
+        <Link href={`/sesiones/nueva?tema=${topic.id}`} className="text-blue-700 hover:underline">
+          + Registrar sesión
+        </Link>
+      </div>
     </article>
   );
 }

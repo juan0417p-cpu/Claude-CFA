@@ -28,3 +28,17 @@ CREATE TABLE IF NOT EXISTS sessions (
   created_at    TEXT    NOT NULL DEFAULT (datetime('now')),
   CHECK (num_correct BETWEEN 0 AND num_questions)
 );
+
+-- Preguntas falladas de cada sesión. Si se borra la sesión, se borran sus preguntas.
+CREATE TABLE IF NOT EXISTS missed_questions (
+  id             INTEGER PRIMARY KEY,
+  session_id     INTEGER NOT NULL REFERENCES sessions(id) ON DELETE CASCADE,
+  question_text  TEXT    NOT NULL,   -- enunciado
+  my_answer      TEXT    NOT NULL,   -- lo que respondí
+  correct_answer TEXT    NOT NULL,   -- la respuesta correcta
+  note           TEXT,               -- mi nota (por qué fallé, qué repasar)
+  created_at     TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_sessions_topic ON sessions(topic_id, date);
+CREATE INDEX IF NOT EXISTS idx_missed_session ON missed_questions(session_id);
