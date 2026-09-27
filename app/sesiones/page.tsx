@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import DeleteSessionButton from "@/components/DeleteSessionButton";
+import ExplainButton from "@/components/ExplainButton";
 import { getSessions, getTopicsWithStats } from "@/lib/data";
 import { pctOf, statusFor } from "@/lib/status";
 
@@ -141,6 +142,7 @@ export default async function SessionsPage({ searchParams }: PageProps<"/sesione
                             {m.note && (
                               <p className="mt-1 whitespace-pre-wrap text-slate-600">📝 {m.note}</p>
                             )}
+                            <ExplainButton missedQuestionId={m.id} savedExplanation={m.explanation} />
                           </li>
                         ))}
                       </ol>

@@ -70,8 +70,9 @@ missed_questions (id, session_id → sessions ON DELETE CASCADE,
              created_at)                                   -- fase 2 (note = mi nota)
 missed_question_images (id, missed_question_id → missed_questions ON DELETE CASCADE,
              media_type, data BLOB, created_at)            -- fotos del enunciado
-ai_messages (id, missed_question_id NULL, kind, prompt, response, created_at)
-                                                            -- fase 4 (cache de respuestas IA)
+ai_explanations (missed_question_id PK → missed_questions, content, created_at)  -- fase 4
+chat_messages (id, role user|assistant, content, created_at)                    -- fase 4
+readings (id, topic_id NULL → topics, name, file_id UNIQUE, size_bytes, created_at) -- fase 4
 ```
 
 `subtopic_id` es opcional: permite registrar un mock/examen mixto a nivel de tema.
@@ -174,16 +175,26 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 - [ ] "Prioridad de estudio" = brecha a 70 % × peso del tema en el examen.
 - [ ] Ritmo: preguntas por semana vs. días restantes.
 
-### Fase 4 — Tutor con IA ⬜
-- [ ] `.env.local` con `ANTHROPIC_API_KEY` y `ANTHROPIC_MODEL`; `lib/ai.ts` como único punto de llamada.
-- [ ] **Explicar** una pregunta fallada (por qué mi respuesta es incorrecta y la correcta sí).
-      Enviar sus fotos como bloques `image` en base64 (`media_type` guardado en la tabla)
-      antes del texto; muchas preguntas solo tienen foto.
-- [ ] **Generar preguntas similares** (formato CFA: 3 opciones A/B/C) y poder responderlas
-      en la app; los resultados se registran como una sesión más.
-- [ ] **Plan de estudio**: enviar las métricas de la fase 3 y los días restantes; recibir
-      un plan semanal priorizado por temas débiles.
-- [ ] Guardar respuestas en `ai_messages` para no pagar dos veces la misma explicación.
+### Fase 4 — Tutor con IA 🟨
+- [x] `.env.local` con `ANTHROPIC_API_KEY` (y opcional `ANTHROPIC_MODEL`, por defecto
+      `claude-opus-5`); plantilla en `.env.example`. `lib/ai.ts` (con `import "server-only"`)
+      es el único punto de llamada. Verificado: la clave no aparece en `.next/static`.
+- [x] **Explícame** en cada pregunta fallada (`/api/tutor/explicar`, streaming): envía fotos
+      (`image` base64) + PDFs del tema + texto; se guarda en `ai_explanations` (regenerable).
+- [x] **Practicar** (`/tutor/practica`): 5 preguntas A/B/C sobre los 3 subtemas más débiles
+      (salida estructurada con Zod, `betaZodOutputFormat`); se responden en la app y se
+      guardan como sesiones por subtema + falladas con su explicación.
+- [x] **Chat** (`/tutor`, `/api/tutor/chat`, streaming): system = instrucciones fijas +
+      resumen de estadísticas (`statsSummary()`); historial en `chat_messages`; PDFs elegidos.
+- [x] **Lecturas** (`/tutor/lecturas`, `/api/lecturas`): PDFs a la Files API (`client.files`),
+      asignados a un tema; se borran también en Anthropic.
+- [ ] **Plan de estudio** semanal priorizado (con métricas y días restantes).
+
+Notas de la API: `client.beta.messages` con `fallbacks: "default"` + beta
+`server-side-fallback-2026-07-01` (solo Opus 5); revisar `stop_reason` (`refusal`,
+`max_tokens`); `cache_control` automático; streaming vía `ReadableStream` con la marca
+`ERROR_MARK` (`lib/tutor-shared.ts`) para errores. Pruebas sin clave real: servidor falso
++ `ANTHROPIC_BASE_URL`.
 
 ### Fase 5 — Pulido (opcional, solo si sobra tiempo) ⬜
 - [ ] Exportar/importar datos (CSV/JSON) y respaldo del archivo `cfa.db`.

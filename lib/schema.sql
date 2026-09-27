@@ -56,3 +56,32 @@ CREATE TABLE IF NOT EXISTS missed_question_images (
 );
 
 CREATE INDEX IF NOT EXISTS idx_images_missed ON missed_question_images(missed_question_id);
+
+-- ============ Fase 4: tutor con IA ============
+
+-- Explicación del tutor para cada pregunta fallada (se guarda para no pagar
+-- dos veces por la misma explicación).
+CREATE TABLE IF NOT EXISTS ai_explanations (
+  missed_question_id INTEGER PRIMARY KEY REFERENCES missed_questions(id) ON DELETE CASCADE,
+  content            TEXT NOT NULL,
+  created_at         TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Conversación con el tutor (una sola, se puede reiniciar).
+CREATE TABLE IF NOT EXISTS chat_messages (
+  id         INTEGER PRIMARY KEY,
+  role       TEXT NOT NULL CHECK (role IN ('user', 'assistant')),
+  content    TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- PDFs de lecturas. El archivo vive en la Files API de Anthropic (file_id);
+-- aquí solo guardamos sus datos.
+CREATE TABLE IF NOT EXISTS readings (
+  id         INTEGER PRIMARY KEY,
+  topic_id   INTEGER REFERENCES topics(id),  -- tema al que pertenece (opcional)
+  name       TEXT NOT NULL,
+  file_id    TEXT NOT NULL UNIQUE,
+  size_bytes INTEGER NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);

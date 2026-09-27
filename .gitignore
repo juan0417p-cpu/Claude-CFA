@@ -42,3 +42,6 @@ next-env.d.ts
 
 # base de datos local (tus datos; no se suben a git)
 /data/
+
+# plantilla de variables (sin secretos)
+!.env.example

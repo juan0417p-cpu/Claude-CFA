@@ -18,6 +18,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <Link href="/" className="text-slate-600 hover:text-slate-900">Dashboard</Link>
             <Link href="/sesiones" className="text-slate-600 hover:text-slate-900">Historial</Link>
             <Link href="/sesiones/nueva" className="text-slate-600 hover:text-slate-900">+ Sesión</Link>
+            <Link href="/tutor" className="text-slate-600 hover:text-slate-900">🤖 Tutor</Link>
           </nav>
         </header>
         {children}

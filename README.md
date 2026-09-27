@@ -15,6 +15,16 @@ npm run dev     # arranca la app
 ```
 Luego abre **http://localhost:3000** en el navegador. Para detenerla: `Ctrl + C` en la terminal.
 
+## Tutor con IA (clave de Anthropic)
+1. Crea una clave en https://console.anthropic.com/settings/keys (necesita créditos).
+2. En la carpeta del proyecto, copia la plantilla: `copy .env.example .env.local`
+   (Mac/Linux: `cp .env.example .env.local`).
+3. Abre `.env.local` y reemplaza `sk-ant-...` por tu clave.
+4. Reinicia la app (`Ctrl + C` y `npm run dev`).
+
+`.env.local` no se sube a git y la clave solo se usa en el servidor: nunca llega al navegador.
+Para gastar menos, agrega `ANTHROPIC_MODEL=claude-sonnet-5` en `.env.local`.
+
 ## Cómo actualizar cuando hay cambios nuevos
 Con la app apagada (`Ctrl + C`), en la carpeta del proyecto:
 ```bash
