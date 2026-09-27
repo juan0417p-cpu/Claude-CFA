@@ -4,7 +4,9 @@ App local (Next.js + SQLite) para seguir la preparación del CFA Nivel 1.
 La visión y el plan por fases están en [`CLAUDE.md`](CLAUDE.md).
 
 ## Requisitos
-- [Node.js](https://nodejs.org) 20 o superior.
+- [Node.js](https://nodejs.org) 22.13 o superior (versión LTS recomendada).
+  La base de datos usa el SQLite que viene con Node, así que no hay que instalar
+  Python ni herramientas de compilación.
 
 ## Cómo abrirla
 ```bash

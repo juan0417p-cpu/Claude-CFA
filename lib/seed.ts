@@ -5,7 +5,7 @@
 // porque usa INSERT OR IGNORE y los nombres son únicos.
 // Ojo: borrar un subtema de esta lista NO lo borra de la base de datos.
 
-import type Database from "better-sqlite3";
+import type { DatabaseSync } from "node:sqlite";
 
 type TopicSeed = {
   name: string;
@@ -182,7 +182,7 @@ export const TOPICS: TopicSeed[] = [
 
 // Inserta temas y subtemas que falten. Corre dentro de una transacción
 // para que sea rápido y "todo o nada".
-export function seed(db: Database.Database) {
+export function seed(db: DatabaseSync) {
   const insertTopic = db.prepare(
     `INSERT INTO topics (name, weight_min, weight_max, sort_order)
      VALUES (?, ?, ?, ?)
@@ -198,7 +198,8 @@ export function seed(db: Database.Database) {
      ON CONFLICT (topic_id, name) DO UPDATE SET sort_order = excluded.sort_order`
   );
 
-  const run = db.transaction(() => {
+  db.exec("BEGIN");
+  try {
     TOPICS.forEach((topic, i) => {
       insertTopic.run(topic.name, topic.weightMin, topic.weightMax, i + 1);
       const { id } = getTopicId.get(topic.name) as { id: number };
@@ -206,6 +207,9 @@ export function seed(db: Database.Database) {
         insertSubtopic.run(id, sub, j + 1);
       });
     });
-  });
-  run();
+    db.exec("COMMIT");
+  } catch (error) {
+    db.exec("ROLLBACK"); // si algo falla, no queda nada a medias
+    throw error;
+  }
 }

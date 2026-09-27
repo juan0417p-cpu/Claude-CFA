@@ -19,7 +19,7 @@ export type TopicWithStats = {
 
 // Devuelve los 10 temas, con sus subtemas y sus aciertos acumulados.
 export async function getTopicsWithStats(): Promise<TopicWithStats[]> {
-  // better-sqlite3 es síncrono: sin esto, Next.js ejecutaría la consulta
+  // node:sqlite es síncrono: sin esto, Next.js ejecutaría la consulta
   // una sola vez al compilar y la página mostraría datos viejos.
   await connection();
   const db = getDb();
@@ -35,7 +35,7 @@ export async function getTopicsWithStats(): Promise<TopicWithStats[]> {
        GROUP BY t.id
        ORDER BY t.sort_order`
     )
-    .all() as Omit<TopicWithStats, "pct" | "subtopics">[];
+    .all() as unknown as Omit<TopicWithStats, "pct" | "subtopics">[];
 
   const subtopicsStmt = db.prepare(
     `SELECT id, name FROM subtopics WHERE topic_id = ? ORDER BY sort_order`
@@ -44,7 +44,7 @@ export async function getTopicsWithStats(): Promise<TopicWithStats[]> {
   return topics.map((t) => ({
     ...t,
     pct: t.questions > 0 ? (100 * t.correct) / t.questions : null,
-    subtopics: subtopicsStmt.all(t.id) as Subtopic[],
+    subtopics: subtopicsStmt.all(t.id) as unknown as Subtopic[],
   }));
 }
 

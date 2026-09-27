@@ -32,7 +32,7 @@ cada fase debe dejar algo usable ese mismo día para no robarle tiempo al estudi
 | Pieza | Elección | Por qué |
 |---|---|---|
 | Framework | **Next.js (App Router) + TypeScript** | Front y back en un solo proyecto |
-| Base de datos | **SQLite** vía **`better-sqlite3`** | Un solo archivo local, sin servidor, síncrono y simple |
+| Base de datos | **SQLite** vía **`node:sqlite`** (incluido en Node ≥ 22.13) | Un solo archivo local, sin servidor, síncrono y **sin compilar nada** (`better-sqlite3` falló en Windows ARM64) |
 | Acceso a datos | SQL plano en `lib/db.ts` (sin ORM) | Menos magia, fácil de entender para quien empieza |
 | Mutaciones | **Server Actions** | Formularios sin escribir API REST a mano |
 | Estilos | **Tailwind CSS** | Viene con `create-next-app` |
@@ -50,6 +50,7 @@ cada fase debe dejar algo usable ese mismo día para no robarle tiempo al estudi
 - Nivel de programación del usuario: principiante/intermedio → preferir código
   explícito y comentado sobre abstracciones ingeniosas. Explicar cada paso.
 - Idioma de la UI: español. Nombres de temas/subtemas en inglés (como el currículo oficial).
+- No usar dependencias que se compilen (node-gyp): el computador del usuario es Windows ARM64.
 - Comandos: `npm run dev` (desarrollo), `npm run build` (verificar), `npm run lint`.
 
 ## Modelo de datos
@@ -128,7 +129,7 @@ Estado: ⬜ pendiente · 🟨 en curso · ✅ hecho
 
 ### Fase 1 — Lo mínimo útil (1 tarde) 🟨
 Objetivo: empezar a registrar sesiones **hoy mismo**.
-- [x] `create-next-app` con TypeScript + Tailwind; instalar `better-sqlite3`.
+- [x] `create-next-app` con TypeScript + Tailwind; SQLite con `node:sqlite` (sin dependencias nativas).
 - [x] `lib/db.ts`: abre `data/cfa.db`, aplica `schema.sql` (topics, subtopics, sessions), corre el seed.
 - [x] Página `/` (dashboard):
   - Cuenta regresiva: "Faltan N días" hasta 2026-11-17 (`components/Countdown.tsx`).
@@ -170,7 +171,7 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 
 ## Cómo trabajar en este repo (para Claude)
 - Next.js 16: leer `AGENTS.md` y la guía en `node_modules/next/dist/docs/` antes de usar APIs de Next.
-- Consultas con `better-sqlite3` deben llamar `await connection()` (de `next/server`) para
+- Consultas con `node:sqlite` deben llamar `await connection()` (de `next/server`) para
   no quedar congeladas en tiempo de compilación (ver `lib/data.ts`).
 - Una fase a la vez; no adelantar funciones de fases futuras.
 - Al terminar una tarea, marcar su checkbox aquí y actualizar el estado de la fase.
