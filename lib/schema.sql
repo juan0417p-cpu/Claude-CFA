@@ -42,3 +42,17 @@ CREATE TABLE IF NOT EXISTS missed_questions (
 
 CREATE INDEX IF NOT EXISTS idx_sessions_topic ON sessions(topic_id, date);
 CREATE INDEX IF NOT EXISTS idx_missed_session ON missed_questions(session_id);
+
+-- Fotos de cada pregunta fallada (captura o foto del enunciado).
+-- Se guardan dentro de la base de datos (BLOB), así el respaldo sigue siendo
+-- un solo archivo. Ya vienen comprimidas a JPEG ≤ 1568 px desde el navegador,
+-- que es el tamaño ideal para enviarlas a Claude en la fase 4.
+CREATE TABLE IF NOT EXISTS missed_question_images (
+  id                 INTEGER PRIMARY KEY,
+  missed_question_id INTEGER NOT NULL REFERENCES missed_questions(id) ON DELETE CASCADE,
+  media_type         TEXT    NOT NULL,   -- image/jpeg, image/png, image/webp o image/gif
+  data               BLOB    NOT NULL,
+  created_at         TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_images_missed ON missed_question_images(missed_question_id);

@@ -4,6 +4,11 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { getDb } from "@/lib/db";
+import {
+  ALLOWED_IMAGE_TYPES,
+  MAX_IMAGE_BYTES,
+  MAX_IMAGES_PER_QUESTION,
+} from "@/lib/image-limits";
 
 // Lo que la acción le devuelve al formulario cuando algo está mal.
 export type FormState = { errors: string[] };
@@ -47,6 +52,10 @@ export async function createSession(
     myAnswer: myAnswers[i] ?? "",
     correctAnswer: correctAnswers[i] ?? "",
     note: missedNotes[i] || null,
+    // Fotos de la pregunta i (el formulario las envía como "missedImages-i")
+    images: formData
+      .getAll(`missedImages-${i}`)
+      .filter((v): v is File => v instanceof File && v.size > 0),
   }));
 
   // 3. Validar
@@ -68,10 +77,19 @@ export async function createSession(
     errors.push("No puedes tener más aciertos que preguntas.");
 
   missed.forEach((q, i) => {
-    if (!q.questionText || !q.myAnswer || !q.correctAnswer)
-      errors.push(
-        `Pregunta fallada ${i + 1}: completa enunciado, tu respuesta y la correcta.`
-      );
+    const n = i + 1;
+    if (!q.questionText && q.images.length === 0)
+      errors.push(`Pregunta fallada ${n}: escribe el enunciado o agrega una foto.`);
+    if (!q.myAnswer || !q.correctAnswer)
+      errors.push(`Pregunta fallada ${n}: completa tu respuesta y la correcta.`);
+    if (q.images.length > MAX_IMAGES_PER_QUESTION)
+      errors.push(`Pregunta fallada ${n}: máximo ${MAX_IMAGES_PER_QUESTION} fotos.`);
+    for (const img of q.images) {
+      if (!ALLOWED_IMAGE_TYPES.includes(img.type))
+        errors.push(`Pregunta fallada ${n}: formato de foto no permitido (${img.type || "desconocido"}).`);
+      else if (img.size > MAX_IMAGE_BYTES)
+        errors.push(`Pregunta fallada ${n}: una foto pesa más de 5 MB.`);
+    }
   });
   const numWrong = numQuestions - numCorrect;
   if (numWrong >= 0 && missed.length > numWrong)
@@ -81,8 +99,16 @@ export async function createSession(
 
   if (errors.length > 0) return { errors };
 
-  // 4. Guardar la sesión y sus preguntas falladas en una sola transacción
-  //    (si algo falla, no se guarda nada a medias).
+  // 4. Leer los bytes de las fotos (esto es asíncrono, así que va antes de
+  //    abrir la transacción).
+  const imageBytes = await Promise.all(
+    missed.map((q) =>
+      Promise.all(q.images.map(async (img) => new Uint8Array(await img.arrayBuffer())))
+    )
+  );
+
+  // 5. Guardar la sesión, sus preguntas falladas y sus fotos en una sola
+  //    transacción (si algo falla, no se guarda nada a medias).
   db.exec("BEGIN");
   try {
     const result = db
@@ -97,9 +123,15 @@ export async function createSession(
       `INSERT INTO missed_questions (session_id, question_text, my_answer, correct_answer, note)
        VALUES (?, ?, ?, ?, ?)`
     );
-    for (const q of missed) {
-      insertMissed.run(sessionId, q.questionText, q.myAnswer, q.correctAnswer, q.note);
-    }
+    const insertImage = db.prepare(
+      `INSERT INTO missed_question_images (missed_question_id, media_type, data)
+       VALUES (?, ?, ?)`
+    );
+    missed.forEach((q, i) => {
+      const r = insertMissed.run(sessionId, q.questionText, q.myAnswer, q.correctAnswer, q.note);
+      const missedId = Number(r.lastInsertRowid);
+      q.images.forEach((img, j) => insertImage.run(missedId, img.type, imageBytes[i][j]));
+    });
     db.exec("COMMIT");
   } catch (error) {
     db.exec("ROLLBACK");
@@ -107,7 +139,7 @@ export async function createSession(
     return { errors: ["No se pudo guardar la sesión. Revisa la terminal."] };
   }
 
-  // 5. Actualizar el dashboard y llevarme al historial de ese tema
+  // 6. Actualizar el dashboard y llevarme al historial de ese tema
   revalidatePath("/");
   revalidatePath("/sesiones");
   redirect(`/sesiones?tema=${topicId}&guardada=1`);
@@ -116,7 +148,7 @@ export async function createSession(
 export async function deleteSession(formData: FormData) {
   const id = int(formData.get("sessionId"));
   if (Number.isNaN(id)) return;
-  // ON DELETE CASCADE borra también sus preguntas falladas
+  // ON DELETE CASCADE borra también sus preguntas falladas y sus fotos
   getDb().prepare("DELETE FROM sessions WHERE id = ?").run(id);
   revalidatePath("/");
   revalidatePath("/sesiones");

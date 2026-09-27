@@ -117,8 +117,22 @@ export default async function SessionsPage({ searchParams }: PageProps<"/sesione
                         {s.missed.map((m, i) => (
                           <li key={m.id} className="rounded-lg bg-slate-50 p-3">
                             <p className="whitespace-pre-wrap text-slate-800">
-                              <span className="font-semibold">{i + 1}.</span> {m.questionText}
+                              <span className="font-semibold">{i + 1}.</span>{" "}
+                              {m.questionText || <span className="text-slate-500">(enunciado en la foto)</span>}
                             </p>
+                            {m.imageIds.length > 0 && (
+                              <div className="mt-2 flex flex-wrap gap-2">
+                                {m.imageIds.map((imgId) => (
+                                  <a key={imgId} href={`/imagenes/${imgId}`} target="_blank"
+                                    rel="noreferrer" title="Abrir foto en tamaño completo">
+                                    {/* eslint-disable-next-line @next/next/no-img-element -- foto local servida por /imagenes */}
+                                    <img src={`/imagenes/${imgId}`} alt={`Foto de la pregunta ${i + 1}`}
+                                      loading="lazy"
+                                      className="h-28 w-auto max-w-[12rem] rounded-lg border border-slate-200 bg-white object-contain hover:opacity-90" />
+                                  </a>
+                                ))}
+                              </div>
+                            )}
                             <p className="mt-2">
                               <span className="text-red-700">Mi respuesta: {m.myAnswer}</span>
                               <span className="mx-2 text-slate-300">|</span>

@@ -64,11 +64,19 @@ sessions    (id, date, topic_id → topics, subtopic_id → subtopics NULL,
 missed_questions (id, session_id → sessions ON DELETE CASCADE,
              question_text, my_answer, correct_answer, note NULL,
              created_at)                                   -- fase 2 (note = mi nota)
+missed_question_images (id, missed_question_id → missed_questions ON DELETE CASCADE,
+             media_type, data BLOB, created_at)            -- fotos del enunciado
 ai_messages (id, missed_question_id NULL, kind, prompt, response, created_at)
                                                             -- fase 4 (cache de respuestas IA)
 ```
 
 `subtopic_id` es opcional: permite registrar un mock/examen mixto a nivel de tema.
+
+**Fotos de preguntas:** se comprimen en el navegador (`lib/compress-image.ts`) a JPEG con
+lado mayor ≤ 1568 px (tamaño óptimo para visión de Claude) y se guardan como BLOB en
+`cfa.db` (respaldo = un solo archivo). Máx. 5 fotos por pregunta y 5 MB por foto
+(`lib/image-limits.ts`). Se sirven en `/imagenes/<id>`. Una pregunta puede tener solo
+foto (entonces `question_text` queda vacío).
 
 ## Temas del CFA Nivel 1 (currículo 2026) — datos del seed
 
@@ -146,6 +154,8 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 - [x] En el formulario de sesión, agregar N preguntas falladas (enunciado, mi respuesta,
       correcta, mi nota). Validación: no más falladas que (preguntas − aciertos).
 - [x] Historial por tema: `/sesiones?tema=ID` con resumen, % por sesión y falladas desplegables.
+- [x] Fotos por pregunta fallada: botón (o cámara en celular) y pegar captura con Ctrl+V;
+      el enunciado pasa a ser opcional si hay foto. Miniaturas en el historial.
 - [ ] Página `/falladas`: listado filtrable por tema/subtema, con buscador de texto.
 - [ ] Página de detalle de cada tema: subtemas con su % y sus preguntas falladas.
 
@@ -160,6 +170,8 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 ### Fase 4 — Tutor con IA ⬜
 - [ ] `.env.local` con `ANTHROPIC_API_KEY` y `ANTHROPIC_MODEL`; `lib/ai.ts` como único punto de llamada.
 - [ ] **Explicar** una pregunta fallada (por qué mi respuesta es incorrecta y la correcta sí).
+      Enviar sus fotos como bloques `image` en base64 (`media_type` guardado en la tabla)
+      antes del texto; muchas preguntas solo tienen foto.
 - [ ] **Generar preguntas similares** (formato CFA: 3 opciones A/B/C) y poder responderlas
       en la app; los resultados se registran como una sesión más.
 - [ ] **Plan de estudio**: enviar las métricas de la fase 3 y los días restantes; recibir

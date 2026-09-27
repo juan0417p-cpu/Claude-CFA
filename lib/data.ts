@@ -51,6 +51,7 @@ export type MissedQuestion = {
   myAnswer: string;
   correctAnswer: string;
   note: string | null;
+  imageIds: number[]; // ids de sus fotos (se ven en /imagenes/<id>)
 };
 
 export type SessionRow = {
@@ -84,12 +85,18 @@ export async function getSessions(topicId?: number): Promise<SessionRow[]> {
 
   return sessions.map((s) => ({
     ...s,
-    missed: allRows<MissedQuestion>(
+    missed: allRows<Omit<MissedQuestion, "imageIds">>(
       `SELECT id, question_text AS questionText, my_answer AS myAnswer,
               correct_answer AS correctAnswer, note
        FROM missed_questions WHERE session_id = ? ORDER BY id`,
       s.id
-    ),
+    ).map((m) => ({
+      ...m,
+      imageIds: allRows<{ id: number }>(
+        `SELECT id FROM missed_question_images WHERE missed_question_id = ? ORDER BY id`,
+        m.id
+      ).map((img) => img.id),
+    })),
   }));
 }
 
