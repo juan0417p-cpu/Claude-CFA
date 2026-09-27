@@ -126,14 +126,14 @@ ai_messages (id, missed_question_id NULL, kind, prompt, response, created_at)
 
 Estado: ⬜ pendiente · 🟨 en curso · ✅ hecho
 
-### Fase 1 — Lo mínimo útil (1 tarde) ⬜
+### Fase 1 — Lo mínimo útil (1 tarde) 🟨
 Objetivo: empezar a registrar sesiones **hoy mismo**.
-- [ ] `create-next-app` con TypeScript + Tailwind; instalar `better-sqlite3`.
-- [ ] `lib/db.ts`: abre `data/cfa.db`, aplica `schema.sql` (topics, subtopics, sessions), corre el seed.
-- [ ] Página `/` (dashboard):
-  - Cuenta regresiva: "Faltan N días" hasta 2026-11-17.
-  - Tabla de los 10 temas: preguntas hechas, aciertos, % y semáforo
-    (verde ≥ 70 %, amarillo 60–69 %, rojo < 60 %, gris sin datos).
+- [x] `create-next-app` con TypeScript + Tailwind; instalar `better-sqlite3`.
+- [x] `lib/db.ts`: abre `data/cfa.db`, aplica `schema.sql` (topics, subtopics, sessions), corre el seed.
+- [x] Página `/` (dashboard):
+  - Cuenta regresiva: "Faltan N días" hasta 2026-11-17 (`components/Countdown.tsx`).
+  - 10 tarjetas de temas (`components/TopicCard.tsx`): peso, aciertos, % y semáforo
+    (verde ≥ 70 %, amarillo 60–69 %, rojo < 60 %, gris sin datos) + subtemas desplegables.
 - [ ] Página `/sesiones/nueva`: formulario (fecha, tema, subtema dependiente del tema,
       nº preguntas, aciertos) → Server Action que valida e inserta.
 - [ ] Página `/sesiones`: lista de sesiones con opción de borrar.
@@ -169,6 +169,9 @@ Objetivo: empezar a registrar sesiones **hoy mismo**.
 - [ ] Registro de mocks completos con desglose por tema.
 
 ## Cómo trabajar en este repo (para Claude)
+- Next.js 16: leer `AGENTS.md` y la guía en `node_modules/next/dist/docs/` antes de usar APIs de Next.
+- Consultas con `better-sqlite3` deben llamar `await connection()` (de `next/server`) para
+  no quedar congeladas en tiempo de compilación (ver `lib/data.ts`).
 - Una fase a la vez; no adelantar funciones de fases futuras.
 - Al terminar una tarea, marcar su checkbox aquí y actualizar el estado de la fase.
 - Antes de dar algo por terminado: `npm run build` y `npm run lint` sin errores.

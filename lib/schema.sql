@@ -1,0 +1,30 @@
+-- Esquema de la base de datos (SQLite).
+-- Se ejecuta cada vez que arranca la app; "IF NOT EXISTS" evita borrar datos.
+
+CREATE TABLE IF NOT EXISTS topics (
+  id          INTEGER PRIMARY KEY,
+  name        TEXT    NOT NULL UNIQUE,
+  weight_min  INTEGER NOT NULL,   -- peso mínimo en el examen (%)
+  weight_max  INTEGER NOT NULL,   -- peso máximo en el examen (%)
+  sort_order  INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS subtopics (
+  id          INTEGER PRIMARY KEY,
+  topic_id    INTEGER NOT NULL REFERENCES topics(id),
+  name        TEXT    NOT NULL,
+  sort_order  INTEGER NOT NULL,
+  UNIQUE (topic_id, name)
+);
+
+CREATE TABLE IF NOT EXISTS sessions (
+  id            INTEGER PRIMARY KEY,
+  date          TEXT    NOT NULL,                     -- formato AAAA-MM-DD
+  topic_id      INTEGER NOT NULL REFERENCES topics(id),
+  subtopic_id   INTEGER REFERENCES subtopics(id),     -- opcional (mocks mixtos)
+  num_questions INTEGER NOT NULL CHECK (num_questions > 0),
+  num_correct   INTEGER NOT NULL,
+  notes         TEXT,
+  created_at    TEXT    NOT NULL DEFAULT (datetime('now')),
+  CHECK (num_correct BETWEEN 0 AND num_questions)
+);
