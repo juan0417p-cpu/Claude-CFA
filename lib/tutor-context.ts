@@ -67,6 +67,7 @@ export async function statsSummary(): Promise<string> {
      JOIN sessions s ON s.id = mq.session_id
      JOIN topics t ON t.id = s.topic_id
      LEFT JOIN subtopics st ON st.id = s.subtopic_id
+     WHERE mq.lucky = 0
      ORDER BY s.date DESC, mq.id DESC LIMIT 8`
   );
 
@@ -129,13 +130,14 @@ export type MissedForTutor = {
   myAnswer: string;
   correctAnswer: string;
   note: string | null;
+  lucky: number; // 1 = la acerté al azar
 };
 
 export function getMissedForTutor(id: number): MissedForTutor | undefined {
   return allRows<MissedForTutor>(
     `SELECT mq.id, s.topic_id AS topicId, t.name AS topicName, st.name AS subtopicName,
             mq.question_text AS questionText, mq.my_answer AS myAnswer,
-            mq.correct_answer AS correctAnswer, mq.note
+            mq.correct_answer AS correctAnswer, mq.note, mq.lucky
      FROM missed_questions mq
      JOIN sessions s ON s.id = mq.session_id
      JOIN topics t ON t.id = s.topic_id

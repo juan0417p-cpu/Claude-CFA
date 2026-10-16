@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS missed_questions (
   my_answer      TEXT    NOT NULL,   -- lo que respondí
   correct_answer TEXT    NOT NULL,   -- la respuesta correcta
   note           TEXT,               -- mi nota (por qué fallé, qué repasar)
+  lucky          INTEGER NOT NULL DEFAULT 0, -- 1 = la acerté al azar (se guarda para repasarla)
   created_at     TEXT    NOT NULL DEFAULT (datetime('now'))
 );
 

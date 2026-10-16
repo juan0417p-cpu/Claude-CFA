@@ -20,8 +20,22 @@ function openDatabase() {
   db.exec("PRAGMA journal_mode = WAL"); // escrituras más seguras y rápidas
   db.exec("PRAGMA foreign_keys = ON"); // respeta las relaciones entre tablas
   db.exec(fs.readFileSync(SCHEMA_PATH, "utf-8"));
+  migrate(db);
   seed(db);
   return db;
+}
+
+// Cambios al esquema para bases de datos que ya existían antes del cambio.
+// "CREATE TABLE IF NOT EXISTS" no agrega columnas nuevas a una tabla existente,
+// así que aquí se agregan si faltan (los datos existentes no se tocan).
+function migrate(db: DatabaseSync) {
+  const hasColumn = (table: string, column: string) =>
+    (db.prepare(`PRAGMA table_info(${table})`).all() as { name: string }[]).some(
+      (c) => c.name === column
+    );
+  if (!hasColumn("missed_questions", "lucky")) {
+    db.exec("ALTER TABLE missed_questions ADD COLUMN lucky INTEGER NOT NULL DEFAULT 0");
+  }
 }
 
 // En desarrollo Next.js recarga los módulos a cada cambio; guardamos la

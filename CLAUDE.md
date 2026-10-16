@@ -67,7 +67,9 @@ sessions    (id, date, topic_id → topics, subtopic_id → subtopics NULL,
              -- CHECK (num_correct BETWEEN 0 AND num_questions)
 missed_questions (id, session_id → sessions ON DELETE CASCADE,
              question_text, my_answer, correct_answer, note NULL,
-             created_at)                                   -- fase 2 (note = mi nota)
+             lucky 0|1, created_at)   -- fase 2 (note = mi nota; lucky = acertada al azar,
+                                      -- se guarda solo para repasar; columna agregada por
+                                      -- migrate() en lib/db.ts a bases existentes)
 missed_question_images (id, missed_question_id → missed_questions ON DELETE CASCADE,
              media_type, data BLOB, created_at)            -- fotos del enunciado
 ai_explanations (missed_question_id PK → missed_questions, content, created_at)  -- fase 4
@@ -197,6 +199,15 @@ no usa ninguno de esos parámetros); revisar `stop_reason` (`refusal`,
 `max_tokens`); `cache_control` automático; streaming vía `ReadableStream` con la marca
 `ERROR_MARK` (`lib/tutor-shared.ts`) para errores. Pruebas sin clave real: servidor falso
 + `ANTHROPIC_BASE_URL`.
+
+### Extra — Importar mocks ✅
+- [x] `/importar` (`lib/mock-import.ts`, `app/importar/`): sube un JSON `cfa-mock-v1`
+      (preparado por Claude a partir del PDF de respuestas + Excel del usuario), vista previa
+      por tema y fecha elegible. Crea una sesión por subtema con nota `Mock: <nombre>`
+      (si ya existe, se rechaza), guarda falladas/sin responder y las acertadas al azar
+      (`lucky = 1`, en amarillo 🎲 en el historial; el tutor las explica distinto).
+- Los JSON de mocks contienen material con derechos (Kaplan): **no se suben a git**.
+- Mock importado: Kaplan Mock Exam 2 (88/180).
 
 ### Fase 5 — Pulido (opcional, solo si sobra tiempo) ⬜
 - [ ] Exportar/importar datos (CSV/JSON) y respaldo del archivo `cfa.db`.

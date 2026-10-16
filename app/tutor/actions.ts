@@ -69,7 +69,7 @@ export async function generateQuiz(): Promise<QuizResult> {
        FROM missed_questions mq
        JOIN sessions s ON s.id = mq.session_id
        JOIN subtopics st ON st.id = s.subtopic_id
-       WHERE s.subtopic_id IN (${weak.map(() => "?").join(",")}) AND mq.question_text != ''
+       WHERE s.subtopic_id IN (${weak.map(() => "?").join(",")}) AND mq.question_text != '' AND mq.lucky = 0
        ORDER BY mq.id DESC LIMIT 10`,
       ...weak.map((w) => w.id)
     );

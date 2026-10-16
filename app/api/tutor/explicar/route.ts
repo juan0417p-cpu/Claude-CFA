@@ -29,8 +29,13 @@ export async function POST(request: Request) {
     "",
     "Explícame:",
     "1. **El concepto** que evalúa la pregunta (intuición + fórmula/regla).",
-    "2. **Por qué mi respuesta es incorrecta** (qué confusión o trampa típica la explica).",
-    "3. **Por qué la correcta es correcta**, con el cálculo paso a paso si aplica.",
+    // Si la acerté al azar, no tiene sentido explicar "por qué fallé"
+    q.lucky
+      ? "2. **Por qué la correcta es correcta** (la acerté al azar: quiero entenderla de verdad), con el cálculo paso a paso si aplica."
+      : "2. **Por qué mi respuesta es incorrecta** (qué confusión o trampa típica la explica).",
+    q.lucky
+      ? "3. **Por qué cada una de las otras opciones es incorrecta.**"
+      : "3. **Por qué la correcta es correcta**, con el cálculo paso a paso si aplica.",
     "4. **Un truco para recordarlo** en el examen.",
     "Sé conciso: esto es para repasar rápido.",
   ].filter(Boolean).join("\n");

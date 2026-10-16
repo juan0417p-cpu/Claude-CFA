@@ -36,12 +36,18 @@ export default async function SessionsPage({ searchParams }: PageProps<"/sesione
     <main className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-bold">Historial de sesiones</h1>
+        <div className="flex gap-2">
+        <Link href="/importar"
+          className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium hover:bg-slate-50">
+          ⬆ Importar mock
+        </Link>
         <Link
           href={selected ? `/sesiones/nueva?tema=${selected.id}` : "/sesiones/nueva"}
           className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-700"
         >
           + Registrar sesión
         </Link>
+        </div>
       </div>
 
       {guardada && (
@@ -112,11 +118,21 @@ export default async function SessionsPage({ searchParams }: PageProps<"/sesione
                   {s.missed.length > 0 ? (
                     <details className="min-w-0 flex-1 text-sm">
                       <summary className="cursor-pointer select-none font-medium text-slate-700">
-                        {s.missed.length} {s.missed.length === 1 ? "pregunta fallada" : "preguntas falladas"}
+                        {(() => {
+                          const lucky = s.missed.filter((m) => m.lucky).length;
+                          const wrong = s.missed.length - lucky;
+                          return [
+                            wrong > 0 && `${wrong} ${wrong === 1 ? "pregunta fallada" : "preguntas falladas"}`,
+                            lucky > 0 && `🎲 ${lucky} ${lucky === 1 ? "acertada" : "acertadas"} al azar`,
+                          ].filter(Boolean).join(" · ");
+                        })()}
                       </summary>
                       <ol className="mt-3 space-y-3">
                         {s.missed.map((m, i) => (
-                          <li key={m.id} className="rounded-lg bg-slate-50 p-3">
+                          <li key={m.id} className={`rounded-lg p-3 ${m.lucky ? "bg-amber-50" : "bg-slate-50"}`}>
+                            {m.lucky && (
+                              <p className="mb-1 text-xs font-semibold text-amber-800">🎲 Acertada al azar: repasa el concepto</p>
+                            )}
                             <p className="whitespace-pre-wrap text-slate-800">
                               <span className="font-semibold">{i + 1}.</span>{" "}
                               {m.questionText || <span className="text-slate-500">(enunciado en la foto)</span>}
@@ -135,7 +151,7 @@ export default async function SessionsPage({ searchParams }: PageProps<"/sesione
                               </div>
                             )}
                             <p className="mt-2">
-                              <span className="text-red-700">Mi respuesta: {m.myAnswer}</span>
+                              <span className={m.lucky ? "text-amber-800" : "text-red-700"}>Mi respuesta: {m.myAnswer}</span>
                               <span className="mx-2 text-slate-300">|</span>
                               <span className="text-emerald-700">Correcta: {m.correctAnswer}</span>
                             </p>
