@@ -1,8 +1,8 @@
 # Preguntas falladas en el repaso: para ver al final
 
-Días 1 y 2 del plan (26 y 27 de octubre de 2026). Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
+Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 20 preguntas** (Equity: 10 · Ethics: 10)
+**Total: 26 preguntas** (Equity: 10 · Ethics: 10 · Fixed Income: 6)
 
 ---
 
@@ -222,4 +222,99 @@ Nombra las 4 partes de una IPS (Suitability, III(C)).
 **① Identificación** del cliente → **② Objetivos** (retorno y riesgo) → **③ Restricciones** (liquidez, horizonte, impuestos, legales y regulatorias, circunstancias únicas) → **④ Benchmarks**.
 🧠 ¿Quién es? → ¿Qué quiere? → ¿Qué lo limita? → ¿Cómo lo medimos?
 *(Tu respuesta: horizonte, restricciones, liquidez, aversión al riesgo. Te faltaron Identificación y Benchmarks.)*
+</details>
+
+---
+
+## 📉 Fixed Income: falladas del Mock 4 (repaso del 26-oct)
+
+### 21. *(Mock 4 #150)*
+Based on the following interest rates:
+
+| | |
+|---|---|
+| 1-year spot rate | 3.0% |
+| 1-year forward rate one year from now | 5.0% |
+| 2-year forward rate one year from now | 6.5% |
+
+The 3-year spot rate is closest to:
+- A) 5.0%.
+- B) 5.3%.
+- C) 9.3%.
+
+<details><summary>Ver respuesta</summary>
+
+**B.** (1 + S₃)³ = 1,03 × 1,065² → S₃ = (1,1682)^(1/3) − 1 = **5,32 %**.
+- Las tasas se encadenan como **piezas de un tren** 🚂: el 1y2y empieza donde termina el spot de 1 año. El 5 % (1y1y) **se pisa** con el 6,5 %: es un distractor.
+- **Anualiza** (raíz cúbica). Prueba de rango: el resultado tiene que quedar entre 3 % y 6,5 %, así que 9,3 % es imposible.
+*(Mock: C. En el repaso necesitaste ayuda con la anualización.)*
+</details>
+
+### 22. *(Mock 4 #153)*
+An analyst collects the following spot rates, stated as annual bond-equivalent yields: 6-month spot rate = 6%, 12-month spot rate = 6.5%, 18-month spot rate = 7%, 24-month spot rate = 7.5%. Given only this information, the price of a 2-year, semiannual-pay, 10% coupon bond with a face value of $1,000 is closest to:
+- A) $918.30.
+- B) $1,000.00.
+- C) $1,046.77.
+
+<details><summary>Ver respuesta</summary>
+
+**C.** Sin calcular: cupón 10 % > todas las spot rates → **prima** → precio > 1.000, así que solo queda la C.
+Calculándolo: tasas **÷ 2** (3 %, 3,25 %, 3,5 %, 3,75 %), cupón 50 → 48,54 + 46,90 + 45,10 + 906,23 = 1.046,77.
+*(Mock: A. En el repaso volvió a darte 918: usaste las tasas sin dividir por 2.)*
+</details>
+
+### 23. *(Mock 4 #100)*
+The quoted add-on rate for a 120-day certificate of deposit is 0.25%, assuming a 365-day year. Given an initial principal amount of EUR 100 million, the redemption amount is closest to:
+- A) 99.75 million.
+- B) 100.08 million.
+- C) 100.25 million.
+
+<details><summary>Ver respuesta</summary>
+
+**B.** FV = 100 × (1 + 120/365 × 0,0025) = 100,08 M. **Add-on suma** (CD) y **discount resta** (T-bill). La A usa lógica de discount, y la C aplica el 0,25 % anual completo a 120 días.
+*(Mock: A. En el repaso preguntaste cómo se hacía.)*
+</details>
+
+### 24. *(Mock 4 #134)*
+Recent economic data suggest an increasing likelihood that the economy will soon enter a recessionary phase. What is the most likely effect on the yields of lower-quality corporate bonds and on credit spreads of lower-quality versus higher-quality corporate bonds?
+- A) Both will increase.
+- B) Both will decrease.
+- C) One will increase and one will decrease.
+
+<details><summary>Ver respuesta</summary>
+
+**A.** Yield = tasa del gobierno + spread. En recesión, la tasa del gobierno baja **un poco**, pero el spread de los bonos de baja calidad sube **mucho**. El spread domina → **el yield sube**, y **el spread también**. *(Tu respuesta: C, en el mock y en el repaso.)*
+</details>
+
+### 25. *(Mock 4 #149)*
+Four non-convertible bonds have the indicated yield spreads to Treasury securities:
+
+| Bond | Maturity | Government spread | Zero-volatility spread | Option-adjusted spread |
+|---|---|---|---|---|
+| W | 2 years | 156 bp | 155 bp | 130 bp |
+| X | 3 years | 173 bp | 174 bp | 199 bp |
+| Y | 5 years | 188 bp | 189 bp | 164 bp |
+| Z | 10 years | 202 bp | 201 bp | 226 bp |
+
+Based on these spreads, it is most likely that:
+- A) Bond X is callable, and Bond Y is putable.
+- B) Bond W is callable, and Bond Z is putable.
+- C) Bond Z is callable, and the spot yield curve is inverted.
+
+<details><summary>Ver respuesta</summary>
+
+**B.** **C**allable → OAS más **C**hico que el Z-spread (W e Y). Putable → OAS más grande (X y Z). El G-spread ≈ el Z-spread indica una curva **plana**, no invertida.
+*(Tu respuesta: A en el repaso, la regla aplicada al revés. Mock: C.)*
+</details>
+
+### 26. *(Mock 4 #175)*
+In what way is approximate convexity different from effective convexity?
+- A) Effective convexity takes embedded options into account, while approximate convexity does not.
+- B) Effective convexity results in a more accurate estimate of an option-free bond's change in price than approximate convexity.
+- C) Approximate convexity can be used with an unequal increase and decrease in yield, while effective convexity can only be used with an equal increase or decrease in yield.
+
+<details><summary>Ver respuesta</summary>
+
+**A.** En un bono **sin opciones** (option-free) las dos dan **lo mismo**. La effective solo marca la diferencia cuando el bono **tiene opciones**. 🚨 Si una opción dice "option-free", pregúntate si la diferencia existe sin opciones.
+*(Tu respuesta: B en el repaso. Mock: C.)*
 </details>
