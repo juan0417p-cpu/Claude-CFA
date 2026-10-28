@@ -1,4 +1,4 @@
-# Traspaso CFA Nivel 1: estado del estudio (al 28-oct-2026)
+# Traspaso CFA Nivel 1: estado del estudio (al 27-oct-2026, hora de Colombia)
 
 Recuperado del historial de la sesión "App de monitoreo CFA Nivel 1" (session_011y4R44NJ9pXd617NMs94dJ).
 
@@ -72,7 +72,7 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 
 ## 2. Historial de estudio
 
-**Examen: 17-nov-2026. Meta: ≥ 70 %.**
+**Examen: 17-nov-2026. Meta: ≥ 70 %.** Fechas en hora de Colombia (aprox.).
 
 | Fecha | Qué se hizo | Resultado |
 |---|---|---|
@@ -88,10 +88,10 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | 23-oct | Examen de Fixed Income (20 preguntas) + variantes de las falladas | 16/20 = 80 % (en los mocks: 39 %) |
 | 25-oct | Mock 4 procesado | 89/180 = 49,4 % (Fixed Income subió a 57 %) |
 | 26-oct | Repaso de las falladas de Fixed Income en el Mock 4; análisis por peso | |
-| 26–27 oct | Equity, Bloque 1: órdenes, margen, mercados | 7/9 + refuerzos (en los mocks: 17 %) |
-| 27-oct | Ethics, patrones ①②③ | 23/28 = 82 % (en los mocks: 0/28) |
-| 28-oct | Equity, Bloque 2: índices | 8/9 + 2/4 en refuerzos (en los mocks: 10 %) |
-| 28-oct | Ethics, patrón ④ (memorización) | en curso |
+| 26-oct | Equity, Bloque 1: órdenes, margen, mercados | 7/9 + refuerzos (en los mocks: 17 %) |
+| 26–27 oct | Ethics, patrones ①②③ | 23/28 = 82 % (en los mocks: 0/28) |
+| 27-oct | Equity, Bloque 2: índices | 8/9 + 2/4 en refuerzos (en los mocks: 10 %) |
+| 27-oct | Ethics, patrón ④ (memorización) | en curso |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
@@ -99,8 +99,8 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 
 | Día | Fecha | Tema | Qué cubre |
 |---|---|---|---|
-| 1 | 26 oct | Equity B1 | Órdenes, margen, tipos de mercado ✅ (terminado el 27) |
-| 2 | 27 oct | Equity B2 | Índices ✅ (terminado el 28) |
+| 1 | 26 oct | Equity B1 | Órdenes, margen, tipos de mercado ✅ |
+| 2 | 27 oct | Equity B2 | Índices ✅ |
 | 3 | 28 oct | Equity B3 + B4 | EMH, acciones preferentes, votación |
 | 4 | 29 oct | Equity B5 | Porter, PESTLE, forecasting |
 | 5–6 | 30–31 oct | Equity B6 | DDM, Gordon, multi-etapa, P/E, EV |
