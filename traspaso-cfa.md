@@ -142,6 +142,7 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 2. Repaso rápido de órdenes (sell limit) y de "same number of shares".
 3. Siguientes prioridades por puntos perdidos: el resto de **Equity** (valuation, overview, market efficiency), **FSA** (analysis techniques, reporting quality, inventories) y **Fixed Income** (interest rate risk, valuation).
 4. Registrar en la app las sesiones de repaso.
+5. **Repaso final de falladas:** `falladas-repaso.md` (se va ampliando día a día).
 
 ## 5. Archivos de los mocks
 
