@@ -93,6 +93,32 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | 28-oct | Equity, Bloque 2: índices | 8/9 + 2/4 en refuerzos (en los mocks: 10 %) |
 | 28-oct | Ethics, patrón ④ (memorización) | en curso |
 
+## 2b. Plan de 22 días (armado el 26-oct)
+
+**Todos los días:** 30 min de Ethics (10–15 preguntas) + 10 min de repaso del día anterior.
+
+| Día | Fecha | Tema | Qué cubre |
+|---|---|---|---|
+| 1 | 26 oct | Equity B1 | Órdenes, margen, tipos de mercado ✅ (terminado el 27) |
+| 2 | 27 oct | Equity B2 | Índices ✅ (terminado el 28) |
+| 3 | 28 oct | Equity B3 + B4 | EMH, acciones preferentes, votación |
+| 4 | 29 oct | Equity B5 | Porter, PESTLE, forecasting |
+| 5–6 | 30–31 oct | Equity B6 | DDM, Gordon, multi-etapa, P/E, EV |
+| 7–8 | 1–2 nov | Alternatives | Comisiones, waterfall, J-curve, private capital, real estate, commodities |
+| 9–10 | 3–4 nov | Derivatives | Payoffs, put-call parity, cost of carry, forwards y futures |
+| 11 | 5 nov | Portfolio Mgmt | CAPM/SML, beta, tipos de inversionista, IPS |
+| 12 | 6 nov | Mock 5 | Completo y cronometrado |
+| 13 | 7 nov | Revisión del Mock 5 | Ajustar el plan |
+| 14–17 | 8–11 nov | FSA | Ratios, flujo de caja, EPS, inventarios, impuestos, leases, calidad |
+| 18 | 12 nov | Economics + Quant | Lo más repetido |
+| 19 | 13 nov | Mock 6 | O un examen de práctica |
+| 20 | 14 nov | Revisión del Mock 6 + Fixed Income | Mantenimiento |
+| 21 | 15 nov | Ethics completo + hoja de fórmulas | |
+| 22 | 16 nov | Repaso ligero y descanso | |
+| 🎯 | 17 nov | EXAMEN | |
+
+Si un día no se termina, lo pendiente no se arrastra: va a la revisión del mock siguiente.
+
 ## 3. Errores recurrentes que hay que vigilar
 
 - **Yield to call:** N = número de cupones **hasta el call** (no restar años). Si es semestral, I/Y × 2.
