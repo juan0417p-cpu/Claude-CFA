@@ -91,7 +91,7 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | 26-oct | Equity, Bloque 1: órdenes, margen, mercados | 7/9 + refuerzos (en los mocks: 17 %) |
 | 26–27 oct | Ethics, patrones ①②③ | 23/28 = 82 % (en los mocks: 0/28) |
 | 27-oct | Equity, Bloque 2: índices | 8/9 + 2/4 en refuerzos (en los mocks: 10 %) |
-| 27-oct | Ethics, patrón ④ (memorización) | en curso |
+| 27-oct | Ethics, patrón ④: GIPS, Code y sanciones, procedimientos | 7/9 en las del mock (falladas: M2 #84 y M3 #67) |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
@@ -128,6 +128,9 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 - **"Least accurate":** marca V/F en cada opción y lee cada una hasta el final.
 - **Índices:** "same number of shares" → **price-weighted**. "Same amount of money" → equal-weighted. El market cap sobrepondera lo que subió; el fundamental no.
 - **Ethics:**
+  - GIPS: "firm-wide" = toda la entidad que se presenta a los clientes (puede ser una subsidiaria sin la matriz), con todas sus oficinas.
+  - Misconduct I(D): lista de violaciones **posibles**, no de las que ya ocurrieron.
+  - "Obey all laws" está en los Standards (I(A)), no en el Code.
   - Revelar antes que prohibir. Desconfía de *must / requires / never*.
   - Compensación condicionada ("if…") → **consentimiento escrito** del empleador.
   - I(A): solo eres responsable de lo que haces "knowingly".
@@ -135,7 +138,7 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 
 ## 4. Pendiente
 
-1. **Ethics, patrón ④:** GIPS, sanciones y Code of Ethics (9 preguntas falladas).
+1. **Día 3 (28-oct): Equity B3 + B4** (EMH, acciones preferentes, votación) + 30 min de Ethics.
 2. Repaso rápido de órdenes (sell limit) y de "same number of shares".
 3. Siguientes prioridades por puntos perdidos: el resto de **Equity** (valuation, overview, market efficiency), **FSA** (analysis techniques, reporting quality, inventories) y **Fixed Income** (interest rate risk, valuation).
 4. Registrar en la app las sesiones de repaso.
