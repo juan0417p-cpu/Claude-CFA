@@ -5,6 +5,22 @@ Recuperado del historial de la sesión "App de monitoreo CFA Nivel 1" (session_0
 ## 1. Diagnóstico de los mocks Kaplan 2, 3 y 4
 
 Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
+### Por mock
+| Materia | Mock 2 | Mock 3 | Mock 4 | Total |
+|---|---|---|---|---|
+| Ethics | 15/30 (50 %) | 20/30 (67 %) | 18/30 (60 %) | 58,9 % |
+| Quantitative Methods | 10/13 (77 %) | 8/12 (67 %) | 5/13 (38 %) | 60,5 % |
+| Economics | 7/13 (54 %) | 5/13 (38 %) | 6/11 (55 %) | 48,6 % |
+| Financial Statement Analysis | 12/21 (57 %) | 9/21 (43 %) | 8/23 (35 %) | 44,6 % |
+| Corporate Issuers | 10/13 (77 %) | 8/13 (62 %) | 10/13 (77 %) | 71,8 % |
+| Equity Investments | 10/23 (43 %) | 5/23 (22 %) | 10/22 (45 %) | 36,8 % |
+| Fixed Income | 9/23 (39 %) | 9/23 (39 %) | 13/23 (57 %) | 44,9 % |
+| Derivatives | 4/11 (36 %) | 4/11 (36 %) | 3/11 (27 %) | 33,3 % |
+| Alternative Investments | 5/15 (33 %) | 10/16 (62 %) | 4/16 (25 %) | 40,4 % |
+| Portfolio Management | 6/18 (33 %) | 9/18 (50 %) | 12/18 (67 %) | 50,0 % |
+| **Total** | **88/180 (48,9 %)** | **87/180 (48,3 %)** | **89/180 (49,4 %)** | **48,9 %** |
+
+### Acumulado y prioridad
 "Pts. perdidos" = puntos que se pierden en el examen real según el peso de cada materia. Es el mejor criterio para priorizar.
 
 | Materia | Aciertos | Pts. perdidos |
