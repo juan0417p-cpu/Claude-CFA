@@ -70,14 +70,28 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | Econ | Fiscal Policy | 3/4 | 25 % |
 | FI | Floating-Rate Instruments | 3/4 | 25 % |
 
-## 2. Repaso ya hecho
+## 2. Historial de estudio
 
-| Fecha | Tema | Resultado | En los mocks |
-|---|---|---|---|
-| 23-oct | Fixed Income (repaso mixto) | 16/20 = 80 % | 39 % |
-| 27-oct | Equity, Bloque 1: órdenes, margen, mercados | 7/9 + refuerzos | 17 % |
-| 27-oct | Ethics, patrones ①②③ | 23/28 = 82 % | 0/28 |
-| 28-oct | Equity, Bloque 2: índices | 8/9 + 2/4 en refuerzos | 10 % |
+**Examen: 17-nov-2026. Meta: ≥ 70 %.**
+
+| Fecha | Qué se hizo | Resultado |
+|---|---|---|
+| ~16-oct | Mock 2 procesado e importado a la app | 88/180 = 48,9 % |
+| 16–18 oct | Fixed Income, Bloque 1: tasas spot, forward, Z-spread | ✅ 6/6 en el repaso |
+| 18-oct | Mock 3 procesado; evaluación de probabilidades de aprobar | 87/180 = 48,3 % |
+| 19–20 oct | Fixed Income, Bloque 2: duration, convexity, duration gap | 6/8 en las del mock |
+| 21-oct | Práctica de los Bloques 1 y 2 | 12/14 = 86 % |
+| 21-oct | Fixed Income, Bloque 3: prima/descuento, YTC, matrix pricing, FRN, money market | 7/7 en las del mock |
+| 21-oct | Fixed Income, Bloque 4: CoCos, repos/haircut, índices de bonos | 4/4 |
+| 21–22 oct | Fixed Income, Bloque 5: riesgo de crédito (ratings, frontera IG, spreads) | 4/4 |
+| 22–23 oct | Fixed Income, Bloque 6: titularización (ABS, MBS, CMO, prepago) | 3/4 |
+| 23-oct | Examen de Fixed Income (20 preguntas) + variantes de las falladas | 16/20 = 80 % (en los mocks: 39 %) |
+| 25-oct | Mock 4 procesado | 89/180 = 49,4 % (Fixed Income subió a 57 %) |
+| 26-oct | Repaso de las falladas de Fixed Income en el Mock 4; análisis por peso | |
+| 26–27 oct | Equity, Bloque 1: órdenes, margen, mercados | 7/9 + refuerzos (en los mocks: 17 %) |
+| 27-oct | Ethics, patrones ①②③ | 23/28 = 82 % (en los mocks: 0/28) |
+| 28-oct | Equity, Bloque 2: índices | 8/9 + 2/4 en refuerzos (en los mocks: 10 %) |
+| 28-oct | Ethics, patrón ④ (memorización) | en curso |
 
 ## 3. Errores recurrentes que hay que vigilar
 
