@@ -116,4 +116,4 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 
 ## 5. Archivos de los mocks
 
-Los `Kaplan-Mock-Exam-2/3/4.json` (formato `cfa-mock-v1`, se importan en `/importar` de la app) se generaron a partir de los PDFs de Kaplan y de la hoja Excel de respuestas. Estaban en una carpeta temporal del contenedor anterior. El del Mock 4 se envió como archivo en esa conversación, así que se puede descargar desde ahí. Si falta alguno, se regenera subiendo de nuevo el PDF y el Excel.
+Los `Kaplan-Mock-Exam-2/3/4.json` (formato `cfa-mock-v1`, se importan en `/importar` de la app) se generaron a partir de los PDFs de Kaplan y de la hoja Excel de respuestas. Estaban en una carpeta temporal del contenedor anterior. Los tres se enviaron como archivo en esa conversación, así que se pueden descargar desde ahí. No se suben a git porque contienen material con copyright de Kaplan. Si falta alguno, se regenera subiendo de nuevo el PDF y el Excel.
