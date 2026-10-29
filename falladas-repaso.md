@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 26 preguntas** (Equity: 10 · Ethics: 10 · Fixed Income: 6)
+**Total: 27 preguntas** (Equity: 11 · Ethics: 10 · Fixed Income: 6)
 
 ---
 
@@ -317,4 +317,16 @@ In what way is approximate convexity different from effective convexity?
 
 **A.** En un bono **sin opciones** (option-free) las dos dan **lo mismo**. La effective solo marca la diferencia cuando el bono **tiene opciones**. 🚨 Si una opción dice "option-free", pregúntate si la diferencia existe sin opciones.
 *(Tu respuesta: B en el repaso. Mock: C.)*
+</details>
+
+---
+
+## 🧠 Equity: eficiencia de mercado (Día 3)
+
+### 27. Insiders y la EMH *(práctica)*
+Un estudio muestra que los **gerentes** que compran acciones de su propia empresa obtienen retornos anormales. ¿Qué forma de la EMH **contradice**?
+
+<details><summary>Ver respuesta</summary>
+
+**La strong.** Los gerentes usan **información privada**, y la strong es la única forma que dice que ni la información privada da retornos anormales. Pregúntate **qué información usó** quien ganó: precios pasados → weak, información pública → semi-strong, información privada → strong. *(Tu respuesta: weak.)*
 </details>
