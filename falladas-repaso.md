@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 33 preguntas** (Equity: 17 · Ethics: 10 · Fixed Income: 6)
+**Total: 38 preguntas** (Equity: 22 · Ethics: 10 · Fixed Income: 6)
 
 ---
 
@@ -385,4 +385,51 @@ El analista proyecta que las ventas crecerán **20 % más rápido que el PIB nom
 <details><summary>Ver respuesta</summary>
 
 **Crecimiento relativo al PIB** (*growth relative to GDP growth*), que es un enfoque top-down. El otro top-down es **mercado y participación**. Elige siempre el nombre **más específico**. Además, el cálculo es multiplicativo: 5 % × 1,20 = 6 %. *(Tu respuesta: "top-down".)*
+</details>
+
+---
+
+## 💰 Equity: valoración (Bloque 6)
+
+### 34. Último día para comprar con dividendo *(práctica)*
+La holder-of-record date es el **jueves 10** (liquidación T+1). ¿Cuál es la ex-dividend date? ¿Hasta qué día tienes que comprar para recibir el dividendo?
+
+<details><summary>Ver respuesta</summary>
+
+Ex-dividend date: **miércoles 9** (un día hábil antes del record date). Para recibir el dividendo hay que comprar **a más tardar el martes 8**: **en** la ex-date ya no lo recibes. *(Respondiste "un día antes", pero te faltó el último día para comprar.)*
+</details>
+
+### 35. DDM multietapa *(práctica)*
+No paga dividendos en los años 1 y 2. En el año 3 paga **US$ 3**, y después crece **4 %** para siempre. r = **12 %**. ¿Cuánto vale hoy?
+
+<details><summary>Ver respuesta</summary>
+
+**US$ 29,89.** V₂ = 3 / (0,12 − 0,04) = 37,50 → V₀ = 37,50 / 1,12² = 29,89. El **r − g** va solo en el denominador de Gordon; para **descontar** siempre se usa **r**. *(Tu respuesta: 32,15, descontando al 8 %.)*
+</details>
+
+### 36. Enterprise value *(práctica)*
+Acciones a valor de mercado = US$ 800 M, deuda = US$ 300 M, caja = US$ 100 M. ¿Cuál es el EV?
+
+<details><summary>Ver respuesta</summary>
+
+**US$ 1.000 M** = 800 + 300 − 100. Lo que **heredas** (la deuda) suma y lo que te **llevas** (la caja) resta. *(Tu respuesta: 600, con los signos invertidos.)*
+</details>
+
+### 37. Gordon con D₀ *(Basada en tu M3 #144)*
+An analyst develops the following information to value a common stock: last year's earnings per share = $4.00, dividend payout ratio = 50%, return on equity = 12%, required return = 10%. Using the Gordon growth model, the value of the stock is closest to:
+- A) $50.00.
+- B) $53.00.
+- C) $106.00.
+
+<details><summary>Ver respuesta</summary>
+
+**B.** D₀ = 4 × 0,50 = 2,00 · g = 0,50 × 12 % = 6 % · **D₁ = 2,00 × 1,06 = 2,12** · V = 2,12 / 0,04 = 53,00. *"Last year"* = D₀ → **multiplica por (1 + g)**. *(Tu respuesta: A, usando D₀.)*
+</details>
+
+### 38. Preferente con crecimiento de utilidades *(práctica)*
+Una preferente paga **US$ 5** fijos al año y r = 8 %. ¿Cuánto vale? Si las utilidades de la empresa empiezan a crecer 10 %, ¿cambia su valor?
+
+<details><summary>Ver respuesta</summary>
+
+**US$ 62,50** = 5 / 0,08. **No cambia**: el dividendo de una preferente es **fijo**, así que el crecimiento de las utilidades es un distractor. *(Calculaste bien el valor, pero no respondiste la segunda parte.)*
 </details>
