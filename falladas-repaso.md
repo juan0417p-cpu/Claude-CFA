@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 27 preguntas** (Equity: 11 · Ethics: 10 · Fixed Income: 6)
+**Total: 28 preguntas** (Equity: 12 · Ethics: 10 · Fixed Income: 6)
 
 ---
 
@@ -329,4 +329,12 @@ Un estudio muestra que los **gerentes** que compran acciones de su propia empres
 <details><summary>Ver respuesta</summary>
 
 **La strong.** Los gerentes usan **información privada**, y la strong es la única forma que dice que ni la información privada da retornos anormales. Pregúntate **qué información usó** quien ganó: precios pasados → weak, información pública → semi-strong, información privada → strong. *(Tu respuesta: weak.)*
+</details>
+
+### 28. Efecto value *(práctica)*
+Las acciones con **P/B bajo** rinden más que las de P/B alto. ¿Cómo se llama esta anomalía? ¿Qué explicación **sin** ineficiencia podría tener?
+
+<details><summary>Ver respuesta</summary>
+
+**Efecto value.** Explicación sin ineficiencia: es una **compensación por riesgo**. Muchas empresas con P/B bajo tienen problemas (deudas, ventas cayendo), así que los inversionistas exigen más retorno. Ante cualquier anomalía, piensa primero en **riesgo** y después en **data mining**. *(Describiste qué pasa, pero te faltaron el nombre y la explicación.)*
 </details>

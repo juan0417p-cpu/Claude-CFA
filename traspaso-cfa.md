@@ -92,6 +92,7 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | 26–27 oct | Ethics, patrones ①②③ | 23/28 = 82 % (en los mocks: 0/28) |
 | 27-oct | Equity, Bloque 2: índices | 8/9 + 2/4 en refuerzos (en los mocks: 10 %) |
 | 27-oct | Ethics, patrón ④: GIPS, Code y sanciones, procedimientos | 7/9 en las del mock (falladas: M2 #84 y M3 #67) |
+| 28-oct → 1-nov | Equity, Bloque 3: EMH (eficiencia, 3 formas, anomalías, sesgos) | 5/5 en las basadas en el mock (en los mocks: 0/5) |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
@@ -116,6 +117,8 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | 21 | 15 nov | Ethics completo + hoja de fórmulas | |
 | 22 | 16 nov | Repaso ligero y descanso | |
 | 🎯 | 17 nov | EXAMEN | |
+
+**Ajuste del 1-nov (decidido por el estudiante):** terminar Equity (B4, B5, B6) el 1-nov y hacer un mock. La semana siguiente: repasar los errores de Fixed Income y Equity (`falladas-repaso.md`), y después seguir con Alternatives. El resto del plan se va ajustando según los resultados.
 
 Si un día no se termina, lo pendiente no se arrastra: va a la revisión del mock siguiente.
 
