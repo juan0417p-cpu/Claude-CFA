@@ -20,6 +20,16 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | Portfolio Management | 6/18 (33 %) | 9/18 (50 %) | 12/18 (67 %) | 50,0 % |
 | **Total** | **88/180 (48,9 %)** | **87/180 (48,3 %)** | **89/180 (49,4 %)** | **48,9 %** |
 
+### Mock A de CFA Institute, Sesión 1 (90 preguntas)
+| Materia | Mock A S1 | Kaplan (3 mocks) |
+|---|---|---|
+| Ethics | 19/27 (70 %) ✅ | 58,9 % |
+| FSA | 14/22 (64 %) | 44,6 % |
+| Economics | 8/14 (57 %) | 48,6 % |
+| Quantitative Methods | 7/14 (50 %) | 60,5 % |
+| Corporate Issuers | 5/13 (38 %) 🟥 | 71,8 % |
+| **Total sesión 1** | **53/90 (59 %)** | Sesión 1 de Kaplan: M2 60 %, M4 52 % |
+
 ### Acumulado y prioridad
 "Pts. perdidos" = puntos que se pierden en el examen real según el peso de cada materia. Es el mejor criterio para priorizar.
 
@@ -96,6 +106,7 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | 1-nov | Equity, Bloque 4: preferentes, votación, depository receipts | 5/5 en las basadas en el mock (en los mocks: 1/6) |
 | 1-nov | Equity, Bloque 5: industria (Porter, PESTLE, ciclo de vida) y proyecciones | 6/6 en las basadas en el mock (en los mocks: 0/7) |
 | 1-nov | Equity, Bloque 6: valoración (fechas de dividendo, DDM, múltiplos, EV) | 6/7 en las basadas en el mock. **Equity terminado.** |
+| ~2-nov | 🧪 **Mock A de CFA Institute, Sesión 1** (Ethics, Quant, Econ, FSA, Corporate Issuers) | **53/90 = 59 %**. Falladas en `falladas-mock-a.md` |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

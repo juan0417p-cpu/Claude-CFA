@@ -1,0 +1,272 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Repaso Mock A Sesión 1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: una columna de estudio; resumen por tema que también filtra, barra fija de controles y fichas separadas por filetes. */
+:root {
+  --bg: #eef2f6; --surface: #ffffff; --fg: #14202e; --muted: #546375; --line: #cdd6e0;
+  --accent: #1f4fd8; --on-accent: #ffffff; --track: #dbe2ea;
+  --bad: #b3261e; --bad-bg: #fbeceb; --good: #12703f; --good-bg: #e7f5ed;
+  --tag: #14202e; --on-tag: #ffffff;
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --mono: "JetBrains Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #10171f; --surface: #18222d; --fg: #e6edf4; --muted: #9aa9b9; --line: #2e3b49;
+  --accent: #8aa9ff; --on-accent: #0e1a33; --track: #2a3643;
+  --bad: #ff9c94; --bad-bg: #3a1f1f; --good: #7ad8a4; --good-bg: #17332a;
+  --tag: #e6edf4; --on-tag: #10171f; color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --bg: #10171f; --surface: #18222d; --fg: #e6edf4; --muted: #9aa9b9; --line: #2e3b49;
+  --accent: #8aa9ff; --on-accent: #0e1a33; --track: #2a3643;
+  --bad: #ff9c94; --bad-bg: #3a1f1f; --good: #7ad8a4; --good-bg: #17332a;
+  --tag: #e6edf4; --on-tag: #10171f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 17px/1.5 var(--body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { padding-block: 32px 20px; display: grid; gap: 8px; }
+.eyebrow { font: 500 12px/1.4 var(--mono); letter-spacing: .04em; color: var(--muted); }
+h1 { font: 800 clamp(28px, 7vw, 42px)/1.05 var(--display); font-stretch: 112%; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 62ch; }
+.topics { display: grid; gap: 2px; padding-block: 4px 16px; }
+.topic-btn { display: grid; grid-template-columns: minmax(0, 1fr) 62px 44px; gap: 10px; align-items: center; width: 100%; padding: 9px 10px; border: 1px solid transparent; border-radius: 6px; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.topic-btn:hover { background: var(--surface); }
+.topic-btn[aria-pressed="true"] { background: var(--surface); border-color: var(--accent); }
+.topic-btn .name { font-weight: 600; min-width: 0; }
+.topic-btn .name small { display: block; font-weight: 400; font-size: 14px; color: var(--muted); }
+.topic-btn .num { font: 500 13px var(--mono); font-variant-numeric: tabular-nums; text-align: right; }
+.topic-btn .bar { grid-column: 1 / -1; height: 5px; background: var(--track); border-radius: 3px; overflow: hidden; }
+.topic-btn .bar i { display: block; height: 100%; background: var(--accent); }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-block: 1px solid var(--line); }
+.controls .wrap { padding-block: 10px; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.toggles { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.toggles label { display: inline-flex; gap: 7px; align-items: center; cursor: pointer; font-size: 15px; }
+.toggles input { width: 17px; height: 17px; accent-color: var(--accent); margin: 0; }
+.count { font: 500 13px var(--mono); font-variant-numeric: tabular-nums; color: var(--muted); }
+main { padding-block: 8px 48px; }
+h2 { font: 600 19px/1.2 var(--display); font-stretch: 112%; margin: 28px 0 0; padding-bottom: 8px; border-bottom: 2px solid var(--fg); }
+.q { display: grid; gap: 12px; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.q-head { display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+.tag { background: var(--tag); color: var(--on-tag); font: 500 13px var(--mono); padding: 2px 8px; border-radius: 2px; }
+.mark { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; color: var(--muted); cursor: pointer; }
+.mark input { width: 16px; height: 16px; accent-color: var(--accent); margin: 0; }
+.case { margin: 0; font-weight: 600; font-size: 18px; line-height: 1.4; }
+.reveal { justify-self: start; padding: 7px 14px; border: 1px solid var(--accent); border-radius: 4px; background: none; color: var(--accent); font: 600 15px var(--body); cursor: pointer; }
+.reveal:hover { background: var(--accent); color: var(--on-accent); }
+.answer { display: grid; gap: 12px; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.opt { padding: 9px 12px; border-radius: 4px; min-width: 0; }
+.opt b { display: block; font: 500 12px var(--mono); margin-bottom: 2px; }
+.opt.bad { background: var(--bad-bg); } .opt.bad b { color: var(--bad); }
+.opt.good { background: var(--good-bg); } .opt.good b { color: var(--good); }
+dl { margin: 0; display: grid; gap: 8px; }
+dl > div { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 10px; }
+dt { font: 500 12px/1.9 var(--mono); color: var(--muted); }
+dd { margin: 0; min-width: 0; }
+.calc { font: 500 14px/1.6 var(--mono); overflow-wrap: anywhere; }
+.flag { font-size: 15px; color: var(--muted); border-left: 3px solid var(--line); padding-left: 10px; }
+.empty { padding-block: 32px; color: var(--muted); }
+footer { padding-block: 0 40px; color: var(--muted); font-size: 15px; }
+footer p { margin: 0; max-width: 62ch; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { .pair { grid-template-columns: minmax(0, 1fr); } dl > div { grid-template-columns: minmax(0, 1fr); gap: 0; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">CFA Nivel I · 2026 · Mock Exam A · Sesión 1</div>
+    <h1>Tus 37 preguntas falladas</h1>
+    <p class="lede">Sacaste 53 de 90 (59 %). Los temas van del más débil al más fuerte; toca uno para estudiar solo ese.</p>
+  </header>
+  <section class="topics" id="topics" aria-label="Filtrar por tema"></section>
+</div>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="toggles">
+      <label><input type="checkbox" id="selftest"> Autoevaluarme (ocultar respuestas)</label>
+      <label><input type="checkbox" id="pending"> Solo pendientes</label>
+    </div>
+    <div class="count" id="count" aria-live="polite"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <main id="list"></main>
+  <footer>
+    <p>Resumí cada pregunta con mis palabras y solo incluí tu respuesta y la correcta. El enunciado y las opciones completas siguen en la revisión de la plataforma. La clasificación por tema es mía, no del CFA Institute. "Cuidado" y "Regla" son notas mías de estudio.</p>
+  </footer>
+</div>
+
+<script>
+const TOPICS = [
+  { id: "emisores", name: "Emisores corporativos", ok: 5, total: 13 },
+  { id: "quant", name: "Métodos cuantitativos", ok: 7, total: 14 },
+  { id: "econ", name: "Economía", ok: 8, total: 14 },
+  { id: "fsa", name: "Análisis financiero", ok: 14, total: 22 },
+  { id: "etica", name: "Ética y GIPS", ok: 19, total: 27 }
+];
+
+const Q = [
+  // Ética y GIPS
+  { n: 4, t: "etica", c: "Un analista avisa a sus clientes que deja la firma y, al hacerlo, la critica. ¿Qué Estándar viola?", mine: "Solo preservación de la confidencialidad", right: "Solo lealtad al empleador", why: "Puede avisar que se va, pero no desacreditar a la firma. No reveló información de ningún cliente.", rule: "Estándar IV(A): mientras sigues empleado, no perjudicas al empleador.", watch: "Hablar con clientes no implica confidencialidad. Esta solo aplica si se revela información de ellos.", flag: "Posible errata: la explicación de la respuesta correcta dice al final que se violó la confidencialidad, lo que contradice la propia respuesta." },
+  { n: 5, t: "etica", c: "Una gestora publica tres afirmaciones sobre GIPS. ¿Cuál es compatible con los estándares?", mine: "Todos sus portafolios domésticos cumplen GIPS", right: "Sus consultores de inversión respaldan GIPS", why: "Los consultores pueden respaldar GIPS. El cumplimiento nunca es parcial por producto o composite, y GIPS tampoco elimina la debida diligencia del inversionista.", rule: "GIPS se cumple a nivel de toda la firma, o no se cumple.", watch: "Una afirmación limitada a una parte de la firma suena prudente, pero es justo lo que no se permite." },
+  { n: 6, t: "etica", c: "Un asesor comenta a un amigo las donaciones de una clienta potencial y prepara su IPS con información parcial que ella le dio. ¿Qué Estándar viola?", mine: "Diligencia y base razonable", right: "Preservación de la confidencialidad", why: "Reveló información de una clienta potencial. Si un cliente retiene datos, la idoneidad se evalúa con lo que entregó, así que el IPS no es la falta.", rule: "Estándar III(E): protege a clientes actuales, potenciales y anteriores.", watch: "El detalle del IPS distrae. La falta está en la conversación con el amigo." },
+  { n: 9, t: "etica", c: "¿Qué afirmación describe mejor la relación entre lo legal y lo ético?", mine: "Todo lo ético es legal", right: "Algunas actividades legales pueden no ser éticas", why: "Son conjuntos que se traslapan sin coincidir. Una conducta puede ser solo legal, solo ética, ambas o ninguna.", rule: "Piensa en dos círculos que se cruzan.", watch: "Desconfía de los absolutos como \"todo\" en este tipo de pregunta." },
+  { n: 12, t: "etica", c: "¿Qué conviene recomendar sobre la redacción de un código de ética?", mine: "Integrarlo a los procedimientos de cumplimiento", right: "Usar lenguaje simple, sin procedimientos detallados", why: "Separar el código de los procedimientos evita un lenguaje legal que lo vuelve incomprensible.", rule: "Código: principios simples. Procedimientos: detalle operativo, en otro documento.", watch: "Integrarlo todo suena más robusto, pero el material lo trata como un defecto." },
+  { n: 17, t: "etica", c: "Un analista oye información no pública sobre cambios de personal en un banco. ¿Cuándo puede actuar con ella?", mine: "Nunca", right: "Si no afecta la percepción de los inversionistas", why: "Solo es información material si cambiaría la decisión de un inversionista razonable o el precio de la acción.", rule: "Estándar II(A): la prohibición exige dos condiciones, material y no pública.", watch: "No pública no basta. Comprueba siempre también si es material." },
+  { n: 21, t: "etica", c: "¿Qué procedimientos protegen la independencia: lista restringida si la firma no quiere publicar una opinión adversa, y prohibir que el emisor pague el transporte aéreo?", mine: "Solo prohibir el transporte pagado", right: "Ambos procedimientos", why: "Los dos están entre las prácticas recomendadas por el Estándar I(B).", rule: "Si la firma no publicará una opinión adversa, el emisor va a la lista restringida.", watch: "La lista restringida puede parecer censura, pero es el procedimiento recomendado." },
+  { n: 27, t: "etica", c: "Una CFA asesora a una amiga en su tiempo libre a cambio de una donación a su causa favorita, y solo avisa a su firma por email. ¿Hay violación?", mine: "No", right: "Sí, compensación adicional", why: "La donación cuenta como compensación y el servicio compite con su firma. Necesitaba permiso escrito previo.", rule: "Estándar IV(B): permiso escrito antes de aceptar, en cualquier forma de pago.", watch: "\"Sin efectivo\" y \"ya avisé\" no sustituyen el permiso previo." },
+
+  // Análisis financiero
+  { n: 28, t: "fsa", c: "Una empresa cobra hoy una suscripción de una publicación que entregará el próximo año. ¿Qué aumenta este año?", mine: "Pasivos e ingresos", right: "Activos y pasivos", why: "Entra efectivo (activo) y nace un ingreso diferido (pasivo). Aún no se reconoce ingreso.", rule: "El ingreso se reconoce al entregar, no al cobrar.", watch: "Identificaste el pasivo, pero el ingreso del P&L llega hasta la entrega." },
+  { n: 30, t: "fsa", c: "¿Qué modelos permite IFRS para medir intangibles después del reconocimiento?", mine: "Costo o valor razonable", right: "Costo o revaluación", why: "IFRS permite ambos. US GAAP solo permite el modelo de costo.", rule: "Intangibles y PP&E: costo o revaluación.", watch: "\"Costo o valor razonable\" corresponde a propiedades de inversión." },
+  { n: 44, t: "fsa", c: "¿Qué cambios contables se aplican retrospectivamente?", mine: "Cambios de política y de estimación", right: "Solo cambios de política", why: "Los cambios de estimación se aplican hacia adelante.", rule: "Política: retrospectivo. Estimación: prospectivo.", watch: "Una estimación nueva refleja información nueva, por eso no reescribe el pasado." },
+  { n: 45, t: "fsa", c: "¿Qué afirmación sobre la valuación de inventarios es correcta?", mine: "La definición de IFRS incluye un margen normal", right: "Los productos agrícolas pueden medirse a valor neto de realización en ambas normas", why: "El valor neto de realización es el precio de venta menos los costos de terminación y de venta.", rule: "VNR = precio de venta estimado − costos de terminación − costos de venta.", watch: "El margen normal aparece en el piso del valor de mercado de US GAAP, no en el VNR de IFRS." },
+  { n: 47, t: "fsa", c: "Una empresa baja sus resultados actuales, lo que podría elevar los futuros. ¿Cómo se clasifica?", mine: "Contabilidad agresiva", right: "Contabilidad conservadora", why: "La agresiva hace lo contrario: sube los resultados de hoy a costa de los futuros.", rule: "Agresiva: mejor hoy, peor después. Conservadora: peor hoy, mejor después.", watch: "Que se use para manejar resultados no la vuelve agresiva. Mira la dirección en el tiempo." },
+  { n: 78, t: "fsa", c: "¿Cómo se tratan los activos que se distribuirán en un spin-off hasta que salen?", mine: "Mantenidos para la venta, sin depreciar", right: "Activos en uso, con depreciación", why: "No se disponen mediante una venta, así que no entran en esa categoría y siguen depreciándose.", rule: "Antes de clasificar, pregunta cómo saldrá el activo: venta, distribución o abandono.", watch: "\"Va a salir del balance\" no equivale a \"mantenido para la venta\"." },
+  { n: 84, t: "fsa", c: "Con precios al alza e inventario constante, ¿qué reporta el costo promedio frente a FIFO?", mine: "Menor rotación de inventario", right: "Ciclo de conversión de efectivo más corto", why: "Costo promedio da mayor costo de ventas y menor inventario. Sube la rotación, bajan los días de inventario y se acorta el ciclo.", rule: "Rotación = costo de ventas ÷ inventario promedio.", calc: "CCC = DOH + DSO − días de cuentas por pagar", watch: "Tomaste la dirección contraria. Traza la cadena completa: costo de ventas, rotación, DOH, CCC." },
+  { n: 88, t: "fsa", c: "Una máquina vale 50 en libros. VP de flujos: 46; valor razonable: 48; costos de venta: 3. ¿Cuál es la pérdida por deterioro (en € miles)?", mine: "5", right: "4", why: "El recuperable es el mayor entre valor razonable neto (45) y valor en uso (46).", rule: "IAS 36: recuperable = máx(valor razonable − costos de venta; valor en uso).", calc: "50 − máx(48 − 3; 46) = 50 − 46 = 4", watch: "Elegir 5 significa usar el menor de los dos. Siempre es el mayor." },
+
+  // Emisores
+  { n: 37, t: "emisores", c: "¿Cuál es un proyecto de negocio en marcha?", mine: "Investigar productos nuevos", right: "Modernizar instalaciones para bajar costos", why: "Modernizar mantiene la operación actual. Los productos nuevos abren una línea de negocio.", rule: "Pregunta si el proyecto sostiene lo que ya existe o crea algo nuevo.", watch: "La inversión en investigación no siempre pertenece a la operación actual." },
+  { n: 56, t: "emisores", c: "En un proyecto con flujos dados, ¿a qué tasa de descuento es positivo el VPN?", mine: "15 %", right: "21 %", why: "Según los valores calculados, el VPN solo es positivo al 21 %.", calc: "15 %: −100 | 18 %: −41,6 | 21 %: +14,7", rule: "Calcula el VPN en cada tasa antes de asumir su dirección.", watch: "Aquí el VPN sube con la tasa. Asumir que una tasa baja siempre lo mejora lleva al 15 %." },
+  { n: 64, t: "emisores", c: "¿Quién se encarga de implementar la estrategia de la empresa?", mine: "La junta directiva", right: "La gerencia", why: "La junta la aprueba y supervisa. La gerencia la ejecuta.", rule: "Junta: dirige y vigila. Gerencia: ejecuta.", watch: "Aprobar e implementar son funciones distintas." },
+  { n: 65, t: "emisores", c: "¿Qué forma jurídica da responsabilidad limitada a algunos dueños y no paga impuesto a nivel de la entidad?", mine: "Corporación", right: "Sociedad limitada", why: "Los socios limitados solo arriesgan su aporte y las utilidades tributan en cabeza de los socios.", rule: "\"Algunos\" dueños limitados apunta a sociedad limitada: el socio general responde sin límite.", watch: "La corporación limita la responsabilidad, pero normalmente tributa como entidad." },
+  { n: 71, t: "emisores", c: "¿Qué origina un conflicto entre accionistas y gerencia?", mine: "Elegir proyectos acordes con el riesgo de los accionistas", right: "Que los accionistas no influyan en la remuneración de la gerencia", why: "Si el riesgo elegido coincide con el de los accionistas, no hay conflicto. Sin influencia sobre la remuneración, los incentivos se desalinean.", rule: "Busca el desalineamiento de incentivos.", watch: "Una opción que describe intereses alineados no puede ser el origen del conflicto." },
+  { n: 81, t: "emisores", c: "¿Cuál es un supuesto del marco de Modigliani-Miller?", mine: "Expectativas heterogéneas sobre las utilidades", right: "Los inversionistas prestan y se endeudan a la tasa libre de riesgo", why: "Ese supuesto permite el apalancamiento casero. MM asume expectativas homogéneas y mercados perfectos.", rule: "MM: sin impuestos, sin costos de transacción ni de quiebra, información simétrica y expectativas homogéneas.", watch: "Lee cada palabra: homogéneas frente a heterogéneas decide la opción." },
+  { n: 83, t: "emisores", c: "¿Qué canal es más común en B2B cuando los clientes son pocos y fáciles de alcanzar?", mine: "Omnicanal", right: "Venta directa", why: "Con pocos clientes accesibles basta llegar a ellos sin intermediarios. Omnicanal combina canales físicos y digitales.", rule: "Pocos clientes y accesibles: venta directa.", watch: "Omnicanal suena moderno, pero el caso no pide combinar canales." },
+  { n: 87, t: "emisores", c: "¿Qué es más probable que sea un \"drag\" sobre la liquidez?", mine: "Menos líneas de crédito", right: "Cuentas por cobrar sin cobrar", why: "Un drag retrasa los cobros. Las líneas de crédito reducidas son un pull.", rule: "Drag: el dinero entra tarde. Pull: el dinero sale antes o se reduce el crédito.", watch: "Ambos dañan la liquidez, así que el criterio es por dónde actúan: cobros o pagos." },
+
+  // Cuantitativos
+  { n: 41, t: "quant", c: "Con n = 10 y Σd² = 118, ¿cuál es la correlación de Spearman?", mine: "0,93", right: "0,28", why: "Se aplica la fórmula de rangos.", calc: "1 − 6(118) / [10(99)] = 1 − 708/990 = 0,285", rule: "rₛ = 1 − 6Σd² / [n(n² − 1)]", watch: "El denominador es n(n² − 1), que aquí da 990. Revisa también que restas de 1." },
+  { n: 43, t: "quant", c: "¿Por qué la lognormal sirve para modelar precios de activos?", mine: "Tiene sesgo negativo", right: "Tiene un límite por la izquierda", why: "No baja de 0, igual que un precio, y tiene sesgo positivo.", rule: "Lognormal: mínimo en 0, cola larga a la derecha.", watch: "Cola derecha larga significa sesgo positivo." },
+  { n: 53, t: "quant", c: "¿Qué afirmación sobre los intervalos de predicción de una regresión es correcta?", mine: "Menor variación de X los estrecha", right: "Una muestra mayor reduce el error del pronóstico", why: "Menos variación de X aumenta el error, no lo reduce.", calc: "s_f² = s_e² [1 + 1/n + (X_f − X̄)² / ((n − 1)s_x²)]", rule: "Se estrechan con mayor n, mayor variación de X y X_f cerca de la media.", watch: "s_x² está en el denominador: si baja, el error sube." },
+  { n: 55, t: "quant", c: "¿Cómo se llama el muestreo que toma cada k-ésimo elemento de la población?", mine: "Por conglomerados", right: "Sistemático", why: "No requiere dividir la población en grupos.", rule: "Sistemático: cada k. Conglomerados: grupos enteros. Estratificado: muestra dentro de cada estrato.", watch: "Si el caso no forma grupos, descarta conglomerados y estratificado." },
+  { n: 69, t: "quant", c: "Dada una distribución de probabilidad del EPS, ¿cuál es su desviación estándar?", mine: "$4,0", right: "$2,4", why: "La media ponderada es 29,2 y la varianza es 5,76.", calc: "σ = √5,76 = 2,4", rule: "σ² = Σ pᵢ (xᵢ − μ)²", watch: "Pondera por probabilidad y saca la raíz al final." },
+  { n: 76, t: "quant", c: "¿Qué estadístico se usa en una prueba de diferencia de medias pareadas?", mine: "Chi-cuadrado", right: "t", why: "Chi-cuadrado sirve para la varianza de una población.", rule: "Medias: t. Una varianza: χ². Dos varianzas: F.", watch: "Pregúntate primero qué parámetro se prueba: media o varianza." },
+  { n: 80, t: "quant", c: "¿Qué afirmación sobre el retorno compuesto continuo es correcta?", mine: "No se calcula con retornos negativos", right: "Los retornos de varios períodos se suman", why: "S₁/S₀ siempre es positivo, así que el logaritmo existe. Lo negativo es el resultado del logaritmo.", calc: "r = ln(S₁/S₀) = ln(1 + R)", rule: "Los retornos logarítmicos se suman en el tiempo.", watch: "El logaritmo se aplica a la razón de precios, no al retorno." },
+
+  // Economía
+  { n: 32, t: "econ", c: "¿Qué afirmación sobre el tipo de cambio real es correcta?", mine: "Está casi perfectamente correlacionado con el nominal", right: "Puede construirse frente a una canasta de monedas", why: "Es un índice analítico y puede usar una o varias monedas.", rule: "El real ajusta el nominal por niveles de precios relativos.", watch: "Desconfía de los extremos como \"casi perfectamente\"." },
+  { n: 34, t: "econ", c: "Spot CAD/EUR 1,4356; tasa CAD 2 %; tasa EUR 0,5 %. ¿Cuántos puntos forward hay a 12 meses?", mine: "−211", right: "214", why: "La moneda con mayor tasa cotiza a descuento forward, y aquí el CAD es la de precio, así que el CAD/EUR sube.", calc: "1,4356 × 1,02 / 1,005 = 1,4570 → (1,4570 − 1,4356) × 10.000 = 214", rule: "F(P/B) = S × (1 + i_P) / (1 + i_B)", watch: "−211 sale de invertir la razón de tasas. La tasa de la moneda de precio va arriba." },
+  { n: 40, t: "econ", c: "¿Cuál es un canal inicial de transmisión de la política monetaria?", mine: "Requerimientos de reserva", right: "Precios de activos", why: "Las reservas son una herramienta y la inflación es el resultado final.", rule: "Herramienta → tasas, precios de activos, expectativas, tipo de cambio → demanda → inflación.", watch: "Distingue herramienta, canal y resultado." },
+  { n: 46, t: "econ", c: "¿Qué combinación aumenta la demanda privada frente a la pública?", mine: "Fiscal y monetaria laxas", right: "Fiscal restrictiva y monetaria laxa", why: "La política fiscal reduce el sector público y las tasas bajas estimulan al privado.", rule: "La mezcla de políticas cambia la composición del PIB, no solo su nivel.", watch: "La pregunta pide composición relativa, y una fiscal laxa aumenta la parte pública." },
+  { n: 63, t: "econ", c: "¿Cómo se define la tasa de política neutral?", mine: "Corto plazo, sin inflación", right: "Largo plazo, con inflación estable", why: "Es la tasa que ni estimula ni frena la economía en el largo plazo.", calc: "Tasa neutral = crecimiento tendencial + meta de inflación", rule: "Política expansiva: tasa por debajo de la neutral. Contractiva: por encima.", watch: "La meta de inflación forma parte de la fórmula, así que \"sin inflación\" no encaja." },
+  { n: 74, t: "econ", c: "¿Cuál es una herramienta geopolítica financiera?", mine: "Acuerdos comerciales multilaterales", right: "Libre cambio de monedas", why: "Los acuerdos comerciales son una herramienta económica.", rule: "Tres familias: seguridad nacional, económicas y financieras.", watch: "Comercio de bienes: económica. Monedas y flujos de capital: financiera." }
+];
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+const state = {
+  topic: store.get("topic", "all"),
+  selftest: store.get("selftest", false),
+  pending: store.get("pending", false),
+  done: new Set(store.get("done", [])),
+  open: new Set()
+};
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+
+function renderTopics() {
+  const allPct = Math.round(53 / 90 * 100);
+  const row = (id, name, sub, ok, total, pct) =>
+    `<button class="topic-btn" data-topic="${id}" aria-pressed="${state.topic === id}">
+      <span class="name">${name}<small>${sub}</small></span>
+      <span class="num">${ok}/${total}</span><span class="num">${pct} %</span>
+      <span class="bar"><i style="width:${pct}%"></i></span>
+    </button>`;
+  const html = TOPICS.map(t => {
+    const items = Q.filter(q => q.t === t.id);
+    const left = items.filter(q => !state.done.has(q.n)).length;
+    return row(t.id, t.name, `${items.length} falladas · ${left} pendientes`, t.ok, t.total, Math.round(t.ok / t.total * 100));
+  }).join("");
+  const left = Q.filter(q => !state.done.has(q.n)).length;
+  $("topics").innerHTML = row("all", "Todos los temas", `${Q.length} falladas · ${left} pendientes`, 53, 90, allPct) + html;
+}
+
+function card(q) {
+  const showAns = !state.selftest || state.open.has(q.n);
+  const ans = showAns ? `
+    <div class="answer">
+      <div class="pair">
+        <div class="opt bad"><b>✕ Tu respuesta</b>${esc(q.mine)}</div>
+        <div class="opt good"><b>✓ Correcta</b>${esc(q.right)}</div>
+      </div>
+      <dl>
+        <div><dt>Por qué</dt><dd>${esc(q.why)}</dd></div>
+        ${q.calc ? `<div><dt>Cálculo</dt><dd class="calc">${esc(q.calc)}</dd></div>` : ""}
+        <div><dt>Regla</dt><dd>${esc(q.rule)}</dd></div>
+        <div><dt>Cuidado</dt><dd>${esc(q.watch)}</dd></div>
+      </dl>
+      ${q.flag ? `<div class="flag">${esc(q.flag)}</div>` : ""}
+    </div>` : `<button class="reveal" data-open="${q.n}">Ver respuesta</button>`;
+  return `<article class="q">
+    <div class="q-head">
+      <span class="tag">Pregunta ${q.n}</span>
+      <label class="mark"><input type="checkbox" id="done-${q.n}" data-done="${q.n}" ${state.done.has(q.n) ? "checked" : ""}> Ya la domino</label>
+    </div>
+    <p class="case">${esc(q.c)}</p>
+    ${ans}
+  </article>`;
+}
+
+function renderList() {
+  let html = "", shown = 0;
+  TOPICS.forEach(t => {
+    if (state.topic !== "all" && state.topic !== t.id) return;
+    const items = Q.filter(q => q.t === t.id && !(state.pending && state.done.has(q.n)));
+    if (!items.length) return;
+    shown += items.length;
+    html += `<h2>${t.name}</h2>` + items.map(card).join("");
+  });
+  $("list").innerHTML = html || `<p class="empty">Ya marcaste todas las preguntas de esta vista. Desactiva "Solo pendientes" para verlas de nuevo.</p>`;
+  $("count").textContent = `${shown} en pantalla · ${state.done.size}/${Q.length} dominadas`;
+}
+
+function render() { renderTopics(); renderList(); }
+
+$("topics").addEventListener("click", e => {
+  const b = e.target.closest("[data-topic]");
+  if (!b) return;
+  state.topic = b.dataset.topic;
+  store.set("topic", state.topic);
+  render();
+});
+$("list").addEventListener("click", e => {
+  const b = e.target.closest("[data-open]");
+  if (!b) return;
+  state.open.add(+b.dataset.open);
+  renderList();
+});
+$("list").addEventListener("change", e => {
+  const n = +e.target.dataset.done;
+  if (!n) return;
+  e.target.checked ? state.done.add(n) : state.done.delete(n);
+  store.set("done", [...state.done]);
+  render();
+});
+$("selftest").checked = state.selftest;
+$("pending").checked = state.pending;
+$("selftest").addEventListener("change", e => {
+  state.selftest = e.target.checked;
+  state.open.clear();
+  store.set("selftest", state.selftest);
+  renderList();
+});
+$("pending").addEventListener("change", e => {
+  state.pending = e.target.checked;
+  store.set("pending", state.pending);
+  renderList();
+});
+render();
+</script>
+
+</body></html>
