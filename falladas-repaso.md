@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 28 preguntas** (Equity: 12 · Ethics: 10 · Fixed Income: 6)
+**Total: 31 preguntas** (Equity: 15 · Ethics: 10 · Fixed Income: 6)
 
 ---
 
@@ -337,4 +337,32 @@ Las acciones con **P/B bajo** rinden más que las de P/B alto. ¿Cómo se llama 
 <details><summary>Ver respuesta</summary>
 
 **Efecto value.** Explicación sin ineficiencia: es una **compensación por riesgo**. Muchas empresas con P/B bajo tienen problemas (deudas, ventas cayendo), así que los inversionistas exigen más retorno. Ante cualquier anomalía, piensa primero en **riesgo** y después en **data mining**. *(Describiste qué pasa, pero te faltaron el nombre y la explicación.)*
+</details>
+
+---
+
+## 🏦 Equity: acciones y depository receipts (Bloque 4)
+
+### 29. ADR para levantar capital *(práctica)*
+Una empresa brasileña quiere **emitir acciones nuevas** en la **Bolsa de Nueva York** para levantar capital. ¿Qué tipo de DR usa?
+
+<details><summary>Ver respuesta</summary>
+
+**ADR Level III.** Es el único que cumple las dos condiciones: se negocia en **bolsa** (Level II y III) **y** levanta capital (Level III y 144A). El GDR se negocia **fuera** de EE. UU. *(Tu respuesta: GDR.)*
+</details>
+
+### 30. DR y tipo de cambio *(práctica)*
+Un DR de una empresa europea se negocia en dólares en EE. UU. Si el **euro se debilita** frente al dólar y la acción no se mueve en euros, ¿qué le pasa al precio del DR?
+
+<details><summary>Ver respuesta</summary>
+
+**Baja.** €100 × 1,20 = US$120 → €100 × 1,10 = US$110. Si la moneda de la empresa se debilita, el DR baja: el DR **no** elimina el riesgo cambiario. *(Tu respuesta: sube.)*
+</details>
+
+### 31. GDR vs. Global Registered Shares *(práctica)*
+¿Qué diferencia hay entre un GDR y las Global Registered Shares?
+
+<details><summary>Ver respuesta</summary>
+
+El **GDR** es un **certificado** emitido por un **banco** (depository) que representa acciones, y se negocia fuera de EE. UU. Las **GRS** son **la acción ordinaria misma**, negociada en varias bolsas y monedas, **sin banco intermediario**. *(Dijiste dónde se negocia cada uno, pero te faltó lo del certificado y el banco.)*
 </details>
