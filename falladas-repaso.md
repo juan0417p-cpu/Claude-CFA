@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 31 preguntas** (Equity: 15 · Ethics: 10 · Fixed Income: 6)
+**Total: 33 preguntas** (Equity: 17 · Ethics: 10 · Fixed Income: 6)
 
 ---
 
@@ -365,4 +365,24 @@ Un DR de una empresa europea se negocia en dólares en EE. UU. Si el **euro se d
 <details><summary>Ver respuesta</summary>
 
 El **GDR** es un **certificado** emitido por un **banco** (depository) que representa acciones, y se negocia fuera de EE. UU. Las **GRS** son **la acción ordinaria misma**, negociada en varias bolsas y monedas, **sin banco intermediario**. *(Dijiste dónde se negocia cada uno, pero te faltó lo del certificado y el banco.)*
+</details>
+
+---
+
+## 🏭 Equity: análisis de industria y proyecciones (Bloque 5)
+
+### 32. Tamaño de una industria *(práctica)*
+¿Cómo se mide el **tamaño** de una industria?
+
+<details><summary>Ver respuesta</summary>
+
+Con **las ventas totales de TODAS las empresas** de la industria. Sumar las participaciones de las más grandes (concentration ratio) o elevarlas al cuadrado (HHI) mide la **concentración**, no el tamaño. *(Tu respuesta: "suma de sus participaciones, normal o al cuadrado".)*
+</details>
+
+### 33. Enfoque de proyección *(práctica)*
+El analista proyecta que las ventas crecerán **20 % más rápido que el PIB nominal**. ¿Qué enfoque es?
+
+<details><summary>Ver respuesta</summary>
+
+**Crecimiento relativo al PIB** (*growth relative to GDP growth*), que es un enfoque top-down. El otro top-down es **mercado y participación**. Elige siempre el nombre **más específico**. Además, el cálculo es multiplicativo: 5 % × 1,20 = 6 %. *(Tu respuesta: "top-down".)*
 </details>

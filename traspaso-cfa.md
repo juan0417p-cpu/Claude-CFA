@@ -94,6 +94,7 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | 27-oct | Ethics, patrón ④: GIPS, Code y sanciones, procedimientos | 7/9 en las del mock (falladas: M2 #84 y M3 #67) |
 | 28-oct → 1-nov | Equity, Bloque 3: EMH (eficiencia, 3 formas, anomalías, sesgos) | 5/5 en las basadas en el mock (en los mocks: 0/5) |
 | 1-nov | Equity, Bloque 4: preferentes, votación, depository receipts | 5/5 en las basadas en el mock (en los mocks: 1/6) |
+| 1-nov | Equity, Bloque 5: industria (Porter, PESTLE, ciclo de vida) y proyecciones | 6/6 en las basadas en el mock (en los mocks: 0/7) |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
