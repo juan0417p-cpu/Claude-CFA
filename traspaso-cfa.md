@@ -145,6 +145,28 @@ Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en l
 
 Si un día no se termina, lo pendiente no se arrastra: va a la revisión del mock siguiente.
 
+## 2c. Plan desde el 3-nov (después del Mock A)
+
+**Todos los días:** 30 min de Ethics + 10 min de repaso de `falladas-repaso.md`.
+
+| Fecha | Tema | Pendientes del Mock A (acertadas al azar 🎲) |
+|---|---|---|
+| 3 nov | **Alternatives I:** características, comisiones, waterfall, high-water mark, private capital | #21 convenience yield |
+| 4 nov | **Alternatives II:** real estate, infraestructura, recursos naturales, hedge funds, activos digitales | #43 timberland vs. farmland |
+| 5 nov | **Derivatives I:** forwards, futuros, opciones (payoffs), swaps | #88 replicar un swap |
+| 6 nov | **Derivatives II:** valoración, put-call parity, cost of carry, binomial, griegas | #28 gamma |
+| 7 nov | **Portfolio Mgmt:** CAPM, CAL/SML, alfa de Jensen, IPS, tipos de inversionista | #36 retorno anormal, #47 Jensen, #72 pendiente de la CAL |
+| 8 nov | **Corporate Issuers:** gobierno corporativo, formas jurídicas, liquidez, capital | |
+| 9–11 nov | **FSA** (3 días) | |
+| 12 nov | **Quant + Economics** | |
+| 13 nov | 🧪 **Mock B** de CFA Institute, completo y cronometrado | |
+| 14 nov | Revisión del Mock B | |
+| 15 nov | Ethics completo + `falladas-repaso.md` + hoja de fórmulas | |
+| 16 nov | Repaso ligero y descanso | |
+| 🎯 17 nov | **EXAMEN** | |
+
+*(Propuesta del 2-nov: se ajusta según cómo vaya cada bloque.)*
+
 ## 3. Errores recurrentes que hay que vigilar
 
 - **Yield to call:** N = número de cupones **hasta el call** (no restar años). Si es semestral, I/Y × 2.
