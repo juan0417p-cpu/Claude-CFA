@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 38 preguntas** (Equity: 22 · Ethics: 10 · Fixed Income: 6)
+**Total: 46 preguntas** (Equity: 22 · Ethics: 10 · Fixed Income: 14)
 
 ---
 
@@ -432,4 +432,72 @@ Una preferente paga **US$ 5** fijos al año y r = 8 %. ¿Cuánto vale? Si las ut
 <details><summary>Ver respuesta</summary>
 
 **US$ 62,50** = 5 / 0,08. **No cambia**: el dividendo de una preferente es **fijo**, así que el crecimiento de las utilidades es un distractor. *(Calculaste bien el valor, pero no respondiste la segunda parte.)*
+</details>
+
+---
+
+## 📉 Fixed Income: repaso del Mock A de CFA Institute (2-nov)
+
+### 39. Convexidad en el cambio de precio *(Mock A #34)*
+Duración modificada **5**, convexidad **30**. Si el rendimiento **sube 100 pb**, ¿cuál es el cambio porcentual aproximado del precio?
+
+<details><summary>Ver respuesta</summary>
+
+**−4,85 %** = (−5 × 0,01) + (½ × 30 × 0,01²) = −5,00 % + 0,15 %. La convexidad **siempre suma**, y Δy va **en decimal y al cuadrado**: (0,01)² = 0,0001. Si usas "1" en vez de 0,01, la convexidad te da 15 % en vez de 0,15 %. *(En el mock restaste la convexidad. En el repaso te dio 0,1.)*
+</details>
+
+### 40. Convexidad aproximada *(Mock A #20)*
+YTM 1,35 % → precio 97,5 · YTM 1,50 % → 97,0 (actual) · YTM 1,65 % → 96,8. ¿Convexidad aproximada?
+
+<details><summary>Ver respuesta</summary>
+
+**1.375** = (97,5 + 96,8 − 2 × 97) / (0,0015² × 97) = 0,3 / 0,00021825. Convexidad: **suma** en el numerador, **sin el 2** y con Δy **al cuadrado** en el denominador. Duración: (PV₋ − PV₊) / (2 × Δy × PV₀). En la BA II Plus, usa paréntesis y calcula 2 × 97 = 194 aparte (modo Chain). *(En el mock usaste la fórmula de la duración: 2,4.)*
+</details>
+
+### 41. Conversión de frecuencias *(Mock A #13)*
+Un bono semestral tiene YTM de 6,00 %. ¿Cuál es su equivalente con capitalización trimestral?
+
+<details><summary>Ver respuesta</summary>
+
+**5,96 %**: (1,03)² = (1 + APR/4)⁴ → APR = 4 × (1,03^0,5 − 1). Con ICONV: NOM 6, C/Y 2 → CPT EFF; C/Y 4 → CPT NOM. **Más** capitalizaciones → tasa nominal **más baja**. *(En el mock lo trataste como tasa anual. En el repaso no sabías cómo hacerlo.)*
+</details>
+
+### 42. Spreads y resultado del bono *(Mock A #3)*
+¿Qué favorece el resultado de un bono con riesgo de crédito durante el período de tenencia: spreads que se amplían, una demanda fuerte que estrecha los spreads, o un deterioro de la economía?
+
+<details><summary>Ver respuesta</summary>
+
+**La demanda fuerte que estrecha los spreads.** Spread ↓ → rendimiento ↓ → precio ↑. Un deterioro económico **amplía** los spreads y baja el precio. El spread es el "precio del miedo". *(Mock: spreads que se amplían. Repaso: deterioro de la economía.)*
+</details>
+
+### 43. Riesgo de prepago *(Mock A #4)*
+¿Qué tiene mayor riesgo de prepago: un covered bond, un pass-through hipotecario o un ABS de tarjetas en su período de lockout?
+
+<details><summary>Ver respuesta</summary>
+
+**El pass-through hipotecario**: el prepago **pasa directo** al inversionista. En el covered bond el emisor **reemplaza** los préstamos prepagados, y en el lockout el capital **se reinvierte**. *(Mock: covered bond. Repaso: lockout.)*
+</details>
+
+### 44. Bono de una ciudad *(Mock A #81)*
+¿Cómo se clasifica un bono emitido por una ciudad: supranacional, no soberano o de agencia?
+
+<details><summary>Ver respuesta</summary>
+
+**No soberano** (gobiernos locales o regionales). **Supranacional** = organismo de **varios países** (Banco Mundial, FMI). **Agencia** = entidad creada por el gobierno (Fannie Mae). *(Respondiste supranacional en el mock **y** en el repaso.)*
+</details>
+
+### 45. Duración con bonos callable y ABS *(Mock A #74, acertada al azar 🎲)*
+Un portafolio tiene bonos fijos, callable y ABS. ¿Qué duración usas?
+
+<details><summary>Ver respuesta</summary>
+
+**Efectiva.** Con flujos inciertos (opciones o prepagos) no hay un YTM bien definido, así que Macaulay y modificada no sirven. La efectiva usa cambios en la **curva de referencia** y un modelo. *(Repaso: modificada.)*
+</details>
+
+### 46. Notching *(Mock A #90, acertada al azar 🎲)*
+El notching de la deuda subordinada de emisores **especulativos**, frente al de emisores con grado de inversión, es: ¿menor, igual o mayor?
+
+<details><summary>Ver respuesta</summary>
+
+**Mayor.** Con más probabilidad de default, el orden de cobro importa más. **Peor calificación senior → mayor notching.** *(Repaso: menor.)*
 </details>
