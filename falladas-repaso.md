@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 52 preguntas** (Equity: 28 · Ethics: 10 · Fixed Income: 14)
+**Total: 55 preguntas** (Equity: 28 · Ethics: 13 · Fixed Income: 14)
 
 ---
 
@@ -552,4 +552,32 @@ Preferente 8 % sobre par $50, dividendos trimestrales, precio $35, retractable a
 <details><summary>Ver respuesta</summary>
 
 **$45,02.** Como cotiza muy por debajo de la par, la retracción es probable: valórala como un **bono**. N = 12, I/Y = 3, PMT = 1, FV = 50 → PV = 45,02. $4 / 0,12 = 33,33 la trata como perpetua, y 52,00 aplica Gordon (el 4 % es un distractor). *(Repaso: no sabías cómo hacerla.)*
+</details>
+
+---
+
+## ⚖️ Ethics: repaso del Mock A de CFA Institute (2-nov)
+
+### 53. Afirmaciones sobre GIPS *(Mock A #5)*
+¿Cuál es compatible con GIPS: "todos nuestros portafolios domésticos cumplen GIPS", "nuestros consultores respaldan GIPS" o "al cumplir GIPS, los clientes ya no necesitan debida diligencia"?
+
+<details><summary>Ver respuesta</summary>
+
+**"Nuestros consultores respaldan GIPS."** Los consultores no pueden declarar cumplimiento, pero sí pueden respaldar los estándares. Limitar el cumplimiento a una parte de la firma ("portafolios domésticos") es **cumplimiento parcial**, y GIPS es todo o nada. GIPS tampoco reemplaza la debida diligencia. *(Respondiste "portafolios domésticos" en el mock **y** en el repaso.)*
+</details>
+
+### 54. Cómo redactar el código de ética *(Mock A #12)*
+¿Qué conviene recomendar sobre la redacción del código de ética de una firma?
+
+<details><summary>Ver respuesta</summary>
+
+**Lenguaje simple, sin procedimientos detallados.** Los procedimientos van en **otro documento**. Integrarlos produce un lenguaje legalista e incomprensible. Es la misma lógica del Code (principios) vs. los Standards (reglas). *(Mock: integrarlo con los procedimientos. Repaso: incluir todas las leyes.)*
+</details>
+
+### 55. Compensación adicional sin permiso *(Mock A #27)*
+Una CFA asesora a una amiga en su tiempo libre a cambio de una donación a su causa favorita, y solo le **avisa** a su firma por email. ¿Hay violación?
+
+<details><summary>Ver respuesta</summary>
+
+**Sí, IV(B) Additional Compensation.** Se necesita el **permiso escrito** del empleador **antes** de aceptar. Avisar no es lo mismo que obtener permiso, y la donación también cuenta como compensación. Compáralo con Brenner (M3 #56): avisó por email **y** le dieron permiso → no viola. *(Mock: no. Repaso: no, porque avisó por email.)*
 </details>
