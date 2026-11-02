@@ -1,0 +1,308 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Preguntas Mock A Sesión 2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: una sola columna tipo examen: filtros compactos arriba y una pregunta por pantalla debajo. */
+:root {
+  --bg: #eef2f6; --surface: #ffffff; --fg: #14202e; --muted: #546375; --line: #cdd6e0;
+  --accent: #1f4fd8; --on-accent: #ffffff; --track: #dbe2ea;
+  --bad: #b3261e; --bad-bg: #fbeceb; --good: #12703f; --good-bg: #e7f5ed;
+  --tag: #14202e; --on-tag: #ffffff;
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --mono: "JetBrains Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #10171f; --surface: #18222d; --fg: #e6edf4; --muted: #9aa9b9; --line: #2e3b49;
+  --accent: #8aa9ff; --on-accent: #0e1a33; --track: #2a3643;
+  --bad: #ff9c94; --bad-bg: #3a1f1f; --good: #7ad8a4; --good-bg: #17332a;
+  --tag: #e6edf4; --on-tag: #10171f; color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --bg: #10171f; --surface: #18222d; --fg: #e6edf4; --muted: #9aa9b9; --line: #2e3b49;
+  --accent: #8aa9ff; --on-accent: #0e1a33; --track: #2a3643;
+  --bad: #ff9c94; --bad-bg: #3a1f1f; --good: #7ad8a4; --good-bg: #17332a;
+  --tag: #e6edf4; --on-tag: #10171f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 17px/1.5 var(--body); }
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 20px; }
+header { display: grid; gap: 6px; }
+.eyebrow { font: 500 12px/1.4 var(--mono); letter-spacing: .04em; color: var(--muted); }
+h1 { font: 800 clamp(26px, 6vw, 38px)/1.08 var(--display); font-stretch: 112%; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 62ch; }
+.filters { display: grid; gap: 10px; }
+.filter-group { display: grid; gap: 5px; min-width: 0; }
+.filter-label { font: 500 12px var(--mono); color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { padding: 5px 11px; border: 1px solid var(--line); border-radius: 4px; background: none; color: var(--fg); font: 15px var(--body); cursor: pointer; }
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip small { font: 500 12px var(--mono); margin-left: 4px; opacity: .85; }
+.chip[disabled] { opacity: .45; cursor: default; border-color: var(--line); }
+.stage { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: clamp(16px, 4vw, 28px); display: grid; gap: 16px; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; justify-content: space-between; }
+.tag { background: var(--tag); color: var(--on-tag); font: 500 13px var(--mono); padding: 2px 8px; border-radius: 2px; }
+.pos { font: 500 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.bar { height: 5px; background: var(--track); border-radius: 3px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+.prompt { margin: 0; font-weight: 600; font-size: 19px; line-height: 1.4; }
+.options { display: grid; gap: 8px; }
+.opt { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 8px; width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 4px; background: none; color: var(--fg); font: inherit; text-align: left; cursor: pointer; }
+.opt:not([disabled]):hover { border-color: var(--accent); }
+.opt b { font: 500 14px/1.7 var(--mono); }
+.opt[disabled] { cursor: default; }
+.opt.right { background: var(--good-bg); border-color: var(--good); }
+.opt.right b { color: var(--good); }
+.opt.wrong { background: var(--bad-bg); border-color: var(--bad); }
+.opt.wrong b { color: var(--bad); }
+.feedback { display: grid; gap: 8px; padding-top: 14px; border-top: 1px solid var(--line); }
+.verdict { font: 600 18px var(--display); font-stretch: 112%; }
+.verdict.ok { color: var(--good); } .verdict.no { color: var(--bad); }
+.feedback p { margin: 0; }
+.mocknote { font-size: 15px; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { padding: 9px 18px; border: 1px solid var(--accent); border-radius: 4px; background: var(--accent); color: var(--on-accent); font: 600 16px var(--body); cursor: pointer; }
+.btn.ghost { background: none; color: var(--accent); }
+.results { display: grid; gap: 14px; }
+.big { font: 800 clamp(40px, 10vw, 60px)/1 var(--display); font-stretch: 112%; }
+.results h2 { font: 600 22px var(--display); font-stretch: 112%; margin: 0; }
+.rows { display: grid; gap: 6px; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) 56px; gap: 10px; font-size: 16px; }
+.row span:last-child { font: 500 13px/1.8 var(--mono); text-align: right; font-variant-numeric: tabular-nums; }
+.note { color: var(--muted); font-size: 15px; margin: 0; max-width: 62ch; }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">CFA Nivel I · 2026 · Mock Exam A · Sesión 2 · resultado 54/90 (60 %)</div>
+    <h1>Practica las 90 preguntas</h1>
+    <p class="lede">Empieza por las 36 que fallaste. Cada ronda cambia el orden de las preguntas y de las opciones.</p>
+  </header>
+  <section class="filters" aria-label="Elegir preguntas">
+    <div class="filter-group"><div class="filter-label">Qué repasar</div><div class="chips" id="pools"></div></div>
+    <div class="filter-group"><div class="filter-label">Tema</div><div class="chips" id="topics"></div></div>
+  </section>
+  <section class="stage" id="stage" aria-live="polite"></section>
+  <p class="note">Las preguntas están redactadas por mí sobre los mismos conceptos del simulacro, y las de cálculo usan cifras nuevas. No son el texto oficial del CFA Institute. Tu avance se guarda solo en este navegador.</p>
+</div>
+
+<script>
+const TOPICS = { d: "Derivados", f: "Renta fija", p: "Portafolio", a: "Alternativas", e: "Renta variable" };
+const SCORE = { d: "6/14", f: "12/22", p: "10/17", a: "9/14", e: "17/23" };
+// [número en el mock, tema, pregunta, [correcta, distractor, distractor], explicación, lo que marcaste en el mock si fallaste]
+const Q = [
+[1,"d","Dos posiciones tienen el mismo subyacente y plazo: un forward sin colateral y un futuro. ¿Cuál tiene mayor riesgo de contraparte?",["El forward","El futuro","Ambas por igual"],"El valor del forward se acumula hasta el vencimiento. El futuro liquida ganancias y pérdidas cada día con margen de variación, lo que devuelve su valor a cero.","Ambas por igual"],
+[2,"a","Inviertes $2 millones en un hedge fund con comisión de incentivo de 20 % y hurdle duro de 5 %. El fondo rinde 18 % en el año. ¿Cuánto es la comisión de incentivo?",["$52.000","$72.000","$20.000"],"Ganancia: $360.000. Hurdle: 5 % × $2 millones = $100.000. Con hurdle duro, el incentivo solo aplica al exceso: 20 % × $260.000 = $52.000."],
+[3,"f","En igualdad de lo demás, ¿qué favorece el resultado de un bono con riesgo de crédito durante el período de tenencia?",["Una demanda fuerte que estrecha los spreads","Una ampliación de los spreads","Un deterioro de la economía que eleva las primas de riesgo"],"Spreads más estrechos suben el precio del bono. Spreads más amplios y un peor entorno económico lo bajan.","La ampliación de los spreads"],
+[4,"f","¿Cuál instrumento tiene normalmente mayor riesgo de prepago?",["Un pass-through hipotecario","Un covered bond","Un ABS de tarjetas durante su período de lockout"],"En un pass-through, los deudores pueden prepagar y ese flujo llega al inversionista. El covered bond reemplaza los activos prepagados, y el lockout reinvierte los pagos de principal.","Covered bond"],
+[5,"d","Los inversionistas se vuelven más aversos al riesgo. En el modelo binomial, ¿qué le pasa a la probabilidad neutral al riesgo de una subida?",["No cambia","Baja","Sube"],"El precio de la opción sale de una cobertura perfecta con el subyacente, así que no depende de la aversión al riesgo."],
+[6,"f","Un emisor quiere poder recomprar su deuda antes del vencimiento si bajan las tasas. ¿Qué bono le conviene emitir?",["Callable","Putable","Convertible"],"La opción call pertenece al emisor. La put pertenece al tenedor, y la conversión también es un derecho del tenedor."],
+[7,"e","Una empresa emite acciones para pagar una adquisición y para mejorar su razón de deuda ante un covenant. ¿Son motivos válidos?",["Sí, ambos","Solo la adquisición","Solo el covenant"],"Las empresas emiten capital tanto para financiar compras como para cumplir covenants de deuda."],
+[8,"e","Para decidir si una acción está cara o barata, ¿con qué comparas su precio de mercado?",["Valor intrínseco","Valor en libros","Valor nominal"],"Precio menor al intrínseco indica subvaluación. Precio mayor indica sobrevaluación. Si son iguales, está valorada justamente."],
+[9,"a","¿Qué describe mejor al venture capital frente a las acciones cotizadas?",["Exige un retorno mayor por su riesgo e iliquidez","Tiene un horizonte de inversión corto","Se concentra en empresas maduras y establecidas"],"El venture capital financia etapas tempranas, con horizontes largos, iliquidez y más riesgo."],
+[10,"e","La mejor oferta de venta es $72 y el spread es $3, así que el mejor bid es $69. Entra una orden limitada de venta a $73. ¿Cómo se clasifica?",["Detrás del mercado","Hace el mercado","Toma el mercado"],"Una venta por encima de la mejor oferta queda detrás. Entre $69 y $72 haría el mercado. A $69 o menos lo tomaría.","Toma el mercado"],
+[11,"p","¿Dónde se aplica el presupuesto de riesgo?",["En la gestión de portafolios y en la gestión del negocio","Solo en la gestión de portafolios","Solo en la gestión del negocio"],"Ambas actividades combinan riesgos distintos que se pueden asignar y medir en conjunto.","Solo en la gestión del negocio"],
+[12,"f","La duración Macaulay de un bono es igual a su plazo al vencimiento. ¿Qué bono es, muy probablemente?",["Cupón cero","Con cupón a la par","Con cupón a prima"],"El cupón cero tiene un solo flujo, al vencimiento, con peso de 100 %. Cualquier cupón acorta la duración frente al plazo."],
+[13,"f","Un bono semestral tiene un YTM de 6,00 %. ¿Cuál es su equivalente con capitalización trimestral?",["5,96 %","6,05 %","5,87 %"],"(1 + 0,06/2)² = (1 + APR/4)⁴, entonces APR = 4 × (1,03^0,5 − 1) = 5,96 %. Más períodos al año implican una tasa nominal menor.","Convertiste como si la tasa fuera anual"],
+[14,"e","Una gestora debe vender un bloque muy grande de una acción poco negociada. ¿Dónde lo ejecuta, probablemente?",["Mercado de corretaje (brokered)","Mercado dirigido por órdenes","Mercado dirigido por cotizaciones"],"Los activos poco negociados y costosos de mantener en inventario necesitan un corredor que encuentre contraparte.","Mercado dirigido por órdenes"],
+[15,"d","Vendes una put europea por $25 con strike de $900. Al vencimiento el subyacente vale $940. ¿Cuál es tu resultado?",["+$25","−$15","+$40"],"La put vence sin valor porque el subyacente está sobre el strike. El vendedor conserva la prima: −máx(0; 900 − 940) + 25 = 25."],
+[16,"a","¿Qué posición es típica de un fondo de arbitraje de convertibles?",["Comprar el convertible y vender en corto la acción del emisor","Comprar convertibles de empresas cerca de la quiebra","Acumular convertibles para influir en la empresa"],"Es una estrategia de valor relativo que aprovecha precios desalineados. Las otras dos describen estrategias de distress y activismo."],
+[17,"p","Tasa libre de riesgo 3 %, prima de riesgo de mercado 6 %, beta 1,2 y correlación con el mercado 0,4. Según el CAPM, ¿cuál es el retorno esperado?",["10,2 %","6,6 %","5,4 %"],"3 % + 1,2 × 6 % = 10,2 %. La prima ya es retorno de mercado menos tasa libre, y la correlación no se usa directamente.","Restaste otra vez la tasa libre de la prima de mercado"],
+[18,"e","¿Cuál es una desventaja de valorar acciones con múltiplos?",["Las diferencias contables dificultan comparar empresas","Se calculan con dificultad","No permiten comparaciones transversales"],"Los múltiplos son fáciles de calcular y sirven para comparar. El problema es que las normas y políticas contables distorsionan esa comparación.","No permiten comparaciones transversales"],
+[19,"f","¿Qué describe la duración empírica?",["Estima la sensibilidad con métodos estadísticos y precios históricos","Supone que rendimientos soberanos y spreads son independientes","Supera a la analítica en high yield bajo estrés"],"El supuesto de independencia es de la duración analítica. En estrés, los spreads compensan la caída de tasas y la empírica de high yield resulta menor."],
+[20,"f","Precio inicial 100,0; si el rendimiento baja 10 pb vale 100,9, y si sube 10 pb vale 99,2. ¿Cuál es la convexidad aproximada?",["1.000","8,5","500"],"(100,9 + 99,2 − 2 × 100) / (0,001² × 100) = 0,1 / 0,0001 = 1.000. El resultado 8,5 es la duración aproximada, y 500 duplica el denominador por error.","Aplicaste la fórmula de duración"],
+[21,"a","¿Qué ayuda a explicar el rendimiento de conveniencia (convenience yield) en una materia prima?",["Un spot por encima de lo que el mercado espera a futuro","Un spot por debajo de lo que el mercado espera a futuro","Un spot igual a lo que el mercado espera a futuro"],"Tener la materia prima física en momentos de escasez aporta un beneficio no financiero que justifica pagar más hoy."],
+[22,"f","Dos bonos son iguales salvo por una característica. Cuando suben las tasas, A cae más que B. ¿Qué es lo más probable?",["A tiene menor cupón","A es callable","A tiene menor plazo"],"Menor cupón implica mayor duración. La opción call limita la sensibilidad, y un plazo más corto también la reduce."],
+[23,"d","Según la paridad put-call-forward, ¿a qué es igual p₀ − c₀?",["Valor presente de (X − F₀)","Valor presente de (F₀ − S₀)","Valor presente de (S₀ − X)"],"p₀ − c₀ = (X − F₀) / (1 + r)^T. La fórmula compara el strike con el precio forward.","Valor presente de la diferencia entre forward y spot"],
+[24,"a","¿Quiénes pueden emitir criptomonedas?",["Individuos, empresas y organizaciones","Solo individuos","Solo empresas y organizaciones"],"Existen miles de criptomonedas creadas por los tres tipos de emisor."],
+[25,"d","Frente a los derivados en bolsa, ¿cómo es la transparencia de los OTC?",["Menor","Igual","Mayor"],"Muchas operaciones OTC conservan cierta privacidad. En bolsa, la información se reporta a la bolsa y a los reguladores."],
+[26,"f","Precio actual 100. Si el rendimiento sube 50 pb vale 96,5, y si baja 50 pb vale 104. ¿Cuál es la duración modificada anual aproximada?",["7,5","15,0","4,0"],"(104 − 96,5) / (2 × 0,005 × 100) = 7,5. El 15,0 olvida el 2 del denominador, y el 4,0 usa solo la subida de precio."],
+[27,"e","Un índice se lanza hoy en versiones de precio y de retorno total. ¿Cómo se comparan sus valores en el lanzamiento?",["Son iguales","El de precio es mayor","El de precio es menor"],"Parten igual. Con el tiempo, el de retorno total supera al de precio porque incorpora las distribuciones."],
+[28,"d","¿Cuál griega mide un riesgo de segundo orden?",["Gamma","Delta","Vega"],"Gamma mide cómo cambia delta. Delta y vega son medidas de primer orden."],
+[29,"p","¿Qué resulta directamente de combinar las expectativas de largo plazo del mercado de capitales con los objetivos y restricciones del IPS?",["La asignación estratégica de activos","Una decisión de asignación táctica","El presupuesto de riesgo"],"La asignación estratégica es la política de largo plazo. La táctica se desvía de ella después, a partir de pronósticos de corto plazo.","Una decisión de asignación táctica"],
+[30,"d","Spot €50, strike €45, tasa libre de riesgo 2 % anual, 6 meses. ¿Cuál es el precio mínimo de una call europea?",["€5,44","€5,00","€4,55"],"50 − 45 / 1,02^0,5 = 5,44. El strike se descuenta. Si lo capitalizas obtienes 4,55, y si no lo ajustas obtienes 5,00.","Capitalizaste el strike en lugar de descontarlo"],
+[31,"d","Compras una call con strike igual al precio forward de $80 y prima de $4. Si tu ganancia al vencimiento es cero, ¿cuánto vale el subyacente?",["$84","$80","$76"],"Ganancia = máx(0; S − 80) − 4 = 0, entonces S = 84. El subyacente supera al precio forward por el monto de la prima."],
+[32,"p","Un cliente quiere que su retorno quede dentro de ±3 % del benchmark, con 95 % de probabilidad en 12 meses. ¿Qué tipo de objetivo es?",["De riesgo relativo","De retorno relativo","De valor en riesgo"],"Una banda alrededor del benchmark, con una probabilidad, mide riesgo frente a esa referencia. Un objetivo de retorno relativo sería superar al índice.","De retorno relativo"],
+[33,"p","En mercados eficientes y a largo plazo, ¿qué se espera de las acciones grandes frente a las pequeñas?",["Menor retorno y menor riesgo","Mayor retorno y menor riesgo","Mayor retorno y mayor riesgo"],"Un retorno mayor requiere más riesgo, y las empresas pequeñas son más riesgosas."],
+[34,"f","Duración modificada 5, convexidad 30. Si el rendimiento sube 100 pb, ¿cuál es el cambio porcentual aproximado del precio?",["−4,85 %","−5,15 %","−2,20 %"],"(−5 × 0,01) + (½ × 30 × 0,01²) = −5,00 % + 0,15 %. La convexidad se suma, y por eso amortigua la caída.","Restaste el efecto de convexidad"],
+[35,"f","Un bono de pago anual tiene cupón de 5 %, vence en 4 años y cuesta 95. ¿Cuál es su rendimiento aproximado?",["6,46 %","6,44 %","5,16 %"],"PMT = 5, N = 4, PV = −95, FV = 100 da 6,46 %. El 6,44 % trata el bono como semestral, y el 5,16 % intercambia cupón y plazo."],
+[36,"p","Beta 1,2; retorno del título 13 %; retorno del mercado 10 %; tasa libre 3 %. ¿Cuál es el retorno anormal?",["1,6 %","−2,0 %","4,6 %"],"Retorno esperado: 3 % + 1,2 × 7 % = 11,4 %. Anormal: 13 % − 11,4 % = 1,6 %."],
+[37,"a","Fondo de $200 M con 2 y 20, ambas sobre valor de fin de período y con high-water mark. Tras comisiones valía $227,2 M al año 1 y $215,6 M al año 2. El año 3 cierra en $250 M antes de comisiones. ¿Cuánto cobra el fondo en el año 3?",["$9,56 M","$11,00 M","$11,88 M"],"Gestión: 2 % × 250 = 5. Incentivo: 20 % × (250 − 227,2) = 4,56. El high-water mark es el máximo previo después de comisiones.","Usaste un valor del año 2 como referencia"],
+[38,"a","¿Qué afirmación sobre bienes raíces es correcta?",["Los privados han tenido baja correlación con otras clases de activos","Son activos homogéneos","Lo comercial es la mayor parte del valor global"],"Cada propiedad es única y tiene ubicación fija. Lo residencial es el mayor sector global.","Son activos homogéneos"],
+[39,"p","¿Cuál es un supuesto del CAPM?",["Mercados sin costos de transacción ni impuestos","Inversionistas con varios períodos de tenencia","Inversionistas grandes que mueven los precios"],"El CAPM supone mercados sin fricciones, un solo período e inversionistas tomadores de precios."],
+[40,"d","¿Qué es el precio de un swap de pagar fijo y recibir flotante?",["La tasa fija que hace cero su valor de mercado al inicio","El valor presente de flotantes menos el de fijos","La suma de pagos fijos menos la suma de flotantes"],"El precio es una tasa, fijada al inicio. La diferencia entre valores presentes es el valor del swap para una de las partes.","El valor presente de flotantes menos el de fijos"],
+[41,"f","¿Ante qué cambio mide la sensibilidad la convexidad efectiva?",["La curva de rendimiento de referencia","El rendimiento al vencimiento","El rendimiento en el horizonte"],"Es una medida de curva, útil cuando los flujos son inciertos. La convexidad aproximada usa el YTM."],
+[42,"p","Portafolio 50/50 con desviaciones de 6 % y 10 %, y correlación de −1. ¿Cuál es su desviación estándar?",["2,0 %","0 %","4,4 %"],"Con correlación −1: |0,5 × 6 % − 0,5 × 10 %| = 2 %. Llegar a cero requeriría otros pesos.","Omitiste el 2 en el término de covarianza"],
+[43,"a","¿Qué activo permite retrasar la cosecha cuando los precios están bajos?",["Solo tierras forestales","Solo tierras agrícolas","Ambos"],"Los árboles siguen creciendo y se almacenan sin cortarlos. Los cultivos deben cosecharse cuando maduran."],
+[44,"p","¿Qué es una firma de gestión multi-boutique?",["Un holding dueño de varias gestoras especializadas","Una gestora enfocada en una clase de activo o estilo","Una gestora con una amplia gama de activos y estilos"],"Las otras dos opciones describen a la gestora especializada y a la de servicio completo.","Una gestora enfocada en una clase de activo o estilo"],
+[45,"e","¿Quién desarrolla sistemas de clasificación industrial?",["Entidades comerciales y agencias gubernamentales","Solo entidades comerciales","Solo agencias gubernamentales"],"Ambos tipos de entidad los desarrollan y los usan."],
+[46,"p","¿Qué afirmación sobre endowments y fundaciones es correcta?",["Los endowments suelen destinar una parte importante a alternativos","Tienen horizontes cortos","Las fundaciones son fondos que sostienen servicios de instituciones sin ánimo de lucro"],"Su horizonte es largo o perpetuo. Las fundaciones entregan donaciones, y los endowments sostienen a instituciones sin ánimo de lucro.","Confundiste fundaciones con endowments"],
+[47,"p","Retorno del portafolio 14 %, beta 1,2, mercado 9 %, tasa libre 3 %. ¿Cuál es el alfa de Jensen?",["3,8 %","3,2 %","5,0 %"],"14 % − [3 % + 1,2 × (9 % − 3 %)] = 3,8 %."],
+[48,"e","Compras a $40 con margen inicial de 60 % y margen de mantenimiento de 30 %. ¿Por debajo de qué precio recibes un llamado de margen?",["$22,86","$34,29","$24,00"],"Deuda por acción: $16. Precio = 16 / (1 − 0,30) = $22,86."],
+[49,"e","¿Cómo se clasifica un índice como MSCI ACWI, con acciones de países desarrollados y emergentes?",["Multimercado","De amplio mercado","Sectorial global"],"Cubre varios mercados. Un índice de amplio mercado cubre uno solo, y uno sectorial se limita a un sector.","Sectorial global"],
+[50,"e","¿Qué ocurre, probablemente, con un índice de igual ponderación?",["Subrepresenta a las empresas de gran capitalización","Requiere rebalanceos poco frecuentes","Sus pesos dependen del precio de mercado"],"Todas pesan igual al rebalancear, así que necesita ajustes frecuentes y da menos peso a las grandes."],
+[51,"p","¿Para qué usa un gestor el IPS de un cliente?",["Para evaluar si una inversión es adecuada para ese cliente","Para maximizar el retorno sin importar el riesgo","Para minimizar el riesgo sin importar el retorno"],"El IPS reúne objetivos de riesgo y retorno, que deben ser coherentes entre sí, y las restricciones del cliente."],
+[52,"e","Dividendo actual $2, crecimiento histórico 3 %, crecimiento esperado 6 % durante tres años, precio esperado al año 3 de $40 y retorno requerido 12 %. ¿Cuál es el valor intrínseco?",["$33,85","$33,56","$22,89"],"Descuenta $2,12, $2,25, $2,38 y $40 al 12 %. Usa el crecimiento esperado. Gordon con el histórico da 22,89 e ignora el precio objetivo.","Usaste Gordon con el crecimiento histórico"],
+[53,"a","¿Cuál inversión en infraestructura es de mayor riesgo?",["Un proyecto greenfield sin demanda garantizada","Un activo con flujos estables e historial","Un activo brownfield arrendado al gobierno"],"Greenfield significa construir desde cero. Si además no hay demanda garantizada, los ingresos son inciertos."],
+[54,"a","¿Qué es lo más probable en la deuda mezzanine?",["Incluye warrants o derechos de conversión","Es deuda garantizada","Está subordinada al capital"],"Va detrás de la deuda senior, pero por delante del capital. Sus warrants compensan esa posición.","Está subordinada al capital"],
+[55,"d","Compraste una call por $7 con strike de $60 cuando el subyacente estaba en $58. Al vencimiento vale $69. ¿Cuál es el valor de la call para ti?",["$9","$2","$4"],"Valor al vencimiento = máx(0; 69 − 60) = $9. La ganancia sería 9 − 7 = $2. Pregunta por valor, no por ganancia.","Calculaste la ganancia, no el valor"],
+[56,"p","En un portafolio de igual ponderación, ¿qué disminuye si aumentan las correlaciones?",["La reducción de riesgo que aporta","El retorno esperado","La desviación estándar"],"El retorno no depende de las correlaciones, y la desviación sube. Se pierde beneficio de diversificación."],
+[57,"e","¿Qué hacen normalmente los vendedores en corto?",["Toman prestados títulos y los venden","Venden títulos que ya poseen","Limitan su pérdida a lo invertido"],"Su ganancia máxima es de 100 %, y su pérdida potencial no tiene límite."],
+[58,"d","Una call cuesta $9, el subyacente vale $52 y el strike es $45. ¿Cuál es su valor temporal?",["$2","$7","−$7"],"Valor intrínseco: 52 − 45 = 7. Valor temporal: precio menos intrínseco, 9 − 7 = 2.","Restaste el subyacente del strike"],
+[59,"e","Con eficiencia semifuerte, ¿qué necesita un analista fundamental para obtener retornos anormales?",["Estimar mejor las variables y anticipar sorpresas de utilidades","Extrapolar datos históricos","Usar reglas de trading sobre movimientos de precios"],"Necesita una ventaja al procesar información. Las reglas de precios son análisis técnico."],
+[60,"f","¿Cuál es el caso que menos corresponde a un Eurobono?",["Una empresa alemana emite en dólares para inversionistas de EE. UU.","Una empresa brasileña emite en dólares para inversionistas japoneses","Una empresa coreana emite en euros para inversionistas del Reino Unido"],"Emitir en el mercado local del país de la moneda, siendo extranjero, es un bono extranjero. Los otros se emiten fuera del país de la moneda."],
+[61,"e","¿Qué aportan principalmente los dealers de valores?",["Liquidez","Estructuración de IPO","Titulización de activos"],"Compran y venden con sus clientes por cuenta propia. Los IPO corresponden a bancos de inversión."],
+[62,"d","¿De qué instrumento se obtiene la volatilidad implícita?",["Opciones","Swaps","Futuros"],"Se despeja del precio de la opción, que refleja el riesgo esperado del subyacente.","Swaps"],
+[63,"f","Tasas spot: 2 % a 1 año, 3 % a 2 años, 4 % a 3 años. ¿Cuál es el precio de un bono a 3 años con cupón anual de 5 %?",["102,96","110,72","105,24"],"5/1,02 + 5/1,03² + 105/1,04³ = 102,96. Cada flujo se descuenta con su spot y elevado a su plazo.","No elevaste las tasas a su plazo"],
+[64,"a","Dos fondos de private equity duplican el capital, pero A lo logra más rápido. ¿Cómo se compara su MOIC?",["Es igual","A tiene mayor MOIC","A tiene menor MOIC"],"El MOIC ignora el tiempo. La TIR sí premiaría a A.","A tiene mayor MOIC"],
+[65,"a","¿Cuándo es más probable activar un clawback?",["Salidas exitosas al inicio y pérdidas después","Salidas malas al inicio y ganancias después","Salidas exitosas al inicio y más ganancias después"],"El GP pudo cobrar incentivo sobre ganancias que luego se revierten, y los LP recuperan ese exceso.","Salidas malas al inicio y ganancias después"],
+[66,"e","¿Cuál es el efecto de un dividendo en acciones?",["No cambia el valor de la empresa","Reduce el número de acciones","Cambia la participación proporcional de cada accionista"],"Reparte el mismo valor en más acciones y cada accionista conserva su porcentaje.","Cambia la participación proporcional"],
+[67,"f","Tu horizonte es menor que la duración Macaulay del bono. ¿Qué riesgo domina?",["El riesgo de precio de mercado","El riesgo de reinversión de cupones","Ninguno; se compensan"],"Horizonte corto: precio. Horizonte largo: reinversión. Se compensan cuando el horizonte es igual a la duración.","Reinversión de cupones"],
+[68,"e","Con margen mínimo de 40 %, ¿cuál es el apalancamiento máximo?",["2,50","1,40","1,67"],"Apalancamiento máximo = 1 / margen = 1 / 0,40 = 2,50."],
+[69,"e","¿Qué acciones preferentes se pueden cambiar por un número fijo de acciones comunes?",["Convertibles","Acumulativas","Participativas"],"Las acumulativas acumulan dividendos impagos. Las participativas pueden recibir un dividendo adicional."],
+[70,"p","¿Cómo se llama la incomodidad de recibir información que contradice lo que crees?",["Disonancia cognitiva","Aversión al arrepentimiento","Contabilidad mental"],"Es la base de los sesgos de perseverancia en las creencias."],
+[71,"f","Soberano a 2 años: cupón 2 %, precio 100. Corporativo a 2 años: cupón 6 %, precio 103. Ambos anuales. ¿Cuál es el spread G?",["240 pb","400 pb","200 pb"],"Rendimientos: 2,00 % y 4,40 %. El spread se calcula entre rendimientos, no entre cupones.","Restaste los cupones"],
+[72,"p","¿Cómo se llama la pendiente de la línea de asignación de capital?",["Precio de mercado del riesgo","Beta de mercado","Prima de riesgo de mercado"],"Es (E(R) − Rf) / σ. La prima de mercado es la pendiente de la SML."],
+[73,"p","Las reglas de gasto anual de una fundación se documentan en su IPS como una restricción de:",["Liquidez","Horizonte de tiempo","Legal y regulatoria"],"Indican cuánto dinero debe poder retirarse del portafolio."],
+[74,"f","Tu portafolio incluye bonos fijos, callables y ABS. ¿Qué duración usas?",["Efectiva","Macaulay","Modificada"],"Con flujos inciertos no hay un YTM bien definido, por eso las duraciones de rendimiento no sirven."],
+[75,"e","¿Por dónde suele empezar el análisis de un banco?",["Balance general","Ingresos","Flujos de caja"],"En la mayoría de empresas se empieza por los ingresos. En los bancos, por el balance."],
+[76,"p","Una inversión da 16 % o 4 % con igual probabilidad. Un inversionista la prefiere a 11 % seguro. ¿Cómo es su actitud ante el riesgo?",["Buscador de riesgo","Averso al riesgo","Neutral al riesgo"],"El valor esperado es 10 %, menor que el 11 % seguro. Solo quien busca riesgo elige la opción incierta."],
+[77,"e","En el modelo de Gordon, ¿con qué se relaciona positivamente el P/E forward justificado?",["Solo con el crecimiento","Solo con el retorno requerido","Con ambos"],"P/E = payout / (r − g). Sube con g y baja con r."],
+[78,"e","ROA 10 %, apalancamiento 1,5 y payout 30 %. ¿Cuál es el crecimiento sostenible?",["10,5 %","4,5 %","7,0 %"],"ROE = 10 % × 1,5 = 15 %. Retención = 70 %. g = 70 % × 15 % = 10,5 %."],
+[79,"a","¿Qué caracteriza típicamente a las inversiones alternativas?",["Más restricciones de rescate que las tradicionales","Más transparencia que las tradicionales","Alta correlación con las tradicionales"],"Suelen tener lockups, iliquidez, menor transparencia y baja correlación."],
+[80,"e","¿Qué dice la anomalía de tamaño?",["Las pequeñas superan a las grandes ajustando por riesgo","Los P/E bajos superan a los altos","Los dividendos altos superan a los bajos"],"Las otras dos opciones describen el efecto valor."],
+[81,"f","¿Cómo se clasifica un bono emitido por una ciudad?",["No soberano","Supranacional","De agencia"],"Los gobiernos locales y regionales son no soberanos. Los supranacionales son organismos como el Banco Mundial.","Supranacional"],
+[82,"e","¿Qué tiende a aumentar la eficiencia del mercado?",["Más analistas siguiendo los títulos","Más restricciones a las ventas en corto","Más tiempo para ejecutar operaciones"],"Las restricciones y las demoras limitan el arbitraje. Más analistas difunden mejor la información."],
+[83,"f","En una hipoteca residencial sin recurso, ¿qué puede hacer el prestamista si el deudor incumple?",["Recuperar solo con la propiedad","No recuperar nada","Ir contra otros activos del deudor"],"Ir contra otros activos corresponde a un préstamo con recurso."],
+[84,"d","¿Qué posición forma una put protectora?",["Comprar el activo y comprar una put","Vender el activo y comprar una put","Vender una call y comprar una put"],"Mantienes el activo y la put limita la caída de su valor.","Vender el activo y comprar una put"],
+[85,"f","¿Quién es el dueño legal de los préstamos que respaldan un ABS?",["La entidad de propósito especial","El originador","El tenedor del ABS"],"La SPE es independiente y protege los préstamos de una quiebra del originador."],
+[86,"a","¿Qué documento rige la relación entre GP y LP en una sociedad limitada?",["El acuerdo de sociedad limitada (LPA)","Una side letter","El prospecto de cada operación"],"El GP controla las decisiones. Las side letters añaden términos para ciertos LP, fuera del LPA."],
+[87,"f","Tu horizonte de inversión es más largo que el plazo del bono. ¿Cómo pesa el riesgo de reinversión frente al de mercado?",["Más","Menos","Igual"],"Un inversionista de largo plazo depende más de reinvertir los cupones. El de corto plazo sufre más por el precio.","Menos"],
+[88,"d","¿Cómo se replica un swap en el que recibes flotante y pagas fijo?",["Comprando un bono flotante financiado con un bono fijo","Con forwards de valor inicial cero","Con futuros largos y forwards cortos"],"Estás largo en el flotante y corto en el fijo. Los forwards que replican un swap suelen estar fuera de mercado."],
+[89,"e","Preferente de par $100, dividendo 6 % trimestral, precio $70, retractable a la par en 2 años. Retorno requerido nominal 10 %. ¿Cuál es su valor?",["$92,83","$60,00","$104,00"],"Como cotiza muy por debajo de la par, la retracción es probable. PMT 1,5; N 8; I 2,5 %; FV 100 da $92,83."],
+[90,"f","¿Cómo es el ajuste de notching en la deuda subordinada de emisores especulativos, frente a los de grado de inversión?",["Mayor","Menor","Igual"],"A menor calificación senior no garantizada, mayor es el ajuste."]
+];
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+const POOLS = [
+  { id: "failed", name: "Falladas en el mock", test: q => q[5] },
+  { id: "right", name: "Acertadas en el mock", test: q => !q[5] },
+  { id: "all", name: "Todas", test: () => true },
+  { id: "recent", name: "Mis errores recientes", test: q => S.last[q[0]] === 0 }
+];
+const S = { pool: store.get("pool", "failed"), topic: store.get("topic", "all"), last: store.get("last", {}), round: [], i: 0, score: 0, picked: null, misses: [], order: [] };
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pool = () => POOLS.find(p => p.id === S.pool);
+const inTopic = q => S.topic === "all" || q[1] === S.topic;
+
+function renderFilters() {
+  $("pools").innerHTML = POOLS.map(p => {
+    const n = Q.filter(q => p.test(q) && inTopic(q)).length;
+    return `<button class="chip" data-pool="${p.id}" aria-pressed="${S.pool === p.id}" ${n ? "" : "disabled"}>${p.name}<small>${n}</small></button>`;
+  }).join("");
+  const opts = [["all", "Todos", "90"], ...Object.keys(TOPICS).map(k => [k, TOPICS[k], SCORE[k]])];
+  $("topics").innerHTML = opts.map(([id, name, sc]) => `<button class="chip" data-topic="${id}" aria-pressed="${S.topic === id}">${name}<small>${sc}</small></button>`).join("");
+}
+
+function start(list) {
+  S.round = shuffle(list || Q.filter(q => pool().test(q) && inTopic(q)));
+  S.i = 0; S.score = 0; S.misses = []; S.picked = null;
+  prepare();
+  render();
+}
+function prepare() {
+  const q = S.round[S.i];
+  if (q) S.order = shuffle([0, 1, 2]);
+}
+
+function render() {
+  renderFilters();
+  if (!S.round.length) {
+    $("stage").innerHTML = `<div class="results"><h2>Aún no hay preguntas aquí</h2><p class="note">Esta lista se llena cuando respondes mal en una ronda. Elige otra opción para seguir practicando.</p></div>`;
+    return;
+  }
+  if (S.i >= S.round.length) return renderResults();
+  const q = S.round[S.i], answered = S.picked !== null;
+  const opts = S.order.map((idx, pos) => {
+    let cls = "opt";
+    if (answered && idx === 0) cls += " right";
+    if (answered && idx === S.picked && idx !== 0) cls += " wrong";
+    return `<button class="${cls}" data-pick="${idx}" ${answered ? "disabled" : ""}><b>${"ABC"[pos]}</b><span>${esc(q[3][idx])}</span></button>`;
+  }).join("");
+  const fb = !answered ? "" : `<div class="feedback">
+    <div class="verdict ${S.picked === 0 ? "ok" : "no"}">${S.picked === 0 ? "Correcto" : "Incorrecto"}</div>
+    <p>${esc(q[4])}</p>
+    ${q[5] ? `<p class="mocknote">En el mock fallaste este concepto. Tu respuesta o error fue: ${esc(q[5])}.</p>` : ""}
+    <div class="actions"><button class="btn" id="next">${S.i + 1 < S.round.length ? "Siguiente" : "Ver resultado"}</button></div>
+  </div>`;
+  $("stage").innerHTML = `
+    <div class="meta"><span class="tag">Mock ${q[0]} · ${TOPICS[q[1]]}</span><span class="pos">${S.i + 1}/${S.round.length} · ${S.score} correctas</span></div>
+    <div class="bar"><i style="width:${(S.i + (answered ? 1 : 0)) / S.round.length * 100}%"></i></div>
+    <p class="prompt">${esc(q[2])}</p>
+    <div class="options">${opts}</div>${fb}`;
+}
+
+function renderResults() {
+  const total = S.round.length, pct = Math.round(S.score / total * 100);
+  const byTopic = Object.keys(TOPICS).map(k => {
+    const items = S.round.filter(q => q[1] === k);
+    if (!items.length) return "";
+    const miss = S.misses.filter(q => q[1] === k).length;
+    return `<div class="row"><span>${TOPICS[k]}</span><span>${items.length - miss}/${items.length}</span></div>`;
+  }).join("");
+  $("stage").innerHTML = `<div class="results">
+    <div class="big">${pct} %</div>
+    <h2>${S.score} de ${total} correctas</h2>
+    <div class="rows">${byTopic}</div>
+    <div class="actions">
+      ${S.misses.length ? `<button class="btn" id="retry">Repetir mis ${S.misses.length} errores</button>` : ""}
+      <button class="btn ${S.misses.length ? "ghost" : ""}" id="again">Nueva ronda</button>
+    </div></div>`;
+}
+
+function pick(idx) {
+  if (S.picked !== null) return;
+  const q = S.round[S.i];
+  S.picked = idx;
+  if (idx === 0) S.score++; else S.misses.push(q);
+  S.last[q[0]] = idx === 0 ? 1 : 0;
+  store.set("last", S.last);
+  render();
+}
+function next() { S.i++; S.picked = null; prepare(); render(); }
+
+document.addEventListener("click", e => {
+  const t = e.target.closest("button");
+  if (!t) return;
+  if (t.dataset.pool) { S.pool = t.dataset.pool; store.set("pool", S.pool); start(); }
+  else if (t.dataset.topic) {
+    S.topic = t.dataset.topic; store.set("topic", S.topic);
+    if (!Q.some(q => pool().test(q) && inTopic(q))) { S.pool = "all"; store.set("pool", "all"); }
+    start();
+  }
+  else if (t.dataset.pick !== undefined) pick(+t.dataset.pick);
+  else if (t.id === "next") next();
+  else if (t.id === "retry") start(S.misses.slice());
+  else if (t.id === "again") start();
+});
+document.addEventListener("keydown", e => {
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  if (S.i >= S.round.length) return;
+  const key = e.key.toLowerCase(), map = { a: 0, b: 1, c: 2, 1: 0, 2: 1, 3: 2 };
+  if (S.picked === null && key in map) pick(S.order[map[key]]);
+  else if (S.picked !== null && e.key === "Enter" && document.activeElement?.id !== "next") next();
+});
+
+if (!Q.some(q => pool().test(q) && inTopic(q))) { S.pool = "failed"; S.topic = "all"; }
+start();
+</script>
+
+</body></html>
