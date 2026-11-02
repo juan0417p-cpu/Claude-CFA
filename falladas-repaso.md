@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 46 preguntas** (Equity: 22 · Ethics: 10 · Fixed Income: 14)
+**Total: 52 preguntas** (Equity: 28 · Ethics: 10 · Fixed Income: 14)
 
 ---
 
@@ -500,4 +500,56 @@ El notching de la deuda subordinada de emisores **especulativos**, frente al de 
 <details><summary>Ver respuesta</summary>
 
 **Mayor.** Con más probabilidad de default, el orden de cobro importa más. **Peor calificación senior → mayor notching.** *(Repaso: menor.)*
+</details>
+
+---
+
+## 📈 Equity: repaso del Mock A de CFA Institute (2-nov)
+
+### 47. Clasificación de una orden limitada *(Mock A #10)*
+Mejor ask $72, mejor bid $69. Entra una **orden limitada de venta a $73**. ¿Toma el mercado, hace el mercado o está detrás del mercado?
+
+<details><summary>Ver respuesta</summary>
+
+**Detrás del mercado**: hay vendedores más baratos ($72). Venta ≤ bid → **toma** el mercado · entre bid y ask → **hace** un nuevo mercado · por encima del ask → **detrás**. Para compras, al revés. Pregúntate: ¿mi orden cruza al otro lado (toma), es la mejor de su lado (hace) o hay otras mejores (detrás)? *(Mock: toma. Repaso: hace.)*
+</details>
+
+### 48. Estructura de mercado *(Mock A #14)*
+Una gestora debe vender un **bloque muy grande** de una acción **poco negociada**. ¿Dónde lo ejecuta: order-driven, quote-driven o brokered?
+
+<details><summary>Ver respuesta</summary>
+
+**Brokered market**: un corredor busca un comprador para activos únicos o poco líquidos (inmuebles, arte, bloques grandes). En **order-driven** casi no hay órdenes del otro lado, y en **quote-driven** ningún dealer quiere ese inventario. *(Respondiste order-driven en el mock **y** en el repaso.)*
+</details>
+
+### 49. DDM con precio futuro *(Mock A #52)*
+D₀ = $2, crecimiento histórico 3 %, crecimiento esperado 6 % durante 3 años, precio esperado en el año 3 = $40, r = 12 %. ¿Valor intrínseco?
+
+<details><summary>Ver respuesta</summary>
+
+**$33,85.** D₁ = 2,12 · D₂ = 2,2472 · D₃ = 2,382 → PV de D₁, D₂ y (D₃ + 40). Con el worksheet CF: C01 = 2,12 · C02 = 2,2472 · C03 = 42,382 · I = 12 · NPV. Si te dan el **precio futuro**, ese es el valor terminal: **no** uses Gordon. El crecimiento histórico es un distractor. *(Mock: Gordon con el histórico, 22,89. Repaso: 21,09, y en la práctica volviste a usar Gordon.)*
+</details>
+
+### 50. Índice de precio vs. retorno total *(Mock A #27, acertada al azar 🎲)*
+En el **lanzamiento**, ¿el índice de precio vale menos, igual o más que el de retorno total?
+
+<details><summary>Ver respuesta</summary>
+
+**Igual.** Parten en el mismo valor. Con el tiempo, el de retorno total queda por encima porque suma los dividendos reinvertidos. *(Repaso: menor.)*
+</details>
+
+### 51. Función de los dealers *(Mock A #61, acertada al azar 🎲)*
+¿Qué hacen principalmente los dealers: organizar IPOs, dar liquidez o titularizar activos?
+
+<details><summary>Ver respuesta</summary>
+
+**Dar liquidez**: compran y venden por cuenta propia desde su inventario. Los IPOs son de los **bancos de inversión**, y la titularización es de los **securitizers**. Dealer = "yo te compro". Broker = "yo te busco quién compre". *(Repaso: titularizar.)*
+</details>
+
+### 52. Preferente retractable *(Mock A #89, acertada al azar 🎲)*
+Preferente 8 % sobre par $50, dividendos trimestrales, precio $35, retractable a la par en 3 años, r nominal 12 %, crecimiento de las utilidades 4 %. ¿Valor?
+
+<details><summary>Ver respuesta</summary>
+
+**$45,02.** Como cotiza muy por debajo de la par, la retracción es probable: valórala como un **bono**. N = 12, I/Y = 3, PMT = 1, FV = 50 → PV = 45,02. $4 / 0,12 = 33,33 la trata como perpetua, y 52,00 aplica Gordon (el 4 % es un distractor). *(Repaso: no sabías cómo hacerla.)*
 </details>
