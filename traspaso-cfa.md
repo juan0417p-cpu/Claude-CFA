@@ -35,7 +35,7 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 | Corporate Issuers | 5/13 (38 %) 🟥 | 71,8 % | −34 pts |
 | **Total** | **107/180 (59,4 %)** | 48,9 % | **+10 pts** |
 
-Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en la segunda sesión. En la Sesión 2 hubo bastantes respuestas al azar.
+Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en la segunda sesión. En la Sesión 2 hubo **16 acertadas al azar** (Equity #27, #50, #61, #89 · FI #26, #60, #74, #83, #90 · PM #36, #47, #72 · Alt #21, #43 · Deriv #28, #88): sin ellas, sabías 38 de 90 (42 %).
 
 ### Acumulado y prioridad
 "Pts. perdidos" = puntos que se pierden en el examen real según el peso de cada materia. Es el mejor criterio para priorizar.

@@ -15,6 +15,13 @@
 
 ---
 
+## 🎲 Acertadas al azar (16)
+Equity: #27, #50, #61, #89 · Fixed Income: #26, #60, #74, #83, #90 · Portfolio Mgmt: #36, #47, #72 · Alternatives: #21, #43 · Derivatives: #28, #88
+
+Si no cuentas las 16 que adivinaste, **sabías 38 de 90 (42 %)**. Por eso conviene repasar también estas.
+
+---
+
 # Parte 1: las 36 falladas
 
 ## 🔀 Derivatives (6/14 = 43 %)
@@ -618,7 +625,7 @@ Frente a los derivados en bolsa, ¿cómo es la transparencia de los OTC?
 
 </details>
 
-### Pregunta 28
+### Pregunta 28 🎲 (acertada al azar)
 ¿Cuál griega mide un riesgo de segundo orden?
 
 - Delta
@@ -648,7 +655,7 @@ Compras una call con strike igual al precio forward de $80 y prima de $4. Si tu 
 
 </details>
 
-### Pregunta 88
+### Pregunta 88 🎲 (acertada al azar)
 ¿Cómo se replica un swap en el que recibes flotante y pagas fijo?
 
 - Comprando un bono flotante financiado con un bono fijo
@@ -725,7 +732,7 @@ Dos bonos son iguales salvo por una característica. Cuando suben las tasas, A c
 
 </details>
 
-### Pregunta 26
+### Pregunta 26 🎲 (acertada al azar)
 Precio actual 100. Si el rendimiento sube 50 pb vale 96,5, y si baja 50 pb vale 104. ¿Cuál es la duración modificada anual aproximada?
 
 - 15,0
@@ -770,7 +777,7 @@ Un bono de pago anual tiene cupón de 5 %, vence en 4 años y cuesta 95. ¿Cuál
 
 </details>
 
-### Pregunta 60
+### Pregunta 60 🎲 (acertada al azar)
 ¿Cuál es el caso que menos corresponde a un Eurobono?
 
 - Una empresa alemana emite en dólares para inversionistas de EE. UU.
@@ -785,7 +792,7 @@ Un bono de pago anual tiene cupón de 5 %, vence en 4 años y cuesta 95. ¿Cuál
 
 </details>
 
-### Pregunta 74
+### Pregunta 74 🎲 (acertada al azar)
 Tu portafolio incluye bonos fijos, callables y ABS. ¿Qué duración usas?
 
 - Efectiva
@@ -800,7 +807,7 @@ Tu portafolio incluye bonos fijos, callables y ABS. ¿Qué duración usas?
 
 </details>
 
-### Pregunta 83
+### Pregunta 83 🎲 (acertada al azar)
 En una hipoteca residencial sin recurso, ¿qué puede hacer el prestamista si el deudor incumple?
 
 - Ir contra otros activos del deudor
@@ -830,7 +837,7 @@ En una hipoteca residencial sin recurso, ¿qué puede hacer el prestamista si el
 
 </details>
 
-### Pregunta 90
+### Pregunta 90 🎲 (acertada al azar)
 ¿Cómo es el ajuste de notching en la deuda subordinada de emisores especulativos, frente a los de grado de inversión?
 
 - Igual
@@ -862,7 +869,7 @@ En mercados eficientes y a largo plazo, ¿qué se espera de las acciones grandes
 
 </details>
 
-### Pregunta 36
+### Pregunta 36 🎲 (acertada al azar)
 Beta 1,2; retorno del título 13 %; retorno del mercado 10 %; tasa libre 3 %. ¿Cuál es el retorno anormal?
 
 - 1,6 %
@@ -892,7 +899,7 @@ Beta 1,2; retorno del título 13 %; retorno del mercado 10 %; tasa libre 3 %. ¿
 
 </details>
 
-### Pregunta 47
+### Pregunta 47 🎲 (acertada al azar)
 Retorno del portafolio 14 %, beta 1,2, mercado 9 %, tasa libre 3 %. ¿Cuál es el alfa de Jensen?
 
 - 3,2 %
@@ -952,7 +959,7 @@ En un portafolio de igual ponderación, ¿qué disminuye si aumentan las correla
 
 </details>
 
-### Pregunta 72
+### Pregunta 72 🎲 (acertada al azar)
 ¿Cómo se llama la pendiente de la línea de asignación de capital?
 
 - Beta de mercado
@@ -1044,7 +1051,7 @@ Inviertes $2 millones en un hedge fund con comisión de incentivo de 20 % y hurd
 
 </details>
 
-### Pregunta 21
+### Pregunta 21 🎲 (acertada al azar)
 ¿Qué ayuda a explicar el rendimiento de conveniencia (convenience yield) en una materia prima?
 
 - Un spot igual a lo que el mercado espera a futuro
@@ -1074,7 +1081,7 @@ Inviertes $2 millones en un hedge fund con comisión de incentivo de 20 % y hurd
 
 </details>
 
-### Pregunta 43
+### Pregunta 43 🎲 (acertada al azar)
 ¿Qué activo permite retrasar la cosecha cuando los precios están bajos?
 
 - Ambos
@@ -1166,7 +1173,7 @@ Para decidir si una acción está cara o barata, ¿con qué comparas su precio d
 
 </details>
 
-### Pregunta 27
+### Pregunta 27 🎲 (acertada al azar)
 Un índice se lanza hoy en versiones de precio y de retorno total. ¿Cómo se comparan sus valores en el lanzamiento?
 
 - El de precio es mayor
@@ -1211,7 +1218,7 @@ Compras a $40 con margen inicial de 60 % y margen de mantenimiento de 30 %. ¿Po
 
 </details>
 
-### Pregunta 50
+### Pregunta 50 🎲 (acertada al azar)
 ¿Qué ocurre, probablemente, con un índice de igual ponderación?
 
 - Requiere rebalanceos poco frecuentes
@@ -1256,7 +1263,7 @@ Con eficiencia semifuerte, ¿qué necesita un analista fundamental para obtener 
 
 </details>
 
-### Pregunta 61
+### Pregunta 61 🎲 (acertada al azar)
 ¿Qué aportan principalmente los dealers de valores?
 
 - Estructuración de IPO
@@ -1376,7 +1383,7 @@ ROA 10 %, apalancamiento 1,5 y payout 30 %. ¿Cuál es el crecimiento sostenible
 
 </details>
 
-### Pregunta 89
+### Pregunta 89 🎲 (acertada al azar)
 Preferente de par $100, dividendo 6 % trimestral, precio $70, retractable a la par en 2 años. Retorno requerido nominal 10 %. ¿Cuál es su valor?
 
 - $104,00
