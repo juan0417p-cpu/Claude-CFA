@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 55 preguntas** (Equity: 28 · Ethics: 13 · Fixed Income: 14)
+**Total: 59 preguntas** (Equity: 28 · Ethics: 13 · Fixed Income: 14 · Alternatives: 4)
 
 ---
 
@@ -580,4 +580,41 @@ Una CFA asesora a una amiga en su tiempo libre a cambio de una donación a su ca
 <details><summary>Ver respuesta</summary>
 
 **Sí, IV(B) Additional Compensation.** Se necesita el **permiso escrito** del empleador **antes** de aceptar. Avisar no es lo mismo que obtener permiso, y la donación también cuenta como compensación. Compáralo con Brenner (M3 #56): avisó por email **y** le dieron permiso → no viola. *(Mock: no. Repaso: no, porque avisó por email.)*
+</details>
+
+---
+
+## 🏗️ Alternatives (repaso de los Mocks 2, 3 y 4, 3-nov)
+*(Enunciados resumidos.)*
+
+### 56. Características de las alternativas *(Kaplan M3 #139)*
+Frente a las inversiones tradicionales, ¿qué es **menos** probable en las alternativas: comisiones más altas, **menos** especialización del gestor o portafolios más concentrados?
+
+<details><summary>Ver respuesta</summary>
+
+**Menos especialización del gestor** (en realidad tienen **más**). Es un "least likely": marca V/F en cada opción y busca la F. La trampa estaba en la palabra **"less"**. *(Repaso: portafolios concentrados.)*
+</details>
+
+### 57. Comisiones con hard hurdle *(Kaplan M3 #174)*
+Fondo de $100 M al inicio, gestión 2 % sobre el inicio, incentivo 20 % neto de gestión con **hard hurdle de 5 %**. Valor final antes de comisiones: $110 M. ¿Retorno neto?
+
+<details><summary>Ver respuesta</summary>
+
+**7,4 %.** Gestión 2 → ganancia neta 8 → hurdle 5 → exceso 3 → incentivo 0,6 → comisiones 2,6 → 107,4. El hurdle **no se le resta al inversionista**: solo define sobre qué parte cobra el gestor. *(Repaso: 5,6 %.)*
+</details>
+
+### 58. Comisiones con soft hurdle y high-water mark *(Kaplan M4 #127, acertada al azar 🎲 en el mock)*
+AUM $250 M al cierre del año anterior, gestión 2 % sobre el valor de **fin** de año, incentivo 20 % neto de gestión, **soft hurdle 4 %**, **high-water mark $275 M**. Retorno bruto: 20 %. ¿Retorno neto?
+
+<details><summary>Ver respuesta</summary>
+
+**16,1 %.** 300 → gestión 6 (sobre el **fin**) → 294 (17,6 % > 4 %) → incentivo 20 % × (294 − 275) = 3,8 → comisiones 9,8 → 290,2 / 250 − 1. *(Repaso: 17,3 %.)*
+</details>
+
+### 59. High-water mark: ¿bruto o neto? *(práctica)*
+Inicio $180 M, high-water mark $200 M, gestión 1 % sobre el inicio, incentivo 20 % neto de gestión, soft hurdle 5 %. Valor final bruto: $220 M. ¿Retorno neto?
+
+<details><summary>Ver respuesta</summary>
+
+**19,2 %.** 220 − 1,8 = 218,2 → incentivo 20 % × (218,2 − 200) = 3,64 → 214,56 / 180 − 1. Si el incentivo es **neto de gestión**, el high-water mark se compara contra el valor **después** de la comisión de gestión (218,2), no contra el bruto (220). *(Repaso: 19,0 %, usando el bruto.)*
 </details>
