@@ -89,7 +89,7 @@ Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en l
 
 ## 2. Historial de estudio
 
-**Examen: 17-nov-2026. Meta: ≥ 70 %.** Fechas en hora de Colombia (aprox.).
+**Examen: 17-nov-2026. Meta: ≥ 70 %.** El estudiante está en **Bogotá (UTC−5)**: usar siempre la fecha y hora de Colombia. Fechas en hora de Colombia (aprox.).
 
 | Fecha | Qué se hizo | Resultado |
 |---|---|---|
