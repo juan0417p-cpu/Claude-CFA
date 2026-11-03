@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 59 preguntas** (Equity: 28 · Ethics: 13 · Fixed Income: 14 · Alternatives: 4)
+**Total: 60 preguntas** (Equity: 28 · Ethics: 13 · Fixed Income: 14 · Alternatives: 5)
 
 ---
 
@@ -617,4 +617,12 @@ Inicio $180 M, high-water mark $200 M, gestión 1 % sobre el inicio, incentivo 2
 <details><summary>Ver respuesta</summary>
 
 **19,2 %.** 220 − 1,8 = 218,2 → incentivo 20 % × (218,2 − 200) = 3,64 → 214,56 / 180 − 1. Si el incentivo es **neto de gestión**, el high-water mark se compara contra el valor **después** de la comisión de gestión (218,2), no contra el bruto (220). *(Repaso: 19,0 %, usando el bruto.)*
+</details>
+
+### 60. Etapas del venture capital *(Kaplan M3 #121)*
+¿En qué etapa del desarrollo de una empresa le da capital un fondo de venture capital para **prepararla para la IPO**: formativa, later stage o mezzanine?
+
+<details><summary>Ver respuesta</summary>
+
+**Mezzanine stage**: el último paso antes de salir a bolsa ("entrepiso" entre privada y pública). Later stage = ya vende y financia la **expansión**. Formativa = idea y primer producto. No confundir con la **deuda** mezzanine (deuda subordinada). *(Repaso: later stage.)*
 </details>

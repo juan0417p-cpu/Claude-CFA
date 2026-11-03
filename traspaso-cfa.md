@@ -116,6 +116,7 @@ Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en l
 | ~2-nov | 🧪 **Mock A de CFA Institute, Sesión 1** (Ethics, Quant, Econ, FSA, Corporate Issuers) | **53/90 = 59 %**. Falladas en `falladas-mock-a.md` |
 | ~2-nov | 🧪 **Mock A de CFA Institute, Sesión 2** (Equity, FI, Derivatives, Alternatives, PM) | **54/90 = 60 %**, con bastantes al azar. Las 90 en `falladas-mock-a-sesion-2.md`. **Mock A completo: 107/180 = 59,4 %** |
 | 2-nov | Repaso del Mock A: falladas y acertadas al azar de FI, Equity y Ethics | FI 9/15 · Equity 4/10 · Ethics 5/8. Falladas agregadas a `falladas-repaso.md` (55 en total) |
+| 2-nov | **Alternatives I** (adelantado): características, métodos, estructuras, comisiones (catch-up, high-water mark, clawback, hurdles), J-curve, private capital | Kaplan: Paso 1 12/13 · Paso 2 3/5 (+2 ejercicios de comisiones) · Paso 3 6/7 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
