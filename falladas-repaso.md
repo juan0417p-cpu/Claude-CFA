@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 60 preguntas** (Equity: 28 · Ethics: 13 · Fixed Income: 14 · Alternatives: 5)
+**Total: 62 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 5)
 
 ---
 
@@ -625,4 +625,24 @@ Inicio $180 M, high-water mark $200 M, gestión 1 % sobre el inicio, incentivo 2
 <details><summary>Ver respuesta</summary>
 
 **Mezzanine stage**: el último paso antes de salir a bolsa ("entrepiso" entre privada y pública). Later stage = ya vende y financia la **expansión**. Formativa = idea y primer producto. No confundir con la **deuda** mezzanine (deuda subordinada). *(Repaso: later stage.)*
+</details>
+
+---
+
+## ⚖️ Ethics: las más difíciles de los Mocks 2, 3 y 4 (2-nov)
+
+### 61. Market maker con información privilegiada *(Kaplan M3 #13, acertada al azar 🎲 en el mock)*
+Un broker-dealer lidera una oferta secundaria de una acción en la que hace mercado hace 5 años, y tiene MNPI sobre la oferta. ¿Qué debe hacer: dejar de ser underwriter, seguir como market maker tomando solo el lado contrario de órdenes no solicitadas, o dejar de hacer mercado durante la oferta?
+
+<details><summary>Ver respuesta</summary>
+
+**Seguir como market maker, de forma pasiva** (solo el lado contrario de órdenes **no solicitadas** de clientes). Retirarse por completo sería una **señal** al mercado de que algo pasa. Ser underwriter y market maker a la vez sí está permitido. *(Repaso: retirarse durante la oferta.)*
+</details>
+
+### 62. Viaje condicionado a un resultado *(Kaplan M2 #47)* ⚠️ fallada 3 veces
+A un banquero le ofrecen un viaje en jet privado y una cacería **si** su firma completa una emisión en 90 días. ¿Puede aceptar si lo revela, no puede porque es lujoso, o necesita el consentimiento escrito de su firma?
+
+<details><summary>Ver respuesta</summary>
+
+**Consentimiento escrito de su firma** (IV(B) Additional Compensation). El **"if"** lo condiciona a un resultado futuro → es compensación adicional, no un regalo. Lo que importa **no es si es lujoso**, sino **si está condicionado**. 🌳 ¿Hay un "IF"? → permiso ESCRITO. *(Mock: no puede, por lujoso. Repaso: puede si lo revela. 2-nov: no puede, por lujoso.)*
 </details>
