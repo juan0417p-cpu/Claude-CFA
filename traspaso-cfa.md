@@ -118,6 +118,7 @@ Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en l
 | 2-nov | Repaso del Mock A: falladas y acertadas al azar de FI, Equity y Ethics | FI 9/15 · Equity 4/10 · Ethics 5/8. Falladas agregadas a `falladas-repaso.md` (55 en total) |
 | 2-nov | **Alternatives I** (adelantado): características, métodos, estructuras, comisiones (catch-up, high-water mark, clawback, hurdles), J-curve, private capital | Kaplan: Paso 1 12/13 · Paso 2 3/5 (+2 ejercicios de comisiones) · Paso 3 6/7 |
 | 3-nov | **Alternatives II** (adelantado): real estate, infraestructura, recursos naturales (carry, contango/backwardation, roll yield), hedge funds, activos digitales | Kaplan: RE/infra 5/5 · recursos naturales 4/5 · hedge funds 7/7 · digitales 4/5 · Mock A #21 y #43 ✅. **Alternatives terminado: 41/47 de Kaplan (87 %)** |
+| 4-nov | 🧪 **Examen de comprobación de Alternatives** (25: 14 del Mock A + 11 de Kaplan, sin pistas) | **22/25 = 88 %**. Falladas: MOIC vs. TIR, clawback y high-water mark = máximo histórico |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

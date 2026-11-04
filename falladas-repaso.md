@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 64 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 7)
+**Total: 67 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10)
 
 ---
 
@@ -665,4 +665,32 @@ A un banquero le ofrecen un viaje en jet privado y una cacería **si** su firma 
 <details><summary>Ver respuesta</summary>
 
 **Cuando la transacción queda registrada en la blockchain**: tienes la criptomoneda misma. Las acciones de empresas cripto, los futuros y los ETFs son **indirectas**. *(Repaso: la acción cripto.)*
+</details>
+
+---
+
+## 🧪 Alternatives: examen de comprobación (4-nov, 22/25)
+
+### 65. MOIC vs. TIR *(Mock A #64)*
+Dos fondos de private equity duplican el capital, pero A lo logra más rápido. ¿Cómo se compara su MOIC?
+
+<details><summary>Ver respuesta</summary>
+
+**Es igual** (2,0× los dos). El MOIC solo mide cuántas veces multiplicaste el dinero, **sin considerar el tiempo**. La que premia la velocidad es la **TIR**. *(Repaso: A tiene menor MOIC.)*
+</details>
+
+### 66. ¿Cuándo se activa el clawback? *(Mock A #65)* ⚠️ fallada 2 veces
+¿Malas salidas al inicio y ganancias después, éxitos al inicio y más éxitos, o éxitos al inicio y pérdidas después?
+
+<details><summary>Ver respuesta</summary>
+
+**Éxitos al inicio y pérdidas después**: el GP cobró incentivo sobre ganancias que después se perdieron, y tiene que devolverlo. Si al inicio no hay ganancias, el GP nunca cobró de más. *(Respondiste "malas al inicio y ganancias después" en el mock **y** en el repaso.)*
+</details>
+
+### 67. High-water mark = máximo histórico *(Mock A #37)* ⚠️ fallada 2 veces
+Fondo de $200 M, 2 y 20, las dos sobre el valor de **fin** de período, con high-water mark. Después de comisiones: año 1 = $227,2 M, año 2 = $215,6 M. El año 3 cierra en $250 M antes de comisiones. ¿Comisiones totales del año 3?
+
+<details><summary>Ver respuesta</summary>
+
+**$9,56 M** = gestión 2 % × 250 = 5 + incentivo 20 % × (250 − **227,2**) = 4,56. El high-water mark es el **máximo histórico** después de comisiones (227,2), **no** el valor del año anterior (215,6). *(Respondiste 11,88, usando 215,6, en el mock **y** en el repaso.)*
 </details>
