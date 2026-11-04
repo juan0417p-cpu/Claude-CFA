@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 63 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 6)
+**Total: 64 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 7)
 
 ---
 
@@ -657,4 +657,12 @@ A un banquero le ofrecen un viaje en jet privado y una cacería **si** su firma 
 <details><summary>Ver respuesta</summary>
 
 **El convenience yield**: solo lo recibe quien tiene la commodity **física**. Los futuros cotizan en bolsa (más transparencia) y siguen a la inflación. "Least likely reason" = algo que el derivado **no** te da, no la razón "menos importante". *(Respondiste transparencia en el mock **y** en el repaso.)*
+</details>
+
+### 64. Inversión directa en criptomonedas *(Kaplan M3 #2)*
+¿Cuándo hay una inversión **directa** en una criptomoneda: cuando la transacción queda registrada en la blockchain, cuando se liquida la compra de una acción cripto o cuando se toma un futuro sobre cripto?
+
+<details><summary>Ver respuesta</summary>
+
+**Cuando la transacción queda registrada en la blockchain**: tienes la criptomoneda misma. Las acciones de empresas cripto, los futuros y los ETFs son **indirectas**. *(Repaso: la acción cripto.)*
 </details>
