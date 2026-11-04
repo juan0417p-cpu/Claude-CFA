@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 62 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 5)
+**Total: 63 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 6)
 
 ---
 
@@ -645,4 +645,16 @@ A un banquero le ofrecen un viaje en jet privado y una cacería **si** su firma 
 <details><summary>Ver respuesta</summary>
 
 **Consentimiento escrito de su firma** (IV(B) Additional Compensation). El **"if"** lo condiciona a un resultado futuro → es compensación adicional, no un regalo. Lo que importa **no es si es lujoso**, sino **si está condicionado**. 🌳 ¿Hay un "IF"? → permiso ESCRITO. *(Mock: no puede, por lujoso. Repaso: puede si lo revela. 2-nov: no puede, por lujoso.)*
+</details>
+
+---
+
+## 🌾 Alternatives: recursos naturales (3-nov)
+
+### 63. Derivados vs. commodity física *(Kaplan M4 #126)* ⚠️ fallada 2 veces
+¿Cuál es la razón **menos** probable para invertir en **derivados** de commodities en vez de en la commodity física: convenience yield, mayor transparencia de precios o correlación positiva con la inflación?
+
+<details><summary>Ver respuesta</summary>
+
+**El convenience yield**: solo lo recibe quien tiene la commodity **física**. Los futuros cotizan en bolsa (más transparencia) y siguen a la inflación. "Least likely reason" = algo que el derivado **no** te da, no la razón "menos importante". *(Respondiste transparencia en el mock **y** en el repaso.)*
 </details>
