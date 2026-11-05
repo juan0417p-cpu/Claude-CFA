@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 67 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10)
+**Total: 68 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 1)
 
 ---
 
@@ -693,4 +693,16 @@ Fondo de $200 M, 2 y 20, las dos sobre el valor de **fin** de período, con high
 <details><summary>Ver respuesta</summary>
 
 **$9,56 M** = gestión 2 % × 250 = 5 + incentivo 20 % × (250 − **227,2**) = 4,56. El high-water mark es el **máximo histórico** después de comisiones (227,2), **no** el valor del año anterior (215,6). *(Respondiste 11,88, usando 215,6, en el mock **y** en el repaso.)*
+</details>
+
+---
+
+## 🔀 Derivatives (repaso de los Mocks 2, 3, 4 y A, 4-nov)
+
+### 68. Clearing central obligatorio *(Kaplan M3 #97)*
+¿Qué resulta más probablemente de un mandato de clearing central: más revelación de operaciones, dispersión del riesgo de contraparte o estandarización de los contratos?
+
+<details><summary>Ver respuesta</summary>
+
+**Más revelación de operaciones.** El riesgo de contraparte se **concentra** en la CCP (no se dispersa), y los contratos OTC siguen siendo **personalizables**. *(Repaso: dispersión del riesgo.)*
 </details>
