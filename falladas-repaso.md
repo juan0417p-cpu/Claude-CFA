@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 68 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 1)
+**Total: 70 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 3)
 
 ---
 
@@ -705,4 +705,20 @@ Fondo de $200 M, 2 y 20, las dos sobre el valor de **fin** de período, con high
 <details><summary>Ver respuesta</summary>
 
 **Más revelación de operaciones.** El riesgo de contraparte se **concentra** en la CCP (no se dispersa), y los contratos OTC siguen siendo **personalizables**. *(Repaso: dispersión del riesgo.)*
+</details>
+
+### 69. Payoff del vendedor de una put *(Kaplan M4 #144)* ⚠️ fallada 2 veces
+Al vencimiento la acción vale $43. ¿Qué resultado tiene el **vendedor** (writer) de una put con strike $45 (sin considerar la prima)?
+
+<details><summary>Ver respuesta</summary>
+
+**Pierde $2.** El comprador ejerce: el vendedor tiene que **comprar a 45** algo que vale 43. Primero calcula el payoff del **comprador** (max(0, 45 − 43) = 2) y, si preguntan por el vendedor, **cámbiale el signo**. Subraya siempre *buyer* o *writer*. *(Respondiste "gana $2" en el mock **y** en el repaso.)*
+</details>
+
+### 70. Valor vs. ganancia de una call *(Mock A #55)* ⚠️ fallada 2 veces
+Compraste una call por $7, strike $60, cuando el subyacente estaba en $58. Al vencimiento vale $69. ¿Cuál es el **valor** de la call?
+
+<details><summary>Ver respuesta</summary>
+
+**$9** = max(0, 69 − 60). La **ganancia** sería 9 − 7 = $2. "Value / payoff / worth" → **sin** restar la prima. "Profit / gain / loss" → **con** la prima. El $58 es un distractor. *(Mock: $2, la ganancia. Repaso: no sabías cómo hacerla.)*
 </details>
