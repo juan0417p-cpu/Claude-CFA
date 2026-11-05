@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 70 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 3)
+**Total: 71 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 4)
 
 ---
 
@@ -721,4 +721,12 @@ Compraste una call por $7, strike $60, cuando el subyacente estaba en $58. Al ve
 <details><summary>Ver respuesta</summary>
 
 **$9** = max(0, 69 − 60). La **ganancia** sería 9 − 7 = $2. "Value / payoff / worth" → **sin** restar la prima. "Profit / gain / loss" → **con** la prima. El $58 es un distractor. *(Mock: $2, la ganancia. Repaso: no sabías cómo hacerla.)*
+</details>
+
+### 71. Arbitraje de un forward mal valorado *(Kaplan M4 #154)*
+Por un error, un forward se emitió **ignorando el convenience yield**. Para arbitrarlo, ¿en qué tendrías una posición **larga**: el forward, el subyacente o el activo libre de riesgo?
+
+<details><summary>Ver respuesta</summary>
+
+**En el subyacente.** El convenience yield **resta** en el precio del forward: si se ignora, el forward queda **caro** → vender el forward, **comprar el subyacente** y pedir prestado (corto en el activo libre de riesgo). Olvidar un beneficio → forward caro. Olvidar un costo → forward barato. *(Repaso: el activo libre de riesgo.)*
 </details>
