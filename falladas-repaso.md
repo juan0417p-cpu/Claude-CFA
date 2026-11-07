@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 71 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 4)
+**Total: 74 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 7)
 
 ---
 
@@ -730,3 +730,29 @@ Por un error, un forward se emitió **ignorando el convenience yield**. Para arb
 
 **En el subyacente.** El convenience yield **resta** en el precio del forward: si se ignora, el forward queda **caro** → vender el forward, **comprar el subyacente** y pedir prestado (corto en el activo libre de riesgo). Olvidar un beneficio → forward caro. Olvidar un costo → forward barato. *(Repaso: el activo libre de riesgo.)*
 </details>
+
+### 72. Precio de un forward *(Kaplan M3 #165)*
+Para un activo sin costos ni beneficios de tenencia, el precio forward de no-arbitraje es: ¿el spot, el valor futuro del spot o cero al inicio?
+
+<details><summary>Ver respuesta</summary>
+
+**El valor futuro del spot:** F₀ = S₀ × (1 + r)^T. "Cero al inicio" es el **valor** del contrato, no su **precio**. *(Repaso: cero al inicio.)*
+</details>
+
+### 73. FRAs que replican un swap *(Kaplan M2 #130)*
+Si se replica un swap con FRAs, cada FRA tiene una tasa igual a: ¿la fija del swap y valor cero, la flotante y valor cero, o la fija pero con un valor que puede no ser cero?
+
+<details><summary>Ver respuesta</summary>
+
+**La tasa fija del swap, pero cada FRA puede valer distinto de cero** (off-market). Solo **la suma** vale cero al inicio. *(Repaso: la flotante y valor cero.)*
+</details>
+
+### 74. Precio de un swap *(Mock A #40)* ⚠️ fallada 2 veces
+¿Qué es el **precio** de un swap de pagar fijo y recibir flotante?
+
+<details><summary>Ver respuesta</summary>
+
+**La tasa fija que hace que el swap valga cero al inicio.** "PV de flotantes − PV de fijos" es el **valor** del swap, no su precio. **Precio** = lo que se pacta (un precio o una tasa). **Valor** = cuánto gana o pierde cada parte. *(Respondiste "PV de flotantes − PV de fijos" en el mock **y** en el repaso.)*
+</details>
+
+> 📝 **Nota sobre Kaplan M4 #113 (net cost of carry = −2):** Kaplan usa el signo de forma inconsistente (en M3 #154 y M4 #94 lo define como costos − beneficios, y aquí como beneficios − costos). Usa siempre F₀ = (S₀ − PV beneficios + PV costos) × (1 + r)^T y fíjate en qué significa el signo en cada enunciado. Lo que siempre está mal es **no capitalizar** el carry (35 × 1,03 + 2 = 38,05).
