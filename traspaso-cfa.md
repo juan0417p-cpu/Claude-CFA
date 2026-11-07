@@ -120,6 +120,7 @@ Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en l
 | 3-nov | **Alternatives II** (adelantado): real estate, infraestructura, recursos naturales (carry, contango/backwardation, roll yield), hedge funds, activos digitales | Kaplan: RE/infra 5/5 · recursos naturales 4/5 · hedge funds 7/7 · digitales 4/5 · Mock A #21 y #43 ✅. **Alternatives terminado: 41/47 de Kaplan (87 %)** |
 | 4-nov | 🧪 **Examen de comprobación de Alternatives** (25: 14 del Mock A + 11 de Kaplan, sin pistas) | **22/25 = 88 %**. Falladas: MOIC vs. TIR, clawback y high-water mark = máximo histórico |
 | 4/5-nov | **Derivatives, Pasos 1–3:** qué son, mercados OTC y en bolsa, payoffs, beneficios y riesgos, arbitraje, cost of carry | 19/23 (83 %) entre Kaplan y Mock A. Pendientes: Paso 4 (forwards, futuros, swaps) y Paso 5 (opciones, put-call parity, binomial) |
+| 6/7-nov | **Derivatives, Pasos 4–5:** valoración de forwards, futuros y swaps (precio vs. valor), opciones, put-call parity, binomial, griegas | Paso 4: 8/11 · Paso 5: 5/13 (las paridades costaron: se decidió quedarse con 2 trucos y no memorizar la fórmula). **Derivatives terminado: 32/47 (68 %)** |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

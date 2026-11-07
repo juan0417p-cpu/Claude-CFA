@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 80 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 13)
+**Total: 81 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14)
 
 ---
 
@@ -804,3 +804,13 @@ Según la paridad put-call-forward, ¿a qué es igual **p − c**?
 
 **PV(X − F₀)** = "put menos call = strike menos forward", **los dos descontados**. Sale de PV(F₀) + p = c + PV(X). No aparece S₀. *(M4 #121: mock A y repaso B. Mock A #23: mock "PV(F − S)" y repaso igual.)*
 </details>
+
+### 81. Precio mínimo de una call europea *(Mock A #30)* ⚠️ fallada 2 veces
+Spot €50, strike €45, r = 2 % anual, 6 meses. ¿Precio mínimo de la call?
+
+<details><summary>Ver respuesta</summary>
+
+**€5,44** = 50 − 45 / 1,02^0,5. El strike se **descuenta** (se divide), nunca se capitaliza. Prueba de sentido común: pagar el strike más tarde favorece al comprador → la call vale **más** que S − X = 5. *(Respondiste 4,55, capitalizando el strike, en el mock **y** en el repaso.)*
+</details>
+
+> 🧠 **Truco de las paridades (sin fórmula):** algo que **gana si sube** (acción o forward largo) = **long call + short put** (+ bono largo). El **corto** = todo al revés. Y **p − c = PV(X − F₀)**: "put menos call = strike menos forward", todo descontado y sin S₀.
