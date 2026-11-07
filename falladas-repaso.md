@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 81 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14)
+**Total: 91 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 10)
 
 ---
 
@@ -814,3 +814,87 @@ Spot €50, strike €45, r = 2 % anual, 6 meses. ¿Precio mínimo de la call?
 </details>
 
 > 🧠 **Truco de las paridades (sin fórmula):** algo que **gana si sube** (acción o forward largo) = **long call + short put** (+ bono largo). El **corto** = todo al revés. Y **p − c = PV(X − F₀)**: "put menos call = strike menos forward", todo descontado y sin S₀.
+
+---
+
+## 🧺 Portfolio Management: falladas de los mocks (7-nov, 6/16)
+
+### 82. Riesgo que no se diversifica *(Kaplan M4 #125)* ⚠️ fallada 2 veces
+¿Qué riesgo es el **menos** probable de reducirse diversificando: el de mercado, el específico de la empresa o el no sistemático?
+
+<details><summary>Ver respuesta</summary>
+
+**El de mercado** (sistemático). "Firm-specific" y "unsystematic" son lo mismo y se eliminan diversificando. Como ese riesgo se elimina gratis, el mercado **solo paga por el sistemático** (beta). *(Mock: A? → repaso: no sistemático.)*
+</details>
+
+### 83. Desviación estándar con correlación −1 *(Mock A #42)* ⚠️ fallada 2 veces
+50 % con σ = 6 % y 50 % con σ = 10 %, ρ = −1. ¿σ del portafolio?
+
+<details><summary>Ver respuesta</summary>
+
+**2 %** = |0,5 × 6 − 0,5 × 10|. Con la fórmula completa: 9 + 25 − **2** × 0,5 × 0,5 × 6 × 10 = 4 → √4 = 2. Si olvidas el **2** del término de covarianza da 4,4 %. Con ρ = ±1 usa el atajo. *(Respondiste 4,4 % en el mock **y** en el repaso.)*
+</details>
+
+### 84. CAPM: ¿sobre o subvalorada? *(Kaplan M4 #168)* ⚠️ fallada 2 veces
+β = 0,9, retorno estimado 10 %, Rf = 7 %, Rm = 11 %. ¿La acción está sobrevalorada, subvalorada o bien valorada?
+
+<details><summary>Ver respuesta</summary>
+
+**Sobrevalorada.** Requerido = 7 + 0,9 × 4 = 10,6 % > estimado 10 %. Rinde **menos** de lo que debería por su riesgo → estás pagando **caro** → por **debajo** de la SML. Precio y retorno van al revés. *(Respondiste subvalorada en el mock **y** en el repaso.)*
+</details>
+
+### 85. Retorno anormal con el market model *(Mock A #36, acertada al azar 🎲)*
+Retorno real 10,5 %, β = 0,8, Rm = 12 %, Rf = 2 %. ¿Retorno anormal?
+
+<details><summary>Ver respuesta</summary>
+
+**0,5 %** = 10,5 − [2 + 0,8 × (12 − 2)]. El CAPM lleva el **Rf dos veces**: sumando adelante y restando dentro del paréntesis. Sin el de adelante da 2,5 %. *(Repaso: 2,5 %.)*
+</details>
+
+### 86. Pendiente de la CAL *(Mock A #72, acertada al azar 🎲)*
+¿La pendiente de la CAL es la beta del mercado, el precio de mercado del riesgo o la prima de riesgo de mercado?
+
+<details><summary>Ver respuesta</summary>
+
+**El precio de mercado del riesgo** (el ratio de Sharpe: (E(Rp) − Rf) / σ). La prima de riesgo de mercado (Rm − Rf) es la pendiente de la **SML**. CAL va con **σ**, SML va con **β**. *(Repaso: prima de riesgo de mercado.)*
+</details>
+
+### 87. Objetivo de riesgo relativo *(Mock A #32)* ⚠️ fallada 2 veces
+Un cliente quiere quedar dentro de ±3 % del benchmark con 95 % de probabilidad. ¿Qué tipo de objetivo es?
+
+<details><summary>Ver respuesta</summary>
+
+**De riesgo relativo** (tracking risk). No pide **ganarle** al benchmark (eso sería retorno relativo), sino **no alejarse** de él. Banda ± y probabilidad = riesgo. *(Respondiste retorno relativo en el mock **y** en el repaso.)*
+</details>
+
+### 88. Asignación estratégica *(Mock A #29)* ⚠️ fallada 2 veces
+¿Qué resulta de combinar las expectativas de **largo plazo** del mercado con la IPS?
+
+<details><summary>Ver respuesta</summary>
+
+**La asignación estratégica de activos** (la política de largo plazo). La **táctica** son desviaciones de **corto** plazo según pronósticos. El presupuesto de riesgo reparte el riesgo total. *(Mock: táctica. Repaso: presupuesto de riesgo.)*
+</details>
+
+### 89. Aseguradoras de propiedad y accidentes *(Kaplan M4 #107, acertada al azar 🎲)*
+¿Cómo son el horizonte y la tolerancia al riesgo de una aseguradora de propiedad y accidentes?
+
+<details><summary>Ver respuesta</summary>
+
+**Horizonte corto y baja tolerancia al riesgo**: los reclamos llegan pronto y de forma impredecible. Las aseguradoras de **vida** son las de horizonte **largo**. Pregúntate **cuándo tiene que pagar**. *(Repaso: largo y alta.)*
+</details>
+
+### 90. Endowments vs. fundaciones *(Mock A #46)* ⚠️ fallada 2 veces
+¿Es correcto que los endowments suelen invertir mucho en alternativas? ¿Y que las fundaciones sostienen los servicios de instituciones sin ánimo de lucro?
+
+<details><summary>Ver respuesta</summary>
+
+**Sí** a lo primero (horizonte muy largo, alta tolerancia al riesgo). **No** a lo segundo: eso describe a un **endowment** (sostiene a UNA institución). Las **fundaciones** dan **donaciones** a otros. *(Elegiste la definición cambiada en el mock **y** en el repaso.)*
+</details>
+
+### 91. Riesgos no financieros *(Kaplan M4 #155)* ⚠️ fallada 2 veces
+¿Cuál es un riesgo **no financiero**: de crédito, de liquidez o de solvencia?
+
+<details><summary>Ver respuesta</summary>
+
+**De solvencia.** Los **financieros** son solo 3: **mercado, crédito y liquidez**. Todo lo demás (operacional, solvencia, legal, regulatorio, de modelo, de liquidación, reputacional) es no financiero. *(Respondiste crédito en el mock **y** en el repaso.)*
+</details>
