@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 74 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 7)
+**Total: 80 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 13)
 
 ---
 
@@ -756,3 +756,51 @@ Si se replica un swap con FRAs, cada FRA tiene una tasa igual a: ¿la fija del s
 </details>
 
 > 📝 **Nota sobre Kaplan M4 #113 (net cost of carry = −2):** Kaplan usa el signo de forma inconsistente (en M3 #154 y M4 #94 lo define como costos − beneficios, y aquí como beneficios − costos). Usa siempre F₀ = (S₀ − PV beneficios + PV costos) × (1 + r)^T y fíjate en qué significa el signo en cada enunciado. Lo que siempre está mal es **no capitalizar** el carry (35 × 1,03 + 2 = 38,05).
+
+### 75. Valor temporal de una put *(Kaplan M3 #138)*
+¿Qué aumenta el **valor temporal** de una put: subir el strike, subir la volatilidad o bajar el precio del subyacente?
+
+<details><summary>Ver respuesta</summary>
+
+**Subir la volatilidad.** Cambios en S o en X afectan el valor **intrínseco**. Cambios en σ o en T afectan el valor **temporal**. *(Repaso: bajar el precio del subyacente.)*
+</details>
+
+### 76. Prima de una put in the money con tiempo *(Kaplan M3 #162)*
+Vendes una put a 6 meses, strike 23, con el subyacente en 20. ¿La prima es igual, menor o mayor que 3?
+
+<details><summary>Ver respuesta</summary>
+
+**Mayor que 3**: intrínseco (23 − 20 = 3) **+ valor temporal positivo**, porque quedan 6 meses. Solo al vencimiento prima = intrínseco. *(Repaso: menor que 3.)*
+</details>
+
+### 77. Binomial: promedio ponderado vs. valor de hoy *(Kaplan M4 #160)* ⚠️ fallada 2 veces
+En un binomial neutral al riesgo, el promedio ponderado de los valores de la opción después de subir y de bajar es: ¿igual, menor o mayor que el valor de hoy?
+
+<details><summary>Ver respuesta</summary>
+
+**Mayor.** El promedio es el valor **dentro de un período**: hay que **descontarlo** con (1 + r) para tener el valor de hoy, que es más chico. *(Mock: menor. Repaso: igual.)*
+</details>
+
+### 78. Bono corto sintético *(Kaplan M3 #146)*
+Con put-call parity, ¿qué se **compra** para crear un bono libre de riesgo **corto** sintético: una put, una call o la acción?
+
+<details><summary>Ver respuesta</summary>
+
+**Una call.** S + p = c + PV(X) → −PV(X) = c − S − p → **comprar la call**, vender en corto la acción y vender la put. Método: despeja, invierte los signos si lo piden corto, y lee + = compras, − = vendes. *(Repaso: la acción.)*
+</details>
+
+### 79. Forward corto sintético *(Kaplan M2 #148)*
+¿Con qué se replica un forward **corto** (sin costos ni beneficios)?
+
+<details><summary>Ver respuesta</summary>
+
+**Short call + long put + short bono.** PV(F₀) + p = c + PV(X) → forward **largo** = long call + short put + long bono → para el **corto**, se invierten todos los signos. *(Repaso: la versión larga.)*
+</details>
+
+### 80. Put-call-forward parity: p − c *(Kaplan M4 #121 y Mock A #23)* ⚠️ fallada 4 veces
+Según la paridad put-call-forward, ¿a qué es igual **p − c**?
+
+<details><summary>Ver respuesta</summary>
+
+**PV(X − F₀)** = "put menos call = strike menos forward", **los dos descontados**. Sale de PV(F₀) + p = c + PV(X). No aparece S₀. *(M4 #121: mock A y repaso B. Mock A #23: mock "PV(F − S)" y repaso igual.)*
+</details>
