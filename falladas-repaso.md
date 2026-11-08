@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 105 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 24)
+**Total: 109 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 24 · Corporate Issuers: 4)
 
 ---
 
@@ -1011,4 +1011,38 @@ Un portafolio **sobre la CML** con **menos riesgo y menos retorno** que el porta
 <details><summary>Ver respuesta</summary>
 
 **Cov = β × σm² = 1,2 × 0,14² = 1,2 × 0,0196 = 0,0235.** El denominador del beta es la **varianza** (si te la dan ya como varianza, se usa directo). El 28 % sobra: solo serviría para la **correlación** (β = ρ × σi / σm). *(Respondiste 0,168 = 1,2 × 0,14, sin elevar al cuadrado.)*
+</details>
+
+<!-- Corporate Issuers, Bloque 1 (7-nov-2026, 9/13) -->
+
+### 106. Limitada para algunos y sin impuesto de entidad *(Mock A #65)* ⚠️ fallada 2 veces
+¿Qué forma jurídica da responsabilidad limitada a **algunos** dueños y **no tributa a nivel de la entidad**?
+
+<details><summary>Ver respuesta</summary>
+
+**Limited partnership**: los **LPs** son limitados y el **GP** ilimitado ("algunos"), y es **pass-through** (tributan los socios). La **corporation** limita a **todos** pero **sí tributa** como entidad (doble tributación). Piensa en un fondo de private equity: GP + LPs. *(Respondiste corporation en el mock **y** en el repaso.)*
+</details>
+
+### 107. Stakeholder theory *(Kaplan M2 #7)*
+Según la **stakeholder** theory, ¿qué debe manejar el gobierno corporativo?
+
+<details><summary>Ver respuesta</summary>
+
+**Los conflictos entre todos los grupos** con interés en la empresa (accionistas, acreedores, empleados, clientes, gobierno). Servir solo a los dueños es la **share**holder theory. Share = acción; stake = tener algo en juego. *(Respondiste la de shareholder.)*
+</details>
+
+### 108. ¿Qué hace un miembro independiente del board? *(Kaplan M4 #68)*
+Opciones: manejar el presupuesto del año, fijar los bonos de la alta gerencia, definir metas operativas.
+
+<details><summary>Ver respuesta</summary>
+
+**Fijar la remuneración (bonos) de la alta gerencia.** El board: estrategia, vigilancia, contratar/despedir al CEO y remuneración. La **gerencia**: presupuesto, operación y metas **operativas** (la palabra "operational" apunta a la gerencia). Mismo patrón del Mock A #64. *(Respondiste metas operativas.)*
+</details>
+
+### 109. Lo que un activista NO inicia *(Kaplan M4 #5)*
+¿Qué es **least likely** que inicie un accionista activista: poison pill, tender offer o proxy contest?
+
+<details><summary>Ver respuesta</summary>
+
+**Poison pill**: es una **defensa** de la empresa contra adquisiciones (diluye al comprador). El activista **ataca** con proxy contests (votos para cambiar el board), tender offers, propuestas y demandas. *(Respondiste tender offer.)*
 </details>
