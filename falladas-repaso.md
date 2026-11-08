@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 91 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 10)
+**Total: 103 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 22)
 
 ---
 
@@ -897,4 +897,102 @@ Un cliente quiere quedar dentro de ±3 % del benchmark con 95 % de probabilidad.
 <details><summary>Ver respuesta</summary>
 
 **De solvencia.** Los **financieros** son solo 3: **mercado, crédito y liquidez**. Todo lo demás (operacional, solvencia, legal, regulatorio, de modelo, de liquidación, reputacional) es no financiero. *(Respondiste crédito en el mock **y** en el repaso.)*
+</details>
+
+<!-- Portfolio Mgmt: diagnóstico Kaplan M2 + M3 (7-nov-2026, 21/36) -->
+
+### 92. Cómo se estima el beta *(Kaplan M2 #93)*
+El beta se estima mejor con la pendiente de: ¿la CML, la SML o la characteristic line del título?
+
+<details><summary>Ver respuesta</summary>
+
+**La characteristic line**: es la **regresión** de los retornos del título contra los del mercado, y su pendiente es el beta. En la SML el beta ya es el **eje X** (su pendiente es Rm − Rf). En la CML el eje es σ. *(Respondiste CML.)*
+</details>
+
+### 93. Correlaciones: ¿cuál prefiere MENOS el averso al riesgo? *(Kaplan M2 #102)*
+Pares: W–Y = +0,6 · X–Y = −0,1 · X–Z = −0,3. ¿Cuál portafolio **least prefer** un inversor averso al riesgo?
+
+<details><summary>Ver respuesta</summary>
+
+**W–Y (+0,6)**: la correlación **más alta** es la que menos reduce el riesgo. X–Z (−0,3) es la **más** preferida. *(Elegiste X–Z: no leíste el "least").*
+</details>
+
+### 94. Smart beta *(Kaplan M2 #116 y M3 #103)*
+¿Qué estilo es el smart beta? ¿Y qué participación de mercado crece, la activa o la pasiva?
+
+<details><summary>Ver respuesta</summary>
+
+Si las opciones son **active / passive / fundamental**, es **passive** (sigue reglas fijas). Si una opción dice **"blend of active and passive"**, esa es la correcta (sigue un índice pero se inclina a factores). La que **crece** es la **pasiva** (≈ 1/5 de los activos, no la mitad). *(Respondiste "fundamental" y "la activa crece".)*
+</details>
+
+### 95. Diversification ratio *(Kaplan M2 #134 y M3 #178)*
+¿Qué portafolio tiene el **menor** diversification ratio? ¿Y qué pasa con el ratio si agregas un título con σ igual al promedio?
+
+<details><summary>Ver respuesta</summary>
+
+**DR = σ del portafolio / promedio de las σ individuales.** Mientras más diversificado, **más bajo**. El menor es el de **30 acciones de industrias distintas**. Agregar un título con ρ < 1 **disminuye** el DR (el promedio no cambia y la σ del portafolio baja). *(Respondiste "30 de la misma industria" y "no cambia".)*
+</details>
+
+### 96. Ability < willingness *(Kaplan M2 #178)*
+La **capacidad** de asumir riesgo del cliente es mucho **menor** que su **disposición**. ¿Qué hace el asesor?
+
+<details><summary>Ver respuesta</summary>
+
+**Basa la tolerancia al riesgo del IPS en la capacidad** (ability). Siempre manda **la más baja**. Solo se **educa** al cliente cuando la baja es la **willingness** (puede, pero no quiere). *(Respondiste educar al cliente.)*
+</details>
+
+### 97. Riesgo no sistemático en el CAPM *(Kaplan M3 #93 y #119)*
+X y Y tienen el **mismo beta**, pero X tiene más riesgo no sistemático. ¿Y con qué supuesto el riesgo no sistemático no da retorno extra?
+
+<details><summary>Ver respuesta</summary>
+
+X tiene **más σ** pero el **mismo retorno esperado**: en el CAPM solo el **beta** paga. El riesgo no sistemático no se premia **si diversificar no cuesta nada** (supuesto), no "bajo cualquier circunstancia". *(Respondiste "más retorno y más σ" y "under any circumstances".)*
+</details>
+
+### 98. Retornos reales vs. distribución normal *(Kaplan M3 #98)*
+Frente a una normal, ¿cómo han sido los retornos históricos de las grandes clases de activos?
+
+<details><summary>Ver respuesta</summary>
+
+**Más desviaciones grandes negativas** de lo esperado: **asimetría negativa** y **colas gordas** (exceso de curtosis positivo). *(Respondiste "menos desviaciones grandes positivas".)*
+</details>
+
+### 99. Menos averso al riesgo *(Kaplan M3 #104)*
+Boswell es **menos** averso que Johnson, con la misma CAL. ¿Qué tiene Boswell?
+
+<details><summary>Ver respuesta</summary>
+
+**Un portafolio óptimo con mayor retorno esperado** (más a la derecha en la CAL). También tiene curvas de indiferencia **más planas** y un coeficiente de aversión **más bajo**. Curva **empinada** = miedoso. *(Respondiste "curvas más empinadas".)*
+</details>
+
+### 100. Quedarse sin caja *(Kaplan M3 #108)* ⚠️ mismo tema que la #91
+Una organización teme **no poder seguir operando porque se quedó sin caja**. ¿Qué riesgo es?
+
+<details><summary>Ver respuesta</summary>
+
+**Solvency risk** (no financiero). **Liquidity risk** = vender un **activo** por debajo de su valor justo por condiciones del mercado. **Credit** = la contraparte no paga. *(Respondiste liquidez.)*
+</details>
+
+### 101. Gestores que se cancelan entre sí *(Kaplan M3 #155)*
+¿Qué resuelve el problema de gestores con **posiciones activas que se compensan**?
+
+<details><summary>Ver respuesta</summary>
+
+**Core-satellite**: la mayoría del dinero **pasivo** (core) y una parte pequeña con pocos gestores **activos** (satélites). Menos apuestas que se anulan y menos rotación. *(Respondiste asignación táctica.)*
+</details>
+
+### 102. Vendería a $58, pero no compraría a más de $53 *(Kaplan M3 #163)*
+¿Qué sesgo muestra este inversor?
+
+<details><summary>Ver respuesta</summary>
+
+**Endowment bias** (emocional): valora más lo que **ya tiene**. Status quo = no hacer nada por comodidad. Conservatism = no actualizar una **opinión** con información nueva (cognitivo). Emocionales = **LOSSER**: Loss aversion, Overconfidence, Self-control, Status quo, Endowment, Regret aversion. *(Respondiste conservatism.)*
+</details>
+
+### 103. El menor mínimo de inversión *(Kaplan M3 #169)*
+¿Cuál requiere el menor mínimo: wrap fee account, market neutral fund o closed-end fund?
+
+<details><summary>Ver respuesta</summary>
+
+**Closed-end fund**: cotiza en bolsa, compras una acción al precio de mercado. Las wrap accounts (cuentas separadas) y los hedge funds (market neutral) exigen montos **altos**. *(Respondiste wrap fee account.)*
 </details>

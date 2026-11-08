@@ -122,6 +122,7 @@ Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en l
 | 4/5-nov | **Derivatives, Pasos 1–3:** qué son, mercados OTC y en bolsa, payoffs, beneficios y riesgos, arbitraje, cost of carry | 19/23 (83 %) entre Kaplan y Mock A. Pendientes: Paso 4 (forwards, futuros, swaps) y Paso 5 (opciones, put-call parity, binomial) |
 | 6/7-nov | **Derivatives, Pasos 4–5:** valoración de forwards, futuros y swaps (precio vs. valor), opciones, put-call parity, binomial, griegas | Paso 4: 8/11 · Paso 5: 5/13 (las paridades costaron: se decidió quedarse con 2 trucos y no memorizar la fórmula). **Derivatives terminado: 32/47 (68 %)** |
 | 7-nov | **Portfolio Mgmt:** repaso de las falladas (6 de Kaplan M4 + 10 del Mock A), con explicación de cada concepto: riesgo sistemático, varianza de 2 activos, CAPM y SML, alfa de Jensen, CAL, capacidad de riesgo, objetivos, asignación estratégica, tipos de inversionistas, riesgos no financieros | 6/16 (eran todas falladas o al azar). De los Mocks 2 y 3 no se sabe cuáles se fallaron |
+| 7-nov (noche) | **Portfolio Mgmt: diagnóstico con las 36 preguntas de Kaplan M2 + M3** | **21/36 (58 %)**. Por subtema: ESG 4/4 · IPS/asset allocation 5/7 · gestión de riesgo 3/4 · CAPM/SML 5/8 · riesgo y retorno I 3/6 · industria/fondos 3/8 · sesgos 2/3. Débil: diversification ratio, smart beta/pasivo, menos averso = curva plana, ability < willingness, riesgo no sistemático, solvency (repetida), core-satellite, endowment bias. 15 falladas → falladas-repaso #92–103 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
