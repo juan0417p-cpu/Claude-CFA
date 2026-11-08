@@ -176,26 +176,24 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 
 *(Propuesta del 2-nov: se ajusta según cómo vaya cada bloque.)*
 
-## 2d. Plan desde el 8-nov (actualizado el 7-nov en la noche)
+## 2d. Plan desde el 8-nov (actualizado el 7-nov en la noche: el Mock B pasa al domingo 8)
 
-**Estado:** Alternatives, Derivatives y Portfolio Mgmt terminados según el plan 2c. Corporate Issuers empezó medio día antes (Bloque 1 hecho el 7-nov).
+**Estado:** Alternatives, Derivatives y Portfolio Mgmt terminados según el plan 2c. Corporate Issuers: Bloque 1 hecho el 7-nov (faltan los Bloques 2–4, ~2 h).
 
-**Todos los días:** 30 min de Ethics + **20 min de falladas** (`falladas-repaso.md` ya tiene 109: con 10 min no alcanza para verlas todas antes del 15-nov).
+**Todos los días:** 30 min de Ethics + **20 min de falladas** (`falladas-repaso.md` ya tiene 109).
 
 | Fecha (Bogotá) | Tema | Tiempo aprox. |
 |---|---|---|
-| dom 8 nov | **Corporate Issuers, Bloques 2–4:** liquidez y capital de trabajo, inversión de capital, estructura de capital + business models. Si sobra tiempo, empezar FSA I | ~2 h + |
-| lun 9 nov | **FSA I:** intro, estado de resultados, balance, flujo de caja I y II | ~3 h |
-| mar 10 nov | **FSA II:** inventarios, activos de largo plazo, pasivos y leases, impuestos diferidos | ~3 h |
-| mié 11 nov | **FSA III:** calidad del reporte, ratios y DuPont, modelación | ~3 h |
-| jue 12 nov | **Quant + Economics** (Mock A: 50 % y 57 %) | ~3 h |
-| vie 13 nov | 🧪 **Mock B** de CFA Institute, completo y cronometrado | 4,5 h |
-| sáb 14 nov | Revisión del Mock B: las falladas se agregan a `falladas-repaso.md` | ~3 h |
+| dom 8 nov | 🧪 **Mock B** de CFA Institute, completo y cronometrado (2 sesiones de 2 h 15 min). Marcar las que se respondan al azar | 4,5 h |
+| lun 9 nov | **Revisión del Mock B** (falladas + al azar → `falladas-repaso.md`) + ajustar el plan con los resultados. Si queda energía: Corporate Issuers Bloque 2 | ~3 h |
+| mar 10 nov | **Corporate Issuers Bloques 3–4** (~1,5 h) + **FSA I:** estado de resultados, balance, flujo de caja | ~3,5 h |
+| mié 11 nov | **FSA II:** inventarios, activos de largo plazo, leases, impuestos diferidos | ~3 h |
+| jue 12 nov | **FSA III:** calidad del reporte, ratios y DuPont, modelación | ~3 h |
+| vie 13 nov | **Quant + Economics** (Mock A: 50 % y 57 %) | ~3 h |
+| sáb 14 nov | **Lo más débil del Mock B** (probablemente Fixed Income) | ~3 h |
 | dom 15 nov | Ethics completo + **todas** las falladas + hoja de fórmulas | ~4 h |
 | lun 16 nov | Repaso ligero (solo la hoja de fórmulas) y descanso | ~1 h |
 | 🎯 mar 17 nov | **EXAMEN** | |
-
-Fixed Income (55 % en el Mock A) no tiene día propio: se refuerza con sus 14 falladas y con la revisión del Mock B.
 
 ## 3. Errores recurrentes que hay que vigilar
 
