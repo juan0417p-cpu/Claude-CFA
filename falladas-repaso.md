@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 103 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 22)
+**Total: 105 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 24)
 
 ---
 
@@ -973,12 +973,12 @@ Una organización teme **no poder seguir operando porque se quedó sin caja**. �
 **Solvency risk** (no financiero). **Liquidity risk** = vender un **activo** por debajo de su valor justo por condiciones del mercado. **Credit** = la contraparte no paga. *(Respondiste liquidez.)*
 </details>
 
-### 101. Gestores que se cancelan entre sí *(Kaplan M3 #155)*
+### 101. Gestores que se cancelan entre sí *(Kaplan M3 #155)* ⚠️ fallada 2 veces
 ¿Qué resuelve el problema de gestores con **posiciones activas que se compensan**?
 
 <details><summary>Ver respuesta</summary>
 
-**Core-satellite**: la mayoría del dinero **pasivo** (core) y una parte pequeña con pocos gestores **activos** (satélites). Menos apuestas que se anulan y menos rotación. *(Respondiste asignación táctica.)*
+**Core-satellite**: la mayoría del dinero **pasivo** (core) y una parte pequeña con pocos gestores **activos** (satélites). Menos apuestas que se anulan y menos rotación. La **táctica** no tiene nada que ver: es desviarse de la estratégica por pronósticos de corto plazo. *(Respondiste asignación táctica en el mock **y** en el repaso.)*
 </details>
 
 ### 102. Vendería a $58, pero no compraría a más de $53 *(Kaplan M3 #163)*
@@ -995,4 +995,20 @@ Una organización teme **no poder seguir operando porque se quedó sin caja**. �
 <details><summary>Ver respuesta</summary>
 
 **Closed-end fund**: cotiza en bolsa, compras una acción al precio de mercado. Las wrap accounts (cuentas separadas) y los hedge funds (market neutral) exigen montos **altos**. *(Respondiste wrap fee account.)*
+</details>
+
+### 104. Portafolio en la CML con menos riesgo que el mercado *(Kaplan M4 #93)*
+Un portafolio **sobre la CML** con **menos riesgo y menos retorno** que el portafolio de mercado es: ¿lending, leveraged o ineficiente?
+
+<details><summary>Ver respuesta</summary>
+
+**Lending portfolio**: está a la **izquierda** de M, con parte del dinero en Rf (comprar T-bills = **prestar**). A la **derecha** de M es **borrowing/leveraged**. Todo lo que está **sobre** la CML es eficiente. *(Respondiste leveraged.)*
+</details>
+
+### 105. Covarianza a partir del beta *(Kaplan M4 #120)*
+β = 1,2 · σ de la acción = 28 % · σ del mercado = 14 %. ¿Cuál es la covarianza con el mercado?
+
+<details><summary>Ver respuesta</summary>
+
+**Cov = β × σm² = 1,2 × 0,14² = 1,2 × 0,0196 = 0,0235.** El denominador del beta es la **varianza** (si te la dan ya como varianza, se usa directo). El 28 % sobra: solo serviría para la **correlación** (β = ρ × σi / σm). *(Respondiste 0,168 = 1,2 × 0,14, sin elevar al cuadrado.)*
 </details>
