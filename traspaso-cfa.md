@@ -37,6 +37,23 @@ Promedio general: **48,9 %** (Mock 4: 89/180 = 49,4 %).
 
 Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en la segunda sesión. En la Sesión 2 hubo **16 acertadas al azar** (Equity #27, #50, #61, #89 · FI #26, #60, #74, #83, #90 · PM #36, #47, #72 · Alt #21, #43 · Deriv #28, #88): sin ellas, sabías 38 de 90 (42 %).
 
+### Kaplan Mock 6 (8-nov, completo): 90/180 = 50,0 %
+| Materia | Mock 6 | Kaplan 2–4 | Mock A (CFAI) |
+|---|---|---|---|
+| Ethics | 14/30 (47 %) 🟥 | 58,9 % | 70 % |
+| Quantitative Methods | 4/12 (33 %) 🟥 | 60,5 % | 50 % |
+| Economics | 7/12 (58 %) | 48,6 % | 57 % |
+| FSA | 12/22 (55 %) | 44,6 % | 64 % |
+| Corporate Issuers | 8/13 (62 %) | 71,8 % | 38 % |
+| Equity | 13/22 (59 %) | 36,8 % | 74 % |
+| Fixed Income | 10/24 (42 %) 🟥 | 44,9 % | 55 % |
+| Derivatives | 7/12 (58 %) | 33,3 % | 43 % |
+| Alternatives | 7/14 (50 %) | 40,4 % | 64 % |
+| Portfolio Mgmt | 8/19 (42 %) 🟥 | 50,0 % | 59 % |
+
+Sesión 1: 46/90 · Sesión 2: 44/90. 16 al azar (8 acertadas). Índice de falladas en `falladas-mock6.md` (90 falladas + 8 acertadas al azar = 98; sin el texto de Kaplan).
+Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10), Economics (+9), Alternatives (+10). Lo que bajó: Ethics, Quant, PM.
+
 ### Acumulado y prioridad
 "Pts. perdidos" = puntos que se pierden en el examen real según el peso de cada materia. Es el mejor criterio para priorizar.
 
@@ -125,6 +142,7 @@ Sesión 1: 53/90 (59 %) · Sesión 2: 54/90 (60 %): esta vez no hubo caída en l
 | 7-nov (noche) | **Portfolio Mgmt: diagnóstico con las 36 preguntas de Kaplan M2 + M3** | **21/36 (58 %)**. Por subtema: ESG 4/4 · IPS/asset allocation 5/7 · gestión de riesgo 3/4 · CAPM/SML 5/8 · riesgo y retorno I 3/6 · industria/fondos 3/8 · sesgos 2/3. Débil: diversification ratio, smart beta/pasivo, menos averso = curva plana, ability < willingness, riesgo no sistemático, solvency (repetida), core-satellite, endowment bias. 15 falladas → falladas-repaso #92–103 |
 | 7-nov (noche) | **Portfolio Mgmt: estudio de los débiles** en 4 bloques (CAPM y riesgo · el inversor · diversificación, industria y vehículos · gestión de riesgo y sesgos) con 12 preguntas no vistas de Kaplan M4 + ronda de las 12 falladas del diagnóstico con opciones reordenadas | Bloques: **10/12** (fallas: lending vs. borrowing en la CML, Cov = β × σm²). Ronda final: **11/12** (repite core-satellite). Falladas → #104–105 |
 | 7-nov (noche) | **Corporate Issuers, Bloque 1:** formas jurídicas, stakeholders y gobierno corporativo (Kaplan módulos 22–24 + Mock A #64, #65, #71). Plan: 4 bloques (~2,5 h) | **9/13** (Kaplan 7/10 · Mock A 2/3). Fallas: limited partnership (repetida), stakeholder vs. shareholder theory, el board fija los bonos, poison pill = defensa. Falladas → #106–109. **Pendientes: Bloques 2 (liquidez), 3 (inversión de capital) y 4 (estructura de capital + business models)** |
+| 8-nov | **Corporate Issuers, Bloques 2–3** (liquidez 7/8; inversión de capital 6/7 hasta la pregunta 14) + 🧪 **Kaplan Mock 6** | Mock 6: **90/180 (50 %)**. Ethics 47 %, Quant 33 %, FI 42 %, PM 42 % |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
@@ -176,24 +194,22 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 
 *(Propuesta del 2-nov: se ajusta según cómo vaya cada bloque.)*
 
-## 2d. Plan desde el 8-nov (actualizado el 7-nov en la noche: el Mock B pasa al domingo 8)
+## 2e. Plan desde el 9-nov (después del Kaplan Mock 6)
 
-**Estado:** Alternatives, Derivatives y Portfolio Mgmt terminados según el plan 2c. Corporate Issuers: Bloque 1 hecho el 7-nov (faltan los Bloques 2–4, ~2 h).
+**Todos los días:** 30 min de Ethics + 20 min de `falladas-repaso.md`.
+Prioridad por puntos perdidos en el Mock 6 (peso × fallos): Ethics > Fixed Income > PM ≈ FSA > Equity ≈ Quant.
 
-**Todos los días:** 30 min de Ethics + **20 min de falladas** (`falladas-repaso.md` ya tiene 109).
-
-| Fecha (Bogotá) | Tema | Tiempo aprox. |
-|---|---|---|
-| dom 8 nov | 🧪 **Mock B** de CFA Institute, completo y cronometrado (2 sesiones de 2 h 15 min). Marcar las que se respondan al azar | 4,5 h |
-| lun 9 nov | **Revisión del Mock B** (falladas + al azar → `falladas-repaso.md`) + ajustar el plan con los resultados. Si queda energía: Corporate Issuers Bloque 2 | ~3 h |
-| mar 10 nov | **Corporate Issuers Bloques 3–4** (~1,5 h) + **FSA I:** estado de resultados, balance, flujo de caja | ~3,5 h |
-| mié 11 nov | **FSA II:** inventarios, activos de largo plazo, leases, impuestos diferidos | ~3 h |
-| jue 12 nov | **FSA III:** calidad del reporte, ratios y DuPont, modelación | ~3 h |
-| vie 13 nov | **Quant + Economics** (Mock A: 50 % y 57 %) | ~3 h |
-| sáb 14 nov | **Lo más débil del Mock B** (probablemente Fixed Income) | ~3 h |
-| dom 15 nov | Ethics completo + **todas** las falladas + hoja de fórmulas | ~4 h |
-| lun 16 nov | Repaso ligero (solo la hoja de fórmulas) y descanso | ~1 h |
-| 🎯 mar 17 nov | **EXAMEN** | |
+| Fecha (Bogotá) | Tema |
+|---|---|
+| lun 9 nov | **Revisión del Mock 6: Ethics** (16 falladas) y **PM** (11) |
+| mar 10 nov | **FSA:** inventarios, impuestos diferidos, activos de LP, pasivos + falladas FSA del Mock 6 (10) |
+| mié 11 nov | **Fixed Income:** falladas del Mock 6 (14 + 4 al azar) + term structure, riesgo de tasa, duración, crédito |
+| jue 12 nov | **Quant** (8) + **Economics** (5) del Mock 6 + Corporate Issuers Bloque 4 (MM, WACC, business models) |
+| vie 13 nov | 🧪 **Mock B de CFA Institute** (opcional según energía) |
+| sáb 14 nov | Revisión del Mock B + falladas de Equity, Alternatives y Derivatives del Mock 6 |
+| dom 15 nov | Ethics completo + todas las falladas + hoja de fórmulas |
+| lun 16 nov | Repaso ligero y descanso |
+| 🎯 mar 17 nov | **EXAMEN** |
 
 ## 3. Errores recurrentes que hay que vigilar
 
