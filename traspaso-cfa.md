@@ -145,6 +145,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 8-nov | **Corporate Issuers, Bloques 2–3** (liquidez 7/8; inversión de capital 6/7 hasta la pregunta 14) + 🧪 **Kaplan Mock 6** | Mock 6: **90/180 (50 %)**. Ethics 47 %, Quant 33 %, FI 42 %, PM 42 % |
 | 10-nov | **Revisión del Mock 6: Ethics** (las 16 falladas, de nuevo) | **9/16**. Se repiten: I(B) bono ligado al resultado, IV(C) rechazar por escrito, Code vs. Standards (2), VI(B) información no material al esposo, II(A) firewall / proprietary trading, V(B) hecho vs. opinión. Falladas → #112–117 (+ #110–111 de Corporate Issuers) |
 | 10-nov | **Revisión del Mock 6: PM** (las 11 falladas) | **7/11**. Se repiten: interacción entre riesgos, **curva empinada = más averso (3.ª vez)**, mental accounting, objetivo absoluto vs. relativo (Rf = relativo). Falladas → #118–120 |
+| 10-nov | **FSA I: inventarios** (Kaplan M2–M4 + falladas del M6) | **4/8**. Falla la **dirección** FIFO/LIFO: ancla "Precios SUBEN → FIFO GANA" + ¿qué VENDE? / ¿qué QUEDA?; LIFO reserve ↓ con unidades ↑ = precios ↓. Falladas → #121–123 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

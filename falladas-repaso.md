@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 120 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6)
+**Total: 123 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 3)
 
 ---
 
@@ -1139,4 +1139,31 @@ Invierte su bono anual en acciones de crecimiento y sus ahorros del sueldo en bo
 <details><summary>Ver respuesta</summary>
 
 **"≥ 5 % con 95 % de probabilidad"**: un número **fijo**. "≥ Rf" es **relativo** (la Rf es un benchmark que cambia), igual que "más que el S&P 500". Pregúntate: ¿se compara con algo? *(Respondiste "≥ Rf", en el mock y en el repaso.)*
+</details>
+
+<!-- FSA: inventarios (10-nov-2026, 4/8) -->
+
+### 121. FIFO con precios subiendo *(Kaplan M3 #40 y M3 #77)*
+Con precios **subiendo**, ¿FIFO tiene más o menos utilidad, impuestos e inventario que LIFO? ¿Qué método elige quien quiere **más utilidad**?
+
+<details><summary>Ver respuesta</summary>
+
+**"Precios SUBEN → FIFO GANA":** más utilidad, más impuestos, **más inventario** y más patrimonio (rotaciones más bajas). Quien quiere más utilidad elige **FIFO**; quien quiere pagar menos impuestos, LIFO.
+Dos preguntas: **¿qué VENDE?** (FIFO vende lo viejo = barato → COGS ↓) y **¿qué QUEDA?** (lo nuevo = caro → inventario ↑). *(Respondiste "menos inventario" y "LIFO para más utilidad".)*
+</details>
+
+### 122. FIFO con precios bajando: patrimonio y ROE *(Kaplan M6 #56)* ⚠️ fallada 2 veces
+Con costos **bajando**, si una empresa con costo promedio usara FIFO, ¿su patrimonio y su ROE serían mayores o menores?
+
+<details><summary>Ver respuesta</summary>
+
+**Los dos menores.** FIFO vende lo viejo, que ahora es **caro** → COGS ↑ → utilidad ↓ → patrimonio ↓. El ROE baja porque la utilidad cae **más en proporción** que el patrimonio (10/100 = 10 % → 8/98 = 8,2 %). *(Respondiste "patrimonio mayor, ROE menor", en el mock y en el repaso.)*
+</details>
+
+### 123. LIFO reserve que baja con unidades que suben *(Kaplan M4 #65)*
+Unidades 500 → 510 y LIFO reserve 50.000 → 48.000. ¿Qué indica?
+
+<details><summary>Ver respuesta</summary>
+
+**Precios bajando.** No es LIFO liquidation: para eso las **unidades** tienen que **bajar**. La reserva (FIFO − LIFO) se achica porque el inventario FIFO (compras recientes) se abarata. Reserva ↑ = precios ↑. *(Respondiste LIFO liquidation.)*
 </details>
