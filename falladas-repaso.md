@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 109 preguntas** (Equity: 28 · Ethics: 15 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 24 · Corporate Issuers: 4)
+**Total: 117 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 24 · Corporate Issuers: 6)
 
 ---
 
@@ -1045,4 +1045,72 @@ Opciones: manejar el presupuesto del año, fijar los bonos de la alta gerencia, 
 <details><summary>Ver respuesta</summary>
 
 **Poison pill**: es una **defensa** de la empresa contra adquisiciones (diluye al comprador). El activista **ataca** con proxy contests (votos para cambiar el board), tender offers, propuestas y demandas. *(Respondiste tender offer.)*
+</details>
+
+### 110. Capital de trabajo "menos conservador" *(Kaplan M2 #75)*
+Una empresa que quiere un enfoque **menos conservador** (agresivo) de capital de trabajo, ¿qué hace?
+
+<details><summary>Ver respuesta</summary>
+
+**Menos activos de corto plazo (relativamente más de largo plazo) y más financiamiento de corto plazo.** El conservador se protege por los dos lados (mucho colchón + financiamiento de largo plazo); el agresivo quita las dos protecciones. *(Respondiste "más activos de corto plazo + financiamiento de corto plazo".)*
+</details>
+
+### 111. EPS de corto plazo y "gástalo o piérdelo" *(Kaplan M3 #41)*
+¿Es válido considerar que un proyecto baja el EPS de este año, o que si no lo haces te recortan el presupuesto?
+
+<details><summary>Ver respuesta</summary>
+
+**Ninguno de los dos.** Son errores típicos de la asignación de capital: el **cortoplacismo** del EPS y el **"use it or lose it"**. La única pregunta válida es si el **VPN > 0**. *(Respondiste "solo uno es apropiado".)*
+</details>
+
+<!-- Ethics: repaso de las falladas del Kaplan Mock 6 (10-nov-2026, 9/16) -->
+
+### 112. Investigación pagada por el emisor con bono *(Kaplan M6 #3)* ⚠️ fallada 2 veces
+Te pagan un informe sobre una empresa con tarifa fija **+ un bono si sus acciones pasan a estar más ampliamente en manos del público**. ¿Basta con revelarlo?
+
+<details><summary>Ver respuesta</summary>
+
+**No: es violación del I(B) aunque reveles la fuente y la compensación.** El issuer-paid research se permite solo con pago **fijo** que no dependa del resultado. Un bono ligado al resultado destruye la objetividad: revelarlo no lo arregla. *(Respondiste "basta con revelar fuente y compensación", en el mock y en el repaso.)*
+</details>
+
+### 113. Supervisar sin un buen sistema de compliance *(Kaplan M6 #6)* ⚠️ fallada 2 veces
+Te ofrecen ser supervisor de una sucursal que no tiene procedimientos de compliance adecuados. ¿Qué haces?
+
+<details><summary>Ver respuesta</summary>
+
+**Rechazar el cargo POR ESCRITO hasta que la firma adopte procedimientos adecuados** (IV(C)). No basta con "conversarlo y pedir autoridad sobre el compliance". Busca "decline in writing". *(Respondiste "conversar y no aceptar hasta tener autoridad", en el mock y en el repaso.)*
+</details>
+
+### 114. Code vs. Standards *(Kaplan M6 #22 y #45)* ⚠️ fallada 2 veces cada una
+¿Cuál es un **Standard**: "Integrity of the Investment Profession", "Maintaining and Improving Competence" o "Investment Analysis, Recommendations, and Actions"? ¿Y qué exige el **Code**: alentar a otros a actuar profesionalmente, evaluar la suitability en el portafolio total o revelar el proceso de inversión?
+
+<details><summary>Ver respuesta</summary>
+
+**Standard V = Investment Analysis, Recommendations, and Actions.** Las otras dos son frases del **Code** (el Standard II es "Integrity of **Capital Markets**"). El **Code** exige "**practice and encourage others** to practice…"; suitability es III(C) y el proceso de inversión es V(B).
+**7 Standards:** I Professionalism · II Integrity of Capital Markets · III Duties to Clients · IV Duties to Employers · V Investment Analysis, Recommendations and Actions · VI Conflicts of Interest · VII Responsibilities as a Member/Candidate.
+**Code (6):** integridad y ética · profesión y clientes antes que uno mismo · reasonable care e independencia · practicar y **alentar a otros** · integridad de los mercados · **mantener y mejorar** la competencia. *(Respondiste "Integrity of the Investment Profession" y "revelar el proceso".)*
+</details>
+
+### 115. Información NO material no pública *(Kaplan M6 #44)* ⚠️ fallada 2 veces
+Con información **no material** no pública del trabajo, ¿qué es violación: contársela a tu esposo, al club de inversión o usarla en un informe?
+
+<details><summary>Ver respuesta</summary>
+
+**Contársela al esposo** (VI(B) Priority of Transactions: no compartir información no pública con quien tenga cuentas de las que eres beneficial owner). Usarla en un informe **está permitido** (mosaic theory). *(Respondiste "usarla en un informe", en el mock y en el repaso.)*
+</details>
+
+### 116. MNPI en la firma: firewall *(Kaplan M6 #65)* ⚠️ fallada 2 veces
+Banca de inversión recibe MNPI seguido. ¿Qué debe hacer la firma?
+
+<details><summary>Ver respuesta</summary>
+
+**Restringir el proprietary trading** (operaciones de la propia firma) en esas acciones. **No** restringir a los clientes (da una señal; se aceptan órdenes unsolicited). Debe haber un **firewall** entre banca de inversión y corretaje/research. *(Respondiste "pedir que publiquen y restringir a los clientes", en el mock y en el repaso.)*
+</details>
+
+### 117. Opinión presentada como hecho *(Kaplan M6 #89)* ⚠️ fallada 2 veces
+Un congresista le dice a una analista que está "seguro" de que no pasará un arancel, y ella escribe: "las utilidades estarán dentro de la guía **porque** el arancel no se aprobará". ¿Qué Standard violó?
+
+<details><summary>Ver respuesta</summary>
+
+**V(B) Communication with Clients:** no distinguió **hecho de opinión**. La "certeza" del congresista es una **opinión**, no MNPI (no es información material de la empresa, y una predicción no es un hecho). *(Respondiste MNPI, en el mock y en el repaso.)*
 </details>
