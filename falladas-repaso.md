@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 123 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 3)
+**Total: 125 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 5)
 
 ---
 
@@ -1166,4 +1166,22 @@ Unidades 500 → 510 y LIFO reserve 50.000 → 48.000. ¿Qué indica?
 <details><summary>Ver respuesta</summary>
 
 **Precios bajando.** No es LIFO liquidation: para eso las **unidades** tienen que **bajar**. La reserva (FIFO − LIFO) se achica porque el inventario FIFO (compras recientes) se abarata. Reserva ↑ = precios ↑. *(Respondiste LIFO liquidation.)*
+</details>
+
+<!-- FSA: impuestos diferidos (10-nov-2026, 6/8) -->
+
+### 124. ¿Cuál tasa es la más alta? *(Kaplan M2 #88)*
+Tasa legal 23 %, utilidad antes de impuestos 500.000, utilidad neta 372.000, impuestos pagados 114.000. ¿Cuál es mayor: la cash tax rate, la efectiva o la estatutaria?
+
+<details><summary>Ver respuesta</summary>
+
+**La efectiva (25,6 %).** Tax expense = 500.000 − 372.000 = **128.000** → 128/500 = 25,6 %. Cash rate = **pagados** / utilidad antes de impuestos = 114/500 = 22,8 %. Estatutaria = 23 %. El gasto (contable) ≠ lo pagado (caja): la diferencia es un aumento del DTL. **Calcula siempre las tres.** *(Respondiste la estatutaria.)*
+</details>
+
+### 125. Valuation allowance que sube *(Kaplan M3 #34)*
+El DTA bruto sube de 10.500 a 11.250 y la valuation allowance sube de 2.700 a 3.900. ¿Qué se espera de las utilidades futuras?
+
+<details><summary>Ver respuesta</summary>
+
+**Que bajen.** La allowance es la parte del DTA que la gerencia cree que **no podrá usar** por falta de utilidades futuras: **allowance ↑ = pesimismo**. Fíjate en la allowance, no en el DTA bruto (el DTA neto bajó de 7.800 a 7.350). *(Respondiste "aumentarán".)*
 </details>
