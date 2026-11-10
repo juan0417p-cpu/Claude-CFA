@@ -144,6 +144,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 7-nov (noche) | **Corporate Issuers, Bloque 1:** formas jurídicas, stakeholders y gobierno corporativo (Kaplan módulos 22–24 + Mock A #64, #65, #71). Plan: 4 bloques (~2,5 h) | **9/13** (Kaplan 7/10 · Mock A 2/3). Fallas: limited partnership (repetida), stakeholder vs. shareholder theory, el board fija los bonos, poison pill = defensa. Falladas → #106–109. **Pendientes: Bloques 2 (liquidez), 3 (inversión de capital) y 4 (estructura de capital + business models)** |
 | 8-nov | **Corporate Issuers, Bloques 2–3** (liquidez 7/8; inversión de capital 6/7 hasta la pregunta 14) + 🧪 **Kaplan Mock 6** | Mock 6: **90/180 (50 %)**. Ethics 47 %, Quant 33 %, FI 42 %, PM 42 % |
 | 10-nov | **Revisión del Mock 6: Ethics** (las 16 falladas, de nuevo) | **9/16**. Se repiten: I(B) bono ligado al resultado, IV(C) rechazar por escrito, Code vs. Standards (2), VI(B) información no material al esposo, II(A) firewall / proprietary trading, V(B) hecho vs. opinión. Falladas → #112–117 (+ #110–111 de Corporate Issuers) |
+| 10-nov | **Revisión del Mock 6: PM** (las 11 falladas) | **7/11**. Se repiten: interacción entre riesgos, **curva empinada = más averso (3.ª vez)**, mental accounting, objetivo absoluto vs. relativo (Rf = relativo). Falladas → #118–120 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

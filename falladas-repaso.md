@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 117 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 24 · Corporate Issuers: 6)
+**Total: 120 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6)
 
 ---
 
@@ -957,12 +957,12 @@ Frente a una normal, ¿cómo han sido los retornos históricos de las grandes cl
 **Más desviaciones grandes negativas** de lo esperado: **asimetría negativa** y **colas gordas** (exceso de curtosis positivo). *(Respondiste "menos desviaciones grandes positivas".)*
 </details>
 
-### 99. Menos averso al riesgo *(Kaplan M3 #104)*
+### 99. Menos averso al riesgo *(Kaplan M3 #104 y M6 #113)* ⚠️ fallada 3 veces
 Boswell es **menos** averso que Johnson, con la misma CAL. ¿Qué tiene Boswell?
 
 <details><summary>Ver respuesta</summary>
 
-**Un portafolio óptimo con mayor retorno esperado** (más a la derecha en la CAL). También tiene curvas de indiferencia **más planas** y un coeficiente de aversión **más bajo**. Curva **empinada** = miedoso. *(Respondiste "curvas más empinadas".)*
+**Un portafolio óptimo con mayor retorno esperado** (más a la derecha en la CAL). También tiene curvas de indiferencia **más planas** y un coeficiente de aversión **más bajo**. Curva **empinada** = miedoso (**"EMPINADA = ASUSTADO"**: exige mucho retorno por cada pizca de riesgo). *(M3 #104: "curvas más empinadas". M6 #113: "Smith, con curva más empinada, es menos averso".)*
 </details>
 
 ### 100. Quedarse sin caja *(Kaplan M3 #108)* ⚠️ mismo tema que la #91
@@ -1113,4 +1113,30 @@ Un congresista le dice a una analista que está "seguro" de que no pasará un ar
 <details><summary>Ver respuesta</summary>
 
 **V(B) Communication with Clients:** no distinguió **hecho de opinión**. La "certeza" del congresista es una **opinión**, no MNPI (no es información material de la empresa, y una predicción no es un hecho). *(Respondiste MNPI, en el mock y en el repaso.)*
+</details>
+
+<!-- Portfolio Mgmt: repaso de las falladas del Kaplan Mock 6 (10-nov-2026, 7/11) -->
+
+### 118. Interacción entre riesgos *(Kaplan M6 #98)* ⚠️ fallada 2 veces
+¿Cuál es falsa: "los riesgos financieros vienen de la exposición al mercado", "las interacciones entre riesgos son poco frecuentes" o "los riesgos no financieros vienen de fuentes externas"?
+
+<details><summary>Ver respuesta</summary>
+
+**"Las interacciones son poco frecuentes" es falsa**: los riesgos interactúan **seguido** (en una crisis aparecen mercado, crédito y liquidez a la vez). Las otras dos son verdaderas: los no financieros vienen de la operación **y** de fuentes externas. *(Respondiste la primera, en el mock y en el repaso.)*
+</details>
+
+### 119. Bono en acciones, sueldo en bonos *(Kaplan M6 #130)* ⚠️ fallada 2 veces
+Invierte su bono anual en acciones de crecimiento y sus ahorros del sueldo en bonos del gobierno. ¿Qué sesgo es?
+
+<details><summary>Ver respuesta</summary>
+
+**Mental accounting** (cognitivo): trata el dinero distinto **según de dónde viene**, en "cajones". Framing = decidir distinto según cómo te presentan la información. Conservatism = no actualizar una opinión. *(Respondiste framing en el mock y conservatism en el repaso.)*
+</details>
+
+### 120. Objetivo absoluto vs. relativo *(Kaplan M6 #163)* ⚠️ fallada 2 veces · ver también la #87
+¿Cuál es un objetivo **absoluto**: "≥ 5 % al año con 95 % de probabilidad", "≥ la tasa libre de riesgo" o "más que el S&P 500 con 90 % de probabilidad"?
+
+<details><summary>Ver respuesta</summary>
+
+**"≥ 5 % con 95 % de probabilidad"**: un número **fijo**. "≥ Rf" es **relativo** (la Rf es un benchmark que cambia), igual que "más que el S&P 500". Pregúntate: ¿se compara con algo? *(Respondiste "≥ Rf", en el mock y en el repaso.)*
 </details>
