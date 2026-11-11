@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 146 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13 · Quant: 4)
+**Total: 148 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13 · Quant: 6)
 
 ---
 
@@ -1330,7 +1330,7 @@ Corporativo: 1 año, cupón 2 % semestral, precio 99,73. Gobierno: 1 año, 0,90 
 **150 pb.** Corporativo: N = 2, PV = −99,73, PMT = 1, FV = 100 → I/Y = 1,137 × **2** = 2,27 %. Gobierno: N = 2, PV = −100,12, PMT = 0,45, FV = 100 → 0,390 × **2** = 0,78 %. 2,27 − 0,78 ≈ 1,50 %. Si no multiplicas por 2 sale 75 pb (la trampa). *(Respondiste 75 pb.)*
 </details>
 
-<!-- Quant: falladas del Kaplan Mock 6 (11-nov-2026, 0/4 por cansancio) -->
+<!-- Quant: falladas del Kaplan Mock 6 (11-nov-2026). Intuición de la prueba de hipótesis: H0 = 'inocente'; t = evidencia; el % = qué tan exigente es el juez (menor % = más difícil rechazar) -->
 
 ### 143. Mediana y "least accurate" *(Kaplan M6 #20)* ⚠️ fallada 2 veces
 Datos: 28, 36, 32, 30, 34, 32. ¿Cuál es **falsa**: rango = 8, mediana = 31 o MAD = 2?
@@ -1362,4 +1362,20 @@ r = 0,1452 con n = 150; críticos ±1,65 (10 %) y ±1,96 (5 %). ¿Se rechaza H�
 <details><summary>Ver respuesta</summary>
 
 **Al 5 % sí, al 2,5 % no.** t = 0,011 / (0,0475/√60) = **1,79**. "Are positive" = **una cola**: críticos 1,645 (5 %) y 1,96 (2,5 %). *(Respondiste "en ambos", en el mock y en el repaso.)*
+</details>
+
+### 147. Bayes: P(A dado B) *(Kaplan M6 #90)* 🎲 al azar en el mock
+P(earnings > 10 %) = 45 %; P(sube div. | earnings > 10 %) = 70 %; P(sube div. | earnings ≤ 10 %) = 30 %. ¿P(earnings > 10 % | sube div.)?
+
+<details><summary>Ver respuesta</summary>
+
+**≈ 66 %.** Árbol: rama ① = 0,45 × 0,70 = **0,315** · rama ② = 0,55 × 0,30 = **0,165** → ① / (① + ②) = 0,315 / 0,480 = **0,656**. El 31,5 % es P(A **y** B); "dado B" = solo el mundo donde pasó B → **dividir**. Pista: "a stock **which increases** its dividend…". *(Te quedaste en 31,5 %.)*
+</details>
+
+### 148. Covarianza desde una tabla de probabilidades conjuntas *(Kaplan M6 #57)* ⚠️ fallada 2 veces
+Con una tabla de probabilidades conjuntas de los retornos de A y B, ¿qué más se necesita para la covarianza: nada, los pesos o las varianzas?
+
+<details><summary>Ver respuesta</summary>
+
+**Nada más**: Cov = Σ P × (R_A − E(R_A)) × (R_B − E(R_B)) y las E(R) salen de la misma tabla. **Pesos** → solo para el **portafolio**. **σ** → para pasar a **correlación**. *(Respondiste las varianzas en el mock y los pesos en el repaso.)*
 </details>
