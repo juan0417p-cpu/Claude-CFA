@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 127 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 7)
+**Total: 132 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 12)
 
 ---
 
@@ -1202,4 +1202,46 @@ Al otorgar opciones a empleados, ¿qué se exige: valorarlas con Black-Scholes, 
 <details><summary>Ver respuesta</summary>
 
 **Revelar** cómo afectan el estado de resultados y el balance. El **valor** se fija en la fecha de otorgamiento, pero el **gasto se reparte durante el vesting period** (300 en 3 años = 100 por año). Black-Scholes es un modelo posible, no obligatorio. *(Respondiste "gastar todo en el periodo del otorgamiento".)*
+</details>
+
+<!-- FSA: auditoría, EPS y calidad del reporte (11-nov-2026) -->
+
+### 128. Opiniones del auditor *(Kaplan M6 #69)* ⚠️ fallada 2 veces
+¿Qué significa un **disclaimer of opinion**?
+
+<details><summary>Ver respuesta</summary>
+
+**El auditor no puede emitir una opinión** ("unable"). Unqualified = limpia · **Qualified = "except for"** (excepciones, pero razonable) · **Adverse = "not fairly"** · **Disclaimer = "unable"**. *(Respondiste "excepciones" (qualified) en el repaso y "no razonables" (adverse) en el mock.)*
+</details>
+
+### 129. Opciones antidilutivas: precio PROMEDIO *(Kaplan M6 #34)* ⚠️ fallada 2 veces
+Opciones con strike $40; precio al cierre $42 y precio promedio del año $38. Todavía no se pueden ejercer. ¿Se incluyen en el EPS diluido?
+
+<details><summary>Ver respuesta</summary>
+
+**No, son antidilutivas.** El treasury stock method usa el precio **PROMEDIO** ($38 < strike $40 → no diluyen). El precio de cierre es un distractor, y que no se puedan ejercer todavía **no importa**. *(Respondiste "no, porque no se pueden ejercer" en el mock e "incluirlas" en el repaso.)*
+</details>
+
+### 130. EPS diluido con warrants *(Kaplan M2 #73)*
+UN 5.000, div. preferentes 500, div. comunes 600, 1.000 acciones, 100 warrants a $50, precio promedio $60. ¿EPS diluido?
+
+<details><summary>Ver respuesta</summary>
+
+**$4,42.** Numerador = 5.000 − **500 preferentes** = 4.500 (los comunes no se restan). Warrants (TSM): (60 − 50)/60 × 100 = **16,7** acciones netas. 4.500 / 1.016,7 = 4,43. *(Respondiste $4,55 = 5.000 / 1.100: sin restar los preferentes y sumando los 100 warrants completos.)*
+</details>
+
+### 131. Espectro de calidad del reporte *(Kaplan M3 #36 y M3 #78)*
+¿Qué queda más alto en el espectro: utilidades no sostenibles, smoothing o estados que reflejan bien la economía pero **no cumplen la norma**? Y "utilidades sostenibles pero con rentabilidad inadecuada", ¿es problema de los resultados, del reporte o de ambos?
+
+<details><summary>Ver respuesta</summary>
+
+**Utilidades no sostenibles** (cumple la norma: solo es un problema de resultados). **Cumplir la norma es la primera línea**: todo lo que cumple está por encima de lo que no cumple. "Sustainable / adequate" = **calidad de los resultados únicamente**; "relevant / faithful / compliance" = calidad del reporte. *(Respondiste "no cumple la norma" y "ambos".)*
+</details>
+
+### 132. Triángulo del fraude *(Kaplan M4 #23)*
+"La alta rotación del personal de sistemas y contabilidad hizo ineficaces los controles internos." ¿Qué condición es?
+
+<details><summary>Ver respuesta</summary>
+
+**Opportunity**: controles débiles = la puerta abierta. **Motivation** = por qué (bonos, presión, covenants). **Rationalization** = la excusa ("es temporal"). Controles → oportunidad; dinero o presión → motivo; excusas → racionalización. *(Respondiste rationalization.)*
 </details>
