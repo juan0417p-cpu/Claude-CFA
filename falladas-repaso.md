@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 125 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 5)
+**Total: 127 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 7)
 
 ---
 
@@ -1184,4 +1184,22 @@ El DTA bruto sube de 10.500 a 11.250 y la valuation allowance sube de 2.700 a 3.
 <details><summary>Ver respuesta</summary>
 
 **Que bajen.** La allowance es la parte del DTA que la gerencia cree que **no podrá usar** por falta de utilidades futuras: **allowance ↑ = pesimismo**. Fíjate en la allowance, no en el DTA bruto (el DTA neto bajó de 7.800 a 7.350). *(Respondiste "aumentarán".)*
+</details>
+
+<!-- FSA: activos de largo plazo y pasivos (10/11-nov-2026, 8/11) -->
+
+### 126. Deterioro: impuestos, caja y dónde se registra *(Kaplan M2 #78 y M4 #78)*
+Un deterioro de $10 millones en 20X3: ¿baja la utilidad **y los impuestos por pagar** de 20X3? ¿Dónde se registra la pérdida?
+
+<details><summary>Ver respuesta</summary>
+
+Baja la utilidad de 20X3, pero **no** los impuestos por pagar ni la caja (no es deducible hasta vender el activo). En 20X4 la depreciación es menor → **utilidad ↑** (y rotación ↑); el CFO no cambia. La pérdida va al **estado de resultados como pérdida operativa** (operaciones continuas), **no al OCI**: al OCI va la **revaluación hacia arriba** (IFRS). Ojo con las opciones de dos partes. *(Respondiste "baja la utilidad y los impuestos" y "pérdida no operativa en OCI".)*
+</details>
+
+### 127. Opciones para empleados *(Kaplan M3 #12)*
+Al otorgar opciones a empleados, ¿qué se exige: valorarlas con Black-Scholes, revelar su efecto en los estados, o gastar todo su valor en el periodo del otorgamiento?
+
+<details><summary>Ver respuesta</summary>
+
+**Revelar** cómo afectan el estado de resultados y el balance. El **valor** se fija en la fecha de otorgamiento, pero el **gasto se reparte durante el vesting period** (300 en 3 años = 100 por año). Black-Scholes es un modelo posible, no obligatorio. *(Respondiste "gastar todo en el periodo del otorgamiento".)*
 </details>

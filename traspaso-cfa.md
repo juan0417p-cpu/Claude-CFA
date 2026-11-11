@@ -147,6 +147,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 10-nov | **Revisión del Mock 6: PM** (las 11 falladas) | **7/11**. Se repiten: interacción entre riesgos, **curva empinada = más averso (3.ª vez)**, mental accounting, objetivo absoluto vs. relativo (Rf = relativo). Falladas → #118–120 |
 | 10-nov | **FSA I: inventarios** (Kaplan M2–M4 + falladas del M6) | **4/8**. Falla la **dirección** FIFO/LIFO: ancla "Precios SUBEN → FIFO GANA" + ¿qué VENDE? / ¿qué QUEDA?; LIFO reserve ↓ con unidades ↑ = precios ↓. Falladas → #121–123 |
 | 10-nov | **FSA I: impuestos diferidos** (Kaplan M2–M4 + falladas del M6) | **6/8** (las 2 del M6 ahora bien). Fallas: calcular la tasa efectiva (tax expense = UAI − UN), valuation allowance ↑ = utilidades futuras ↓. Falladas → #124–125. **Pendientes de FSA del M6:** #2, #17, #21, #33, #34, #69 (módulos 29, 30, 35, 36, 38, 40) |
+| 10/11-nov | **FSA II-A: activos de largo plazo y pasivos** (leases, deterioro, intangibles, opciones) | **8/11** (las 2 del M6 ahora bien). Fallas: deterioro sin efecto en impuestos ni caja, deterioro = pérdida operativa (no OCI), opciones: gasto en el vesting. Falladas → #126–127 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
