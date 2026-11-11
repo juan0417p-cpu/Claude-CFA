@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 133 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13)
+**Total: 137 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 18 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13)
 
 ---
 
@@ -1252,4 +1252,38 @@ UN 5.000, div. preferentes 500, div. comunes 600, 1.000 acciones, 100 warrants a
 <details><summary>Ver respuesta</summary>
 
 **Costos fijos altos + barreras de salida altas**: más **rivalidad** (todos necesitan volumen y nadie se va) → guerra de precios (piensa en las aerolíneas). Muchos proveedores es **bueno** para la empresa. Pocos clientes con **altos costos de cambio** se compensa: los clientes quedan atrapados. *(Respondiste "muchos proveedores" en el mock y "pocos clientes con costos de cambio altos" en el repaso.)*
+</details>
+
+<!-- Fixed Income, Bloque 1: estructura de tasas, riesgo de tasa y duración (11-nov-2026, 5/10) -->
+
+### 134. Par curve *(Kaplan M6 #176)* ⚠️ fallada 2 veces
+¿Con qué se construye la par yield curve: bonos hipotéticos, bonos del gobierno a la par o corporativos cerca del nominal?
+
+<details><summary>Ver respuesta</summary>
+
+**Bonos hipotéticos** que cotizarían a la par con las spot rates actuales (casi ningún bono real cotiza exactamente a 100). Spot = cero cupón · forward = tasas futuras implícitas · par = hipotéticos a la par: las tres se derivan de las spot. *(Respondiste "bonos del gobierno a la par", en el mock y en el repaso.)*
+</details>
+
+### 135. Ganancia o pérdida de capital vs. carrying value *(Kaplan M6 #135)* ⚠️ fallada 2 veces
+Bono de 12 años, cupón 3 %, comprado con YTM 4,6 % (semestral). Lo vende a los 7 años en 91,41. ¿Ganancia o pérdida de capital?
+
+<details><summary>Ver respuesta</summary>
+
+**Pérdida de 1,52.** Se compara contra el **carrying value** (precio al YTM **original** con el plazo que queda): N = 10, I/Y = 2,3, PMT = 1,5, FV = 100 → **92,93**. 91,41 < 92,93 → pérdida. **No** se compara con el precio de compra (85,37): la subida hacia 100 (pull to par) es parte del rendimiento. *(Respondiste ganancia, en el mock y en el repaso.)*
+</details>
+
+### 136. Duración sola y signo de la convexidad *(Kaplan M6 #122 y #101)* 🎲 al azar en el mock
+Con la duración modificada sola, ¿las estimaciones de precio de un bono sin opciones quedan altas o bajas? Con ModDur 5,6, convexidad 28 y una baja de 54 pb, ¿%ΔP?
+
+<details><summary>Ver respuesta</summary>
+
+**Demasiado bajas en los dos casos** (la recta de la duración queda siempre debajo de la curva convexa). Por eso la convexidad **suma**: (Δy)² es siempre positivo. −5,6 × (−0,0054) + ½ × 28 × 0,0054² = 3,024 % + 0,041 % = **3,07 %**. Duración: signo contrario a Δy; convexidad: **mismo signo que la convexidad**, siempre. *(#122: no sabías. #101: restaste la convexidad → 2,98 %.)*
+</details>
+
+### 137. Duración efectiva: el cambio real puede ser mayor o menor *(Kaplan M6 #109)* 🎲 al azar en el mock
+Bono con descuento y **duración efectiva** de 8,5. ¿El cambio real de precio por 1 % de cambio en el YTM es menor, mayor o puede ser cualquiera de los dos?
+
+<details><summary>Ver respuesta</summary>
+
+**Puede ser mayor o menor.** "Efectiva" = bono **con opciones**: la convexidad puede ser positiva (sin opciones o putable) o **negativa** (callable), y no se sabe si la tasa sube o baja. El "descuento" es un distractor. *(Respondiste "menor que 8,5 %".)*
 </details>
