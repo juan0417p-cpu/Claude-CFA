@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 137 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 18 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13)
+**Total: 142 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13)
 
 ---
 
@@ -1286,4 +1286,46 @@ Bono con descuento y **duración efectiva** de 8,5. ¿El cambio real de precio p
 <details><summary>Ver respuesta</summary>
 
 **Puede ser mayor o menor.** "Efectiva" = bono **con opciones**: la convexidad puede ser positiva (sin opciones o putable) o **negativa** (callable), y no se sabe si la tasa sube o baja. El "descuento" es un distractor. *(Respondiste "menor que 8,5 %".)*
+</details>
+
+<!-- Fixed Income, Bloque 2: mercados, crédito y securitización (11-nov-2026, 3/8) -->
+
+### 138. Factura mayor que el precio cotizado *(Kaplan M6 #134)* ⚠️ fallada 2 veces
+Precio cotizado 105,19 por $100.000 de nominal; la factura llega por $107.390. ¿Qué es la diferencia?
+
+<details><summary>Ver respuesta</summary>
+
+**Interés acumulado** ($2.200): precio **full** = **flat** (cotizado) + interés acumulado desde el último cupón. El vendedor se ganó esa parte del cupón. No es comisión (los dealers ganan con el spread). *(Respondiste comisión, en el mock y en el repaso.)*
+</details>
+
+### 139. Oferta no competitiva en una subasta soberana *(Kaplan M6 #96)* ⚠️ fallada 2 veces
+¿Quien presenta una oferta **no competitiva** recibe títulos?
+
+<details><summary>Ver respuesta</summary>
+
+**Siempre**, sea cual sea el resultado: acepta el precio que salga (como una orden de mercado). La **competitiva** especifica precio y cantidad y puede quedarse sin nada (como una orden límite). No compite = no arriesga quedarse sin títulos. *(Respondiste "puede o no recibir", en el mock y en el repaso.)*
+</details>
+
+### 140. Mejora crediticia en MBS *(Kaplan M6 #143)* ⚠️ fallada 2 veces
+¿Qué estructura da **mejora crediticia**: sequential-pay, PAC + support o senior/subordinated?
+
+<details><summary>Ver respuesta</summary>
+
+**Senior/subordinated**: redistribuye el riesgo de **default** (las subordinadas pierden primero). Sequential-pay y PAC + support redistribuyen el riesgo de **prepago**, no el de crédito. *(Respondiste PAC + support, en el mock y en el repaso.)*
+</details>
+
+### 141. Gestión activa: CDO *(Kaplan M6 #166)* ⚠️ fallada 2 veces
+¿Qué título depende de la **gestión activa** de sus activos para generar los flujos: ABS de autos, CDO o CMO?
+
+<details><summary>Ver respuesta</summary>
+
+**CDO**: un **collateral manager** compra y vende bonos y préstamos (es como un fondo apalancado). ABS y CMO son pools pasivos ("ponlo y olvídalo"). *(Respondiste ABS de autos, en el mock y en el repaso.)*
+</details>
+
+### 142. G-spread: anualizar ×2 *(Kaplan M6 #117)* 🎲 al azar en el mock
+Corporativo: 1 año, cupón 2 % semestral, precio 99,73. Gobierno: 1 año, 0,90 % semestral, precio 100,12. ¿G-spread?
+
+<details><summary>Ver respuesta</summary>
+
+**150 pb.** Corporativo: N = 2, PV = −99,73, PMT = 1, FV = 100 → I/Y = 1,137 × **2** = 2,27 %. Gobierno: N = 2, PV = −100,12, PMT = 0,45, FV = 100 → 0,390 × **2** = 0,78 %. 2,27 − 0,78 ≈ 1,50 %. Si no multiplicas por 2 sale 75 pb (la trampa). *(Respondiste 75 pb.)*
 </details>

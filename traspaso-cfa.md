@@ -150,6 +150,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 10/11-nov | **FSA II-A: activos de largo plazo y pasivos** (leases, deterioro, intangibles, opciones) | **8/11** (las 2 del M6 ahora bien). Fallas: deterioro sin efecto en impuestos ni caja, deterioro = pérdida operativa (no OCI), opciones: gasto en el vesting. Falladas → #126–127 |
 | 11-nov | **FSA II-B: auditoría, EPS diluido, calidad del reporte** (8 de 13 preguntas hechas) | **2/8** (cansancio: 5 de 8 respuestas en C → pausa para almorzar). Fallas: disclaimer, opciones con precio promedio, EPS con warrants, espectro de calidad, triángulo del fraude. Falladas → #128–132. Después de la pausa: 4/5 (M6 #33 ahora bien). **Parte B total: 6/13. FSA en el repaso: 24/40 (60 %).** Falladas → #128–133 |
 | 11-nov | **Fixed Income, Bloque 1:** spot/forward/par, horizonte vs. Macaulay, carrying value, duración, convexidad, PVBP (10 del Mock 6) | **5/10** (de las 7 falladas del mock, 4 ahora bien). Fallas: par curve = hipotéticos, pérdida de capital vs. carrying value, la duración sola subestima en los dos casos (la convexidad suma), duración efectiva = puede ser mayor o menor. Falladas → #134–137. **Pendiente Bloque 2:** M6 #134, #96, #162, #136, #170, #143, #166, #117 |
+| 11-nov | **Fixed Income, Bloque 2:** precio full/flat, subastas, repo, spreads, ratings, MBS/CDO, G-spread (8 del Mock 6) | **3/8** (cansancio al final del día). Fallas: interés acumulado, oferta no competitiva, senior/sub = crédito, CDO = gestión activa, G-spread ×2. Falladas → #138–142. **FI del Mock 6 terminado: 8/18** |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
@@ -201,21 +202,19 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 
 *(Propuesta del 2-nov: se ajusta según cómo vaya cada bloque.)*
 
-## 2e. Plan desde el 9-nov (después del Kaplan Mock 6)
+## 2f. Plan desde el 12-nov (actualizado el 11-nov)
 
-**Todos los días:** 30 min de Ethics + 20 min de `falladas-repaso.md`.
-Prioridad por puntos perdidos en el Mock 6 (peso × fallos): Ethics > Fixed Income > PM ≈ FSA > Equity ≈ Quant.
+**Hecho:** revisión del Mock 6 de Ethics, PM, FSA y Fixed Income. FSA y FI se estudiaron con los Kaplan M2–M4.
+
+**Todos los días:** 30 min de Ethics + 20 min de `falladas-repaso.md` (142 fichas).
 
 | Fecha (Bogotá) | Tema |
 |---|---|
-| lun 9 nov | **Revisión del Mock 6: Ethics** (16 falladas) y **PM** (11) |
-| mar 10 nov | **FSA:** inventarios, impuestos diferidos, activos de LP, pasivos + falladas FSA del Mock 6 (10) |
-| mié 11 nov | **Fixed Income:** falladas del Mock 6 (14 + 4 al azar) + term structure, riesgo de tasa, duración, crédito |
-| jue 12 nov | **Quant** (8) + **Economics** (5) del Mock 6 + Corporate Issuers Bloque 4 (MM, WACC, business models) |
-| vie 13 nov | 🧪 **Mock B de CFA Institute** (opcional según energía) |
-| sáb 14 nov | Revisión del Mock B + falladas de Equity, Alternatives y Derivatives del Mock 6 |
-| dom 15 nov | Ethics completo + todas las falladas + hoja de fórmulas |
-| lun 16 nov | Repaso ligero y descanso |
+| jue 12 nov | **Quant** (8 falladas del Mock 6) + **Economics** (5) + **Corporate Issuers Bloque 4** (MM, WACC, business models) |
+| vie 13 nov | Falladas del Mock 6 de **Equity** (9), **Alternatives** (7) y **Derivatives** (5) |
+| sáb 14 nov | **½ Mock B** de CFA Institute (sesión 1, 2 h 15 min) + revisión rápida |
+| dom 15 nov | **Ethics** (los 7 Standards, el Code, las 7 que se repiten) + **las fichas marcadas ⚠️** + hoja de fórmulas |
+| lun 16 nov | Repaso ligero (hoja de fórmulas) y descanso |
 | 🎯 mar 17 nov | **EXAMEN** |
 
 ## 3. Errores recurrentes que hay que vigilar
