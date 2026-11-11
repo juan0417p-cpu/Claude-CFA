@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 142 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13)
+**Total: 146 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13 · Quant: 4)
 
 ---
 
@@ -1328,4 +1328,38 @@ Corporativo: 1 año, cupón 2 % semestral, precio 99,73. Gobierno: 1 año, 0,90 
 <details><summary>Ver respuesta</summary>
 
 **150 pb.** Corporativo: N = 2, PV = −99,73, PMT = 1, FV = 100 → I/Y = 1,137 × **2** = 2,27 %. Gobierno: N = 2, PV = −100,12, PMT = 0,45, FV = 100 → 0,390 × **2** = 0,78 %. 2,27 − 0,78 ≈ 1,50 %. Si no multiplicas por 2 sale 75 pb (la trampa). *(Respondiste 75 pb.)*
+</details>
+
+<!-- Quant: falladas del Kaplan Mock 6 (11-nov-2026, 0/4 por cansancio) -->
+
+### 143. Mediana y "least accurate" *(Kaplan M6 #20)* ⚠️ fallada 2 veces
+Datos: 28, 36, 32, 30, 34, 32. ¿Cuál es **falsa**: rango = 8, mediana = 31 o MAD = 2?
+
+<details><summary>Ver respuesta</summary>
+
+**"Mediana = 31" es falsa.** Ordena: 28, 30, **32, 32**, 34, 36 → mediana = 32. Rango = 8 ✅. MAD = (4 + 2 + 0 + 0 + 2 + 4)/6 = 2 ✅. Con "least" o "NOT": marca V/F en cada opción y elige la F. *(Elegiste "rango = 8", una verdadera, en el mock y en el repaso.)*
+</details>
+
+### 144. Asimetría: orden de moda, mediana y media *(Kaplan M6 #68)* ⚠️ fallada 2 veces
+¿Qué orden tienen moda, mediana y media con asimetría positiva? ¿Y negativa?
+
+<details><summary>Ver respuesta</summary>
+
+**"La media persigue a la cola."** Positiva (cola a la derecha): **moda < mediana < media**. Negativa (cola a la izquierda): **media < mediana < moda**. La mediana siempre en el medio. *(Elegiste "negativa: moda < mediana < media", en el mock y en el repaso.)*
+</details>
+
+### 145. Prueba t de una correlación *(Kaplan M6 #39)* ⚠️ fallada 2 veces
+r = 0,1452 con n = 150; críticos ±1,65 (10 %) y ±1,96 (5 %). ¿Se rechaza H₀: ρ = 0?
+
+<details><summary>Ver respuesta</summary>
+
+**Se rechaza al 10 %, no al 5 %.** t = r√(n − 2)/√(1 − r²) = 0,1452 × 12,166 / 0,9894 = **1,785** (entre 1,65 y 1,96). Con muestras grandes, una correlación chica puede ser significativa: **siempre calcula la t**. *(Respondiste "no rechazar al 10 %", en el mock y en el repaso.)*
+</details>
+
+### 146. Prueba t de una cola *(Kaplan M6 #73)* ⚠️ fallada 2 veces
+¿Los retornos anormales son **positivos**? Media 1,1 %, σ 4,75 %, n = 60. ¿Se rechaza al 5 %? ¿Y al 2,5 %?
+
+<details><summary>Ver respuesta</summary>
+
+**Al 5 % sí, al 2,5 % no.** t = 0,011 / (0,0475/√60) = **1,79**. "Are positive" = **una cola**: críticos 1,645 (5 %) y 1,96 (2,5 %). *(Respondiste "en ambos", en el mock y en el repaso.)*
 </details>
