@@ -148,7 +148,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 10-nov | **FSA I: inventarios** (Kaplan M2–M4 + falladas del M6) | **4/8**. Falla la **dirección** FIFO/LIFO: ancla "Precios SUBEN → FIFO GANA" + ¿qué VENDE? / ¿qué QUEDA?; LIFO reserve ↓ con unidades ↑ = precios ↓. Falladas → #121–123 |
 | 10-nov | **FSA I: impuestos diferidos** (Kaplan M2–M4 + falladas del M6) | **6/8** (las 2 del M6 ahora bien). Fallas: calcular la tasa efectiva (tax expense = UAI − UN), valuation allowance ↑ = utilidades futuras ↓. Falladas → #124–125. **Pendientes de FSA del M6:** #2, #17, #21, #33, #34, #69 (módulos 29, 30, 35, 36, 38, 40) |
 | 10/11-nov | **FSA II-A: activos de largo plazo y pasivos** (leases, deterioro, intangibles, opciones) | **8/11** (las 2 del M6 ahora bien). Fallas: deterioro sin efecto en impuestos ni caja, deterioro = pérdida operativa (no OCI), opciones: gasto en el vesting. Falladas → #126–127 |
-| 11-nov | **FSA II-B: auditoría, EPS diluido, calidad del reporte** (8 de 13 preguntas hechas) | **2/8** (cansancio: 5 de 8 respuestas en C → pausa para almorzar). Fallas: disclaimer, opciones con precio promedio, EPS con warrants, espectro de calidad, triángulo del fraude. Falladas → #128–132. **Pendientes:** M4 #48, M2 #85, M6 #33, M6 #2, M4 #85 |
+| 11-nov | **FSA II-B: auditoría, EPS diluido, calidad del reporte** (8 de 13 preguntas hechas) | **2/8** (cansancio: 5 de 8 respuestas en C → pausa para almorzar). Fallas: disclaimer, opciones con precio promedio, EPS con warrants, espectro de calidad, triángulo del fraude. Falladas → #128–132. Después de la pausa: 4/5 (M6 #33 ahora bien). **Parte B total: 6/13. FSA en el repaso: 24/40 (60 %).** Falladas → #128–133 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

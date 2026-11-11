@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 132 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 12)
+**Total: 133 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 14 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13)
 
 ---
 
@@ -1244,4 +1244,12 @@ UN 5.000, div. preferentes 500, div. comunes 600, 1.000 acciones, 100 warrants a
 <details><summary>Ver respuesta</summary>
 
 **Opportunity**: controles débiles = la puerta abierta. **Motivation** = por qué (bonos, presión, covenants). **Rationalization** = la excusa ("es temporal"). Controles → oportunidad; dinero o presión → motivo; excusas → racionalización. *(Respondiste rationalization.)*
+</details>
+
+### 133. Poco poder de fijación de precios *(Kaplan M6 #2)* ⚠️ fallada 2 veces
+¿Qué genera poco pricing power: costos fijos y barreras de salida altos, muchos proveedores con bajo costo de cambio, o pocos clientes con costos de cambio altos?
+
+<details><summary>Ver respuesta</summary>
+
+**Costos fijos altos + barreras de salida altas**: más **rivalidad** (todos necesitan volumen y nadie se va) → guerra de precios (piensa en las aerolíneas). Muchos proveedores es **bueno** para la empresa. Pocos clientes con **altos costos de cambio** se compensa: los clientes quedan atrapados. *(Respondiste "muchos proveedores" en el mock y "pocos clientes con costos de cambio altos" en el repaso.)*
 </details>
