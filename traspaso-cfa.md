@@ -152,6 +152,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 11-nov | **Fixed Income, Bloque 1:** spot/forward/par, horizonte vs. Macaulay, carrying value, duración, convexidad, PVBP (10 del Mock 6) | **5/10** (de las 7 falladas del mock, 4 ahora bien). Fallas: par curve = hipotéticos, pérdida de capital vs. carrying value, la duración sola subestima en los dos casos (la convexidad suma), duración efectiva = puede ser mayor o menor. Falladas → #134–137. **Pendiente Bloque 2:** M6 #134, #96, #162, #136, #170, #143, #166, #117 |
 | 11-nov | **Fixed Income, Bloque 2:** precio full/flat, subastas, repo, spreads, ratings, MBS/CDO, G-spread (8 del Mock 6) | **3/8** (cansancio al final del día). Fallas: interés acumulado, oferta no competitiva, senior/sub = crédito, CDO = gestión activa, G-spread ×2. Falladas → #138–142. **FI del Mock 6 terminado: 8/18** |
 | 11-nov (tarde) | **Quant del Mock 6** (4 de 9) | **0/4**, con 3 respuestas idénticas a las del mock → cansancio, se paró. Falladas → #143–146. Después, a pedido del estudiante ("no los entiendo"): intuición de la prueba de hipótesis (juicio/juez) → práctica ✅ y las 5 restantes: **3/5** (g esperado ✅, Monte Carlo ✅, jackknife ✅; Bayes y covarianza ❌). **Quant del Mock 6 terminado: 3/9.** Falladas → #143–148 |
+| 11-nov (tarde) | **Economics del Mock 6** (6) | **5/6** (todas las falladas del mock ahora bien, salvo el % de cambio de la moneda que no es la base). Falladas → #149 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 148 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13 · Quant: 6)
+**Total: 149 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13 · Quant: 6 · Economics: 1)
 
 ---
 
@@ -1378,4 +1378,14 @@ Con una tabla de probabilidades conjuntas de los retornos de A y B, ¿qué más 
 <details><summary>Ver respuesta</summary>
 
 **Nada más**: Cov = Σ P × (R_A − E(R_A)) × (R_B − E(R_B)) y las E(R) salen de la misma tabla. **Pesos** → solo para el **portafolio**. **σ** → para pasar a **correlación**. *(Respondiste las varianzas en el mock y los pesos en el repaso.)*
+</details>
+
+<!-- Economics: falladas del Kaplan Mock 6 (11-nov-2026, 5/6) -->
+
+### 149. % de cambio de la moneda que NO es la base *(Kaplan M6 #23)* ⚠️ fallada 2 veces
+USD/CAD pasa de 0,85 a 0,89. ¿Cuánto cambió el **USD**?
+
+<details><summary>Ver respuesta</summary>
+
+**Se depreció 4,5 %.** En USD/CAD la **base es el CAD**: 0,89/0,85 − 1 = +4,7 % es lo que se apreció el **CAD**. Para el USD **invierte**: 1/0,85 = 1,1765 y 1/0,89 = 1,1236 → 1,1236/1,1765 − 1 = **−4,5 %**. Atajo: 1/1,047 − 1. *(Respondiste "se depreció 4,7 %": la dirección estaba bien, el número no.)*
 </details>
