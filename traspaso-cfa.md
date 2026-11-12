@@ -154,6 +154,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 11-nov (tarde) | **Quant del Mock 6** (4 de 9) | **0/4**, con 3 respuestas idénticas a las del mock → cansancio, se paró. Falladas → #143–146. Después, a pedido del estudiante ("no los entiendo"): intuición de la prueba de hipótesis (juicio/juez) → práctica ✅ y las 5 restantes: **3/5** (g esperado ✅, Monte Carlo ✅, jackknife ✅; Bayes y covarianza ❌). **Quant del Mock 6 terminado: 3/9.** Falladas → #143–148 |
 | 11-nov (tarde) | **Economics del Mock 6** (6) | **5/6** (todas las falladas del mock ahora bien, salvo el % de cambio de la moneda que no es la base). Falladas → #149 |
 | 11/12-nov | **Corporate Issuers, Bloque 4:** WACC, teorías de estructura de capital (MM, trade-off, pecking order), business models + 5 falladas del Mock 6 + Mock A #81 y #83 | **15/17** 🔥 (estructura 8/9, business models 4/4, Mock 6 4/5, Mock A 2/2). Fallas: supuestos de MM, escudo fiscal de la depreciación. Falladas → #150–151. **Corporate Issuers terminado** |
+| 12-nov | **Equity del Mock 6** (11) | **7/11** (órdenes, índices, IPO, semi-strong, fechas de dividendo y P/E ahora bien). Fallas: order-driven, EV − caja, sponsored DR, DDM de dos etapas. Falladas → #152–155 |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 

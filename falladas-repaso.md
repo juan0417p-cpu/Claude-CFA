@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 151 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 8 · FSA: 13 · Quant: 6 · Economics: 1)
+**Total: 155 preguntas** (Equity: 32 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 8 · FSA: 13 · Quant: 6 · Economics: 1)
 
 ---
 
@@ -1406,4 +1406,38 @@ USD/CAD pasa de 0,85 a 0,89. ¿Cuánto cambió el **USD**?
 <details><summary>Ver respuesta</summary>
 
 **Incluir el escudo fiscal de la depreciación** (depreciación × t = menos impuestos = caja). Solo importan los **flujos de caja incrementales después de impuestos**: el ROE (contable, bajo al inicio del proyecto) y el EPS de corto plazo son errores típicos (ver #111). *(Respondiste el ROE, en el mock y en el repaso.)*
+</details>
+
+<!-- Equity: falladas del Kaplan Mock 6 (12-nov-2026, 7/11) -->
+
+### 152. Order-driven vs. quote-driven *(Kaplan M6 #151)* ⚠️ fallada 2 veces
+Un mercado secundario donde la liquidez la dan **"those seeking to trade"**, ¿cómo se llama?
+
+<details><summary>Ver respuesta</summary>
+
+**Order-driven**: las órdenes de los propios traders se cruzan entre sí. **Quote-driven** = dealer = OTC: la liquidez la da el **dealer**, que cotiza y opera con su inventario. *(Respondiste quote-driven, en el mock y en el repaso.)*
+</details>
+
+### 153. Enterprise value: se resta la caja *(Kaplan M6 #141)* ⚠️ fallada 2 veces
+Para el EV, ¿se suman deuda y equity sin ajuste, restando la caja o restando los intangibles?
+
+<details><summary>Ver respuesta</summary>
+
+**EV = equity (mercado) + deuda (mercado) + preferentes − caja e inversiones de corto plazo.** Es el valor del **negocio operativo**: si lo compras, la caja vuelve a tu bolsillo. Equity + deuda **sin ajuste** es la trampa (es el valor total del capital, no el EV). El goodwill **no** se resta. *(Respondiste "sin ajuste", en el mock y en el repaso.)*
+</details>
+
+### 154. Depository receipts con voto *(Kaplan M6 #157)* ⚠️ fallada 2 veces
+Receipts en una bolsa de **EE. UU.**, cada uno = **1,7 acciones** búlgaras, y el inversionista **puede votar**. ¿Qué son?
+
+<details><summary>Ver respuesta</summary>
+
+**Sponsored DRs** (la empresa participa → hay voto; unsponsored → no hay voto). **GDR** = emitidos fuera de EE. UU. **Global registered shares** = la misma acción (1 a 1) en varias bolsas, no son "receipts". *(Respondiste global registered shares, en el mock y en el repaso.)*
+</details>
+
+### 155. DDM de dos etapas *(Kaplan M6 #178)* 🎲 al azar en el mock
+D1 = 3, crecimiento de 30 % por 3 años y luego 7 %, k = 13 %. ¿Valor?
+
+<details><summary>Ver respuesta</summary>
+
+**≈ $72.** D2 = 3,90 · D3 = 5,07 · D4 = 5,07 × **1,07** = 5,42 · P3 = 5,42/0,06 = **90,42**. P0 = 3/1,13 + 3,9/1,13² + (5,07 + 90,42)/1,13³ = 71,89. P_n = D_(n+1)/(k − g) va en el **año n** y se descuenta **n** años. Calculadora: CF0 = 0, C01 = 3, C02 = 3,9, C03 = 95,49, I = 13 → NPV. *(Respondiste $87.)*
 </details>
