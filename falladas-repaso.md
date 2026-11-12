@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 155 preguntas** (Equity: 32 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 8 · FSA: 13 · Quant: 6 · Economics: 1)
+**Total: 157 preguntas** (Equity: 32 · Ethics: 21 · Fixed Income: 23 · Alternatives: 12 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 8 · FSA: 13 · Quant: 6 · Economics: 1)
 
 ---
 
@@ -1440,4 +1440,22 @@ D1 = 3, crecimiento de 30 % por 3 años y luego 7 %, k = 13 %. ¿Valor?
 <details><summary>Ver respuesta</summary>
 
 **≈ $72.** D2 = 3,90 · D3 = 5,07 · D4 = 5,07 × **1,07** = 5,42 · P3 = 5,42/0,06 = **90,42**. P0 = 3/1,13 + 3,9/1,13² + (5,07 + 90,42)/1,13³ = 71,89. P_n = D_(n+1)/(k − g) va en el **año n** y se descuenta **n** años. Calculadora: CF0 = 0, C01 = 3, C02 = 3,9, C03 = 95,49, I = 13 → NPV. *(Respondiste $87.)*
+</details>
+
+<!-- Alternatives: falladas del Kaplan Mock 6 (12-nov-2026, 5/7) -->
+
+### 156. Distressed + redesarrollo a gran escala *(Kaplan M6 #119)* ⚠️ fallada 2 veces
+Un REIT cerrado invierte en propiedades **distressed** y hace **redesarrollos a gran escala**. ¿Qué estrategia es?
+
+<details><summary>Ver respuesta</summary>
+
+**Opportunistic.** De menor a mayor riesgo: core (estable) → core-plus (mejoras modestas) → value-add (renovar o reposicionar, escala mediana) → **opportunistic** ("distressed", "large-scale", cambiar el uso, especular). *(Respondiste value-add, en el mock y en el repaso.)*
+</details>
+
+### 157. Retorno neto de un fund of funds *(Kaplan M6 #149)*
+$10M en un FoF: 30 % en X (+14 %), 30 % en Y (−8 %), 40 % en Z (+22 %), retornos ya netos de las comisiones de cada fondo. El FoF cobra "1 and 10", con el incentive **independiente** de la management fee. ¿Retorno neto?
+
+<details><summary>Ver respuesta</summary>
+
+**≈ 8,5 %.** Bruto = 0,3(14) + 0,3(−8) + 0,4(22) = **10,6 %** (la trampa). Management fee = 1 %. Incentive (independent) = 10 % × 10,6 % = 1,06 %. Neto = 10,6 − 1 − 1,06 = **8,54 %**. Si fuera "net of management fee": 10 % × 9,6 % = 0,96 % → 8,64 %. *(Pediste la explicación paso a paso.)*
 </details>
