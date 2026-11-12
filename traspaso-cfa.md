@@ -208,19 +208,17 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 
 *(Propuesta del 2-nov: se ajusta según cómo vaya cada bloque.)*
 
-## 2g. Plan desde el 12-nov (actualizado el 12-nov en la mañana)
+## 2h. Plan desde el 12-nov (actualizado el 12-nov: el estudiante hace otro mock hoy)
 
-**Hecho:** revisión del Mock 6 de Ethics, PM, FSA, Fixed Income, Quant, Economics y Corporate Issuers (CI terminado completo, Bloques 1–4).
-
-**Todos los días:** 30 min de Ethics + 20 min de `falladas-repaso.md` (151 fichas).
+**Hecho:** revisión completa del Mock 6 (todos los temas): 54/98 de las falladas ahora bien. CI terminado completo.
 
 | Fecha (Bogotá) | Tema |
 |---|---|
-| jue 12 nov | Ethics (30 min) + falladas del Mock 6 de **Equity** (9), **Alternatives** (7) y **Derivatives** (5) |
-| vie 13 nov | **½ Mock B** de CFA Institute (sesión 1, 2 h 15 min) + revisión |
-| sáb 14 nov | **Ethics completo** (7 Standards, Code, las 7 que se repiten) + **fichas ⚠️** + Quant (#143–148) |
-| dom 15 nov | Hoja de fórmulas + repaso ligero de fichas |
-| lun 16 nov | Descanso (solo la hoja de fórmulas) |
+| jue 12 nov | 🧪 **Otro mock completo** (marcar con * las respondidas al azar). Después, descanso |
+| vie 13 nov | **Revisión del mock** (falladas + al azar → `falladas-repaso.md`) |
+| sáb 14 nov | **Ethics completo** + **fichas ⚠️** + precio vs. valor (Derivatives) + Quant |
+| dom 15 nov | Hoja de fórmulas + repaso ligero |
+| lun 16 nov | Descanso |
 | 🎯 mar 17 nov | **EXAMEN** |
 
 ## 3. Errores recurrentes que hay que vigilar
