@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 157 preguntas** (Equity: 32 · Ethics: 21 · Fixed Income: 23 · Alternatives: 12 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 8 · FSA: 13 · Quant: 6 · Economics: 1)
+**Total: 162 preguntas** (Equity: 32 · Ethics: 21 · Fixed Income: 23 · Alternatives: 12 · Derivatives: 19 · Portfolio Mgmt: 27 · Corporate Issuers: 8 · FSA: 13 · Quant: 6 · Economics: 1)
 
 ---
 
@@ -1458,4 +1458,46 @@ $10M en un FoF: 30 % en X (+14 %), 30 % en Y (−8 %), 40 % en Z (+22 %), retorn
 <details><summary>Ver respuesta</summary>
 
 **≈ 8,5 %.** Bruto = 0,3(14) + 0,3(−8) + 0,4(22) = **10,6 %** (la trampa). Management fee = 1 %. Incentive (independent) = 10 % × 10,6 % = 1,06 %. Neto = 10,6 − 1 − 1,06 = **8,54 %**. Si fuera "net of management fee": 10 % × 9,6 % = 0,96 % → 8,64 %. *(Pediste la explicación paso a paso.)*
+</details>
+
+<!-- Derivatives: falladas del Kaplan Mock 6 (12-nov-2026, 0/5): PRECIO vs. VALOR sigue siendo el punto débil -->
+
+### 158. Más flujos del subyacente: ¿precio o valor? *(Kaplan M6 #146)* ⚠️ fallada 2 veces
+Si aumentan los flujos del subyacente durante la vida de un forward, ¿qué pasa: menor **precio** al inicio, menor **valor** al inicio o mayor precio al inicio?
+
+<details><summary>Ver respuesta</summary>
+
+**Menor precio al inicio.** El **valor** al inicio es **siempre 0** (esa opción es la trampa). Más beneficios del subyacente → quien compra a plazo se los pierde → acepta pagar **menos**: F₀ = S₀(1 + r)^T − PV(beneficios). *(Respondiste "menor valor al inicio", en el mock y en el repaso.)*
+</details>
+
+### 159. Forward de un índice que paga dividendos *(Kaplan M6 #94)* ⚠️ fallada 2 veces
+Índice de 1.000, r = 4 %, el índice paga dividendos. ¿El forward a 1 año es igual, menor o mayor que 1.000e^0,04?
+
+<details><summary>Ver respuesta</summary>
+
+**Menor**: F = 1.000e^(0,04 − d). Quien compra con un forward **no recibe** los dividendos, así que paga menos (🏠 un apartamento arrendado: si lo compras a plazo, el arriendo de este año no es tuyo). **"Lo que el activo PAGA se RESTA; lo que CUESTA se SUMA."** *(Respondiste "mayor", en el mock y en el repaso, incluso después de la explicación.)*
+</details>
+
+### 160. Cubrir tasas con mucha liquidez *(Kaplan M6 #118)* ⚠️ fallada 2 veces
+Para cubrir riesgo de tasa con una **alta necesidad de liquidez**, ¿swaps, futuros o forwards?
+
+<details><summary>Ver respuesta</summary>
+
+**Futuros**: estandarizados y negociados **en bolsa** → líquidos y sin riesgo de contraparte. Swaps y forwards son OTC, a la medida, difíciles de deshacer. "Liquidity / standardized / exchange-traded" → futuros. *(Respondiste swaps, en el mock y en el repaso.)*
+</details>
+
+### 161. Tasa de descuento del binomial *(Kaplan M6 #139)* ⚠️ fallada 2 veces
+En el modelo binomial, ¿la tasa de descuento del pago esperado no incluye prima de riesgo, depende de las preferencias o refleja las probabilidades?
+
+<details><summary>Ver respuesta</summary>
+
+**No incluye prima de riesgo** (tasa libre de riesgo): la opción se **replica** con la acción + un préstamo, y eso no tiene riesgo → valoración **neutral al riesgo**, igual para cualquier inversionista. Las probabilidades van en el **numerador** (pago esperado), no en la tasa. *(Respondiste "refleja las probabilidades" en el mock y "depende de las preferencias" en el repaso.)*
+</details>
+
+### 162. Precio de un swap *(Kaplan M6 #174)* ⚠️ fallada 2 veces
+¿El **precio** de un swap de tasas es cero al inicio, la par swap rate o su valor para el pagador fijo?
+
+<details><summary>Ver respuesta</summary>
+
+**La par swap rate** (la tasa fija pactada). "Cero al inicio" es el **valor**, y "su valor para el pagador fijo" también es **valor**. **Precio = lo pactado (no cambia). Valor = lo que vale el contrato (0 al inicio, después cambia).** *(Respondiste "su valor para el pagador fijo", en el mock y en el repaso.)*
 </details>
