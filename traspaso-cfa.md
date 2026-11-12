@@ -153,6 +153,7 @@ Lo que subió frente a Kaplan 2–4: Equity (+22), Derivatives (+25), FSA (+10),
 | 11-nov | **Fixed Income, Bloque 2:** precio full/flat, subastas, repo, spreads, ratings, MBS/CDO, G-spread (8 del Mock 6) | **3/8** (cansancio al final del día). Fallas: interés acumulado, oferta no competitiva, senior/sub = crédito, CDO = gestión activa, G-spread ×2. Falladas → #138–142. **FI del Mock 6 terminado: 8/18** |
 | 11-nov (tarde) | **Quant del Mock 6** (4 de 9) | **0/4**, con 3 respuestas idénticas a las del mock → cansancio, se paró. Falladas → #143–146. Después, a pedido del estudiante ("no los entiendo"): intuición de la prueba de hipótesis (juicio/juez) → práctica ✅ y las 5 restantes: **3/5** (g esperado ✅, Monte Carlo ✅, jackknife ✅; Bayes y covarianza ❌). **Quant del Mock 6 terminado: 3/9.** Falladas → #143–148 |
 | 11-nov (tarde) | **Economics del Mock 6** (6) | **5/6** (todas las falladas del mock ahora bien, salvo el % de cambio de la moneda que no es la base). Falladas → #149 |
+| 11/12-nov | **Corporate Issuers, Bloque 4:** WACC, teorías de estructura de capital (MM, trade-off, pecking order), business models + 5 falladas del Mock 6 + Mock A #81 y #83 | **15/17** 🔥 (estructura 8/9, business models 4/4, Mock 6 4/5, Mock A 2/2). Fallas: supuestos de MM, escudo fiscal de la depreciación. Falladas → #150–151. **Corporate Issuers terminado** |
 
 ## 2b. Plan de 22 días (armado el 26-oct)
 
@@ -204,19 +205,19 @@ Si un día no se termina, lo pendiente no se arrastra: va a la revisión del moc
 
 *(Propuesta del 2-nov: se ajusta según cómo vaya cada bloque.)*
 
-## 2f. Plan desde el 12-nov (actualizado el 11-nov)
+## 2g. Plan desde el 12-nov (actualizado el 12-nov en la mañana)
 
-**Hecho:** revisión del Mock 6 de Ethics, PM, FSA y Fixed Income. FSA y FI se estudiaron con los Kaplan M2–M4.
+**Hecho:** revisión del Mock 6 de Ethics, PM, FSA, Fixed Income, Quant, Economics y Corporate Issuers (CI terminado completo, Bloques 1–4).
 
-**Todos los días:** 30 min de Ethics + 20 min de `falladas-repaso.md` (142 fichas).
+**Todos los días:** 30 min de Ethics + 20 min de `falladas-repaso.md` (151 fichas).
 
 | Fecha (Bogotá) | Tema |
 |---|---|
-| jue 12 nov | **Quant** (8 falladas del Mock 6) + **Economics** (5) + **Corporate Issuers Bloque 4** (MM, WACC, business models) |
-| vie 13 nov | Falladas del Mock 6 de **Equity** (9), **Alternatives** (7) y **Derivatives** (5) |
-| sáb 14 nov | **½ Mock B** de CFA Institute (sesión 1, 2 h 15 min) + revisión rápida |
-| dom 15 nov | **Ethics** (los 7 Standards, el Code, las 7 que se repiten) + **las fichas marcadas ⚠️** + hoja de fórmulas |
-| lun 16 nov | Repaso ligero (hoja de fórmulas) y descanso |
+| jue 12 nov | Ethics (30 min) + falladas del Mock 6 de **Equity** (9), **Alternatives** (7) y **Derivatives** (5) |
+| vie 13 nov | **½ Mock B** de CFA Institute (sesión 1, 2 h 15 min) + revisión |
+| sáb 14 nov | **Ethics completo** (7 Standards, Code, las 7 que se repiten) + **fichas ⚠️** + Quant (#143–148) |
+| dom 15 nov | Hoja de fórmulas + repaso ligero de fichas |
+| lun 16 nov | Descanso (solo la hoja de fórmulas) |
 | 🎯 mar 17 nov | **EXAMEN** |
 
 ## 3. Errores recurrentes que hay que vigilar

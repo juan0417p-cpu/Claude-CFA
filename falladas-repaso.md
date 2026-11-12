@@ -2,7 +2,7 @@
 
 Días 1 y 2 del plan (26 y 27 de octubre de 2026), más el repaso de Fixed Income del 26 en la mañana. Cada pregunta trae la respuesta escondida: intenta responderla antes de abrirla.
 
-**Total: 149 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 6 · FSA: 13 · Quant: 6 · Economics: 1)
+**Total: 151 preguntas** (Equity: 28 · Ethics: 21 · Fixed Income: 23 · Alternatives: 10 · Derivatives: 14 · Portfolio Mgmt: 27 · Corporate Issuers: 8 · FSA: 13 · Quant: 6 · Economics: 1)
 
 ---
 
@@ -1388,4 +1388,22 @@ USD/CAD pasa de 0,85 a 0,89. ¿Cuánto cambió el **USD**?
 <details><summary>Ver respuesta</summary>
 
 **Se depreció 4,5 %.** En USD/CAD la **base es el CAD**: 0,89/0,85 − 1 = +4,7 % es lo que se apreció el **CAD**. Para el USD **invierte**: 1/0,85 = 1,1765 y 1/0,89 = 1,1236 → 1,1236/1,1765 − 1 = **−4,5 %**. Atajo: 1/1,047 − 1. *(Respondiste "se depreció 4,7 %": la dirección estaba bien, el número no.)*
+</details>
+
+<!-- Corporate Issuers, Bloque 4: estructura de capital y business models (11/12-nov-2026, 15/17) -->
+
+### 150. Supuestos de Modigliani-Miller *(Kaplan M2 #65)* · ver también Mock A #81
+¿Cuál es un supuesto de la irrelevancia de la estructura de capital: "hay costos de transacción pero no impuestos", "la deuda tiene prima de riesgo" o "los gerentes actúan en interés de los accionistas"?
+
+<details><summary>Ver respuesta</summary>
+
+**Los gerentes actúan en interés de los accionistas** (sin costos de agencia). MM = "el mundo perfecto": **sin** impuestos ni costos (transacción, quiebra, agencia), información simétrica, **expectativas homogéneas**, prestar y endeudarse a la **tasa libre de riesgo**. Si una opción dice que existe un costo o una diferencia, no es MM. *(Respondiste "la deuda tiene prima de riesgo".)*
+</details>
+
+### 151. Evaluar un proyecto: escudo fiscal sí, ROE no *(Kaplan M6 #24)* ⚠️ fallada 2 veces
+¿Qué principio se aplica al evaluar un proyecto: incluir el escudo fiscal de la depreciación, dar más valor a los flujos lejanos o usar el ROE como criterio clave?
+
+<details><summary>Ver respuesta</summary>
+
+**Incluir el escudo fiscal de la depreciación** (depreciación × t = menos impuestos = caja). Solo importan los **flujos de caja incrementales después de impuestos**: el ROE (contable, bajo al inicio del proyecto) y el EPS de corto plazo son errores típicos (ver #111). *(Respondiste el ROE, en el mock y en el repaso.)*
 </details>
